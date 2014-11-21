@@ -1,24 +1,25 @@
 
 class: center, middle
-
-# W3C
-
-.center[![Logo](w3c-logo.png)]
+IRC: [`http://irc.w3.org`](http://irc.w3.org)  `#w3c-ugr`
+Twitter: `#w3c-ugr`
 
 ---
 
-# Antes de empezar&hellip;
-## Conversación en tiempo real
-
-* IRC: `http://irc.w3.org/` (canal: `#w3c-ugr`)
-* Twitter: `#w3c-ugr`
+class: center, middle
+.center[![Logo](https://raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/w3c-logo.png)]
 
 ---
 
+class: center, middle
+# La *plataforma web abierta*, el W3C y tú
+
+---
+
+background-image: url(https://raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/uk-flag.jpeg)
 # Before we start&hellip;
 ## One quick question
-
-*Who would be able to follow this presentation, and to follow up, **in English**?*
+### *Would you be able to understand this talk, and to follow up with further questions or comments, **in English**?*
+(A hint: you should!)
 
 ---
 

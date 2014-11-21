@@ -1,5 +1,9 @@
 
-W3C
+class: center, middle
+
+# W3C
+
+.center[![Logo](w3c-logo.png)]
 
 ---
 

@@ -198,7 +198,8 @@ class: center, middle
 class: center, middle
 .watermark[`\#w3c-urjc`]
 
-http://www.w3.org/TR/
+[`http://www.w3.org/TR/`](http://www.w3.org/TR/)
+
 [`http://w3.org/Consortium/Recruitment`](http://w3.org/Consortium/Recruitment)
 
 ---
@@ -288,7 +289,7 @@ background-image: url(http://localhost/events/2014-11-24_Fuenlabrada-Spain_URJC_
 
 ---
 
-background-image: url(http://localhost/events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/validators.png) <!--  -->
+background-image: url(http://localhost/events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/validators.png)
 .watermark[`\#w3c-urjc`]
 
 [`http://w3.org/QA/Tools`](http://w3.org/QA/Tools)

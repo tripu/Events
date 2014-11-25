@@ -48,7 +48,7 @@ background-image: url(http://localhost/events/2014-11-24_Fuenlabrada-Spain_URJC_
 
 class: center, middle
 # La *plataforma web abierta*, <br /> el futuro de la web, <br /> y por qué debería interesarte
-![Logo](http://localhost/events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/w3c-logo2.png)
+![Logo](http://localhost/events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/w3c-logo.png)
 ## Antonio Olmo Titos
 
 ---
@@ -275,6 +275,8 @@ Para un profesional, o para un estudiante, <br /> la web es una plataforma ideal
 
 **Rica en prestaciones**
 
+**Con inmensa difusión**
+
 ---
 
 background-image: url(http://localhost/events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/css.png)
@@ -420,7 +422,7 @@ class: center, middle
 class: center, middle
 .watermark[`\#w3c-urjc`]
 
-# Seis ideas <br /> para estudiantes españoles de ingeniería
+# Siete ideas <br /> para estudiantes <br /> españoles de ingeniería
 
 ---
 
@@ -460,7 +462,7 @@ class: center, middle
 class: center, middle
 .watermark[`\#w3c-urjc`]
 
-# 3. Exprime a tus profesores <br /> (sobre todo a los buenos)
+# 3. *Exprime* a tus profesores <br /> (sobre todo a los buenos)
 
 ---
 
@@ -481,7 +483,14 @@ class: center, middle
 class: center, middle
 .watermark[`\#w3c-urjc`]
 
-# 6. Dedícate a esto sólo si te gusta <br /> (*razonablemente*)
+# 6. Júntate con gente interesante desde ya <!--  -->
+
+---
+
+class: center, middle
+.watermark[`\#w3c-urjc`]
+
+# 7. Dedícate a esto sólo si te gusta <br /> (*razonablemente*)
 
 ---
 

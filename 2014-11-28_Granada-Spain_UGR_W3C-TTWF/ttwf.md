@@ -48,6 +48,11 @@ Tenéis mi tarjeta, y pegatinas, aquí al lado.
 
 ---
 
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/mute.png)
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+---
+
 background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/irc.png)
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
@@ -67,15 +72,21 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/web-platform-tests.png)
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-3\. Hacer un *fork* propio de `web-platform-tests`: <br /> [`https://github.com/w3c/web-platform-tests`](https://github.com/w3c/web-platform-tests)
+3\. Familiarizarse con los *tests*: [`https://github.com/w3c/web-platform-tests`](https://github.com/w3c/web-platform-tests)
+
+---
+
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/fork.png)
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+4\. Hacer un *fork* propio: [`https://github.com//web-platform-tests`](https://github.com/w3c/web-platform-tests)
 
 ---
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-4\. Installar el cliente de Git:
-
-.center[.middle[foo]]
+5\. Installar las dependencias:
+### `$ sudo apt-get install git` <br /> `$ sudo apt-get install python2.7` <br /> `$ sudo apt-get install python-html5lib`
 
 ---
 

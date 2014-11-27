@@ -305,6 +305,8 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 .watermark[`\#w3cugr`]
 
 [`http://w3.org/annotation`](http://w3.org/annotation)
+???
+Ya conocéis un recurso, y lo estáis usando: IRC.
 
 ---
 

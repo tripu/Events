@@ -30,10 +30,6 @@ class: center, middle
 # &nbsp;
 # **Twitter** <br /> [`#w3cugr`](https://twitter.com/search?f=realtime&q=%23w3cugr&src=typd)
 ???
-OJO: ese canal de IRC es público.
-
-Soy `tripu`; podéis preguntarme por ahí.
-
 Publicaré la presentación en GH.
 
 ---
@@ -52,10 +48,34 @@ Tenéis mi tarjeta, y pegatinas, aquí al lado.
 
 ---
 
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/irc.png)
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+1\. Entrar en el canal de IRC: [`http://irc.w3.org`](http://irc.w3.org)
+???
+`#testing` es **público** y **en inglés**.
+
+---
+
 background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/github.png)
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-[`http://validator.w3.org/nu`](http://validator.w3.org/nu)
+2\. Crear una cuenta en GitHub: [`https://github.com`](https://github.com)
+
+---
+
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/web-platform-tests.png)
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+3\. Hacer un *fork* propio de `web-platform-tests`: <br /> [`https://github.com/w3c/web-platform-tests`](https://github.com/w3c/web-platform-tests)
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+4\. Installar el cliente de Git:
+
+.center[.middle[foo]]
 
 ---
 

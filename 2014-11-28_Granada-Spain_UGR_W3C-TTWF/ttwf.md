@@ -112,7 +112,14 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#7. Añadir algunas entradas al archivo `/etc/hosts`
+\#7. Installar Node.js (no es imprescindible)
+### `$ sudo apt-get install nodejs`
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+\#8. Añadir algunas entradas al archivo `/etc/hosts`
 
 ```bash
 127.0.0.1    localhost
@@ -138,7 +145,7 @@ ff02::2      ip6-allrouters
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#8. *Clonar* tu *fork* del proyecto
+\#9. *Clonar* tu *fork* del proyecto
 ### `$ git clone`<br />`git@github.com:`*usuario*`/`<br />`web-platform-tests.git`
 .center[o bien]
 ### `$ git clone`<br />`https://github.com/`*usuario*`/`<br />`web-platform-tests.git`
@@ -147,7 +154,7 @@ ff02::2      ip6-allrouters
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#9. Actualizar los *submódulos* de Git
+\#10. Actualizar los *submódulos* de Git
 ### `$ cd web-platform-tests`
 ### `$ git submodule update --init --recursive`
 
@@ -155,7 +162,7 @@ ff02::2      ip6-allrouters
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#10. Generar el *manifiesto* para los *tests*, `MANIFEST.json`
+\#11. Generar el *manifiesto* para los *tests*, `MANIFEST.json`
 ### `$ cd web-platform-tests`
 ### `$ python tools/scripts/manifest.py`
 
@@ -163,7 +170,7 @@ ff02::2      ip6-allrouters
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#11. Lanzar el servidor web, *wptserve*
+\#12. Lanzar el servidor web, *wptserve*
 ### `$ cd web-platform-tests`
 ### `$ python serve.py`
 
@@ -186,7 +193,7 @@ INFO:WebSocketServer:Listen on: (2, 1, 6, '', ('127.0.0.1', 54971))
 background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/test-runner.png)
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#12. ¡Probar! [`http://web-platform.test:8000/`<br />`tools/runner/index.html`](http://web-platform.test:8000/tools/runner/index.html)
+\#13. ¡Probar! [`http://web-platform.test:8000/tools/runner/index.html`](http://web-platform.test:8000/tools/runner/index.html)
 
 ---
 
@@ -224,14 +231,79 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 # Proyectos relacionados: *testharness.js*
-[`https://github.com/w3c/testharness.js/blob/master/docs/api.md`](https://github.com/w3c/testharness.js/blob/master/docs/api.md)
-https://darobin.github.io/test-harness-tutorial/docs/using-testharness.html
+
+```html
+<script type="text/javascript" src="testharness.js"></script>
+<script type="text/javascript" src="testharnessreport.js"></script>
+```
 
 ---
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 # Proyectos relacionados: *testharness.js*
+## Tutorial breve:
+[`https://github.com/w3c/testharness.js/blob/master/docs/api.md`](https://github.com/w3c/testharness.js/blob/master/docs/api.md)
+## Tutorial detallado:
+[`https://darobin.github.io/test-harness-tutorial/docs/using-testharness.html`](https://darobin.github.io/test-harness-tutorial/docs/using-testharness.html)
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# Proyectos relacionados: *csswg-test*
+[`https://github.com/w3c/csswg-test`](https://github.com/w3c/csswg-test)
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# ¿Y qué demonios queremos probar?
+
+## La *Plataforma Web Abierta*
+[`http://w3.org/TR`](http://w3.org/TR)
+
+---
+
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/tr.png)
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+df
+
+---
+
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/tr-filtered.png)
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# foo
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# foo
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# foo
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# foo
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# foo
 
 ---
 

@@ -56,9 +56,8 @@ class: center, middle
 .watermark[`\#w3cugr`]
 
 # Sobre mí
-* Estudié **ingeniería informática** aquí en la ETSII<del>T</del>.
-* Acabé en 2.004; llevo diez años trabajando a tiempo completo.
-* He trabajado para **9 empresas**; en **5 ciudades** de **3 países**.
+* Acabé **ingeniería informática** aquí en la ETSII<del>T</del> en 2.004.
+* He trabajado para **8 empresas**; en **5 ciudades** de **3 países**.
 * Soy **programador web** en el [equipo de sistemas](http://www.w3.org/People/domain/systeam) del [W3C](http://www.w3.org/).
 * Me interesan el ***software* libre**, los **sistemas abiertos**, los **estándares**, **GNU/Linux**, la **web**, **JavaScript**, la **usabilidad**, las **interfaces de usuario** y en general el código que se puede *ver*.
 
@@ -68,7 +67,7 @@ class: center, middle
 ???
 Ahora estoy en Tokio.
 
-Soy `tripu` en redes sociales.
+Soy `tripu` en redes sociales **y en el IRC**; preguntad por ahí.
 
 Tenéis mi tarjeta, y pegatinas, aquí al lado.
 
@@ -81,7 +80,7 @@ Tenéis mi tarjeta, y pegatinas, aquí al lado.
 * La ***plataforma web abierta***.
 * **HTML** y otros estándares recientes e importantes.
 * **Herramientas y recursos** que te pueden interesar.
-* *Offtopic*: ideas para estudiantes de ingeniería españoles.
+* *Offtopic*: **ideas** para estudiantes de la ETSIIT.
 * &hellip;y cualquier otra cosa que surja.
 
 ---
@@ -169,7 +168,7 @@ class: center, middle
 class: center, middle
 .watermark[`\#w3cugr`]
 
-# 7. La parte legal es muy importante
+# 7. La parte legal es **muy** importante
 
 ---
 
@@ -184,6 +183,7 @@ class: center, middle
 .watermark[`\#w3cugr`]
 
 # 9. Los estándares **no** se redactan para programadores y diseñadores web
+???
 &hellip;sino para un público mucho más reducido.
 
 ---
@@ -199,6 +199,11 @@ class: center, middle
 .watermark[`\#w3cugr`]
 
 [`http://www.w3.org/TR/`](http://www.w3.org/TR/)
+
+---
+
+class: center, middle
+.watermark[`\#w3cugr`]
 
 [`http://w3.org/Consortium/Recruitment`](http://w3.org/Consortium/Recruitment)
 
@@ -233,11 +238,23 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 * Se ha trabajado en él durante *años*.
 * HTML5 es un estándar muy grande.
 * &hellip;y aún así, no engloba un montón de tecnologías que asumimos que son &laquo;HTML5&raquo;.
+???
+* *CSS3* (no)
+* *WebSocket* (sí)
+* *Canvas 2D* (sí)
+* *WebGL* (no)
+* *SVG* (no)
 
 ---
 
 background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html5-diagram.png)
 .watermark[`\#w3cugr`]
+???
+* *CSS3* (no)
+* *WebSocket* (sí)
+* *Canvas 2D* (sí)
+* *WebGL* (no)
+* *SVG* (no)
 
 ---
 
@@ -255,7 +272,7 @@ class: center, middle
 # Desafíos del estándar
 ## *Bleeding edge* <br /> vs. <br /> conservadurismo
 ???
-Ejemplo: API para computación cuántica (PFC vs. web púlica).
+Ejemplo: API para computación cuántica (PFC vs. web pública).
 
 ---
 
@@ -263,7 +280,7 @@ class: center, middle
 .watermark[`\#w3cugr`]
 
 # En definitiva
-Para un profesional, o para un estudiante, <br /> la web es una plataforma ideal:
+Para un estudiante (y también para un profesional), <br /> la web es una plataforma ideal:
 
 **Gratuita**
 
@@ -410,6 +427,13 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 ---
 
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/specifiction.png)
+.watermark[`\#w3cugr`]
+
+[`http://specifiction.org`](http://specifiction.org)
+
+---
+
 class: center, middle
 .watermark[`\#w3cugr`]
 
@@ -422,7 +446,7 @@ class: center, middle
 class: center, middle
 .watermark[`\#w3cugr`]
 
-# Siete ideas <br /> para estudiantes <br /> españoles de ingeniería
+# Siete ideas <br /> para estudiantes <br />de la ETSIIT
 
 ---
 

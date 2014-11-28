@@ -362,10 +362,8 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 * Lee atentamente **el principio**: *abstract* y *TOC*
 * Entiende el **tipo** de *spec* (el &laquo;perfil&raquo;), y lo que implica
 * Fíjate en las distintas **versiones**, y cómo están enlazadas entre sí
-* [Presta atención a los **verbos**](http://www.ietf.org/rfc/rfc2119.txt): *must [not]*, *should [not]*, *may [not]*
+* [Presta atención a los **verbos**](http://www.ietf.org/rfc/rfc2119.txt): *must [not]* → *should [not]* → *may [not]*
 * Fíjate en la diferencia entre lo que es **vinculante**, y lo que no: <br /> *normativo* y *no-normativo* (o *informativo*)
-* Confirma el significado de **siglas** (ej. *RCF*) y **definiciones** formales (*interoperability report*)
-* Aprende a leer **BNF**, **DTD** y [**WebIDL**](http://www.w3.org/TR/WebIDL/)
 ???
 *No-normativo*: las traducciones, por ejemplo.
 
@@ -374,6 +372,8 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 # ¿Cómo se lee un estándar del W3C? (II)
+* Confirma el significado de **siglas** (ej. *RCF*) y **definiciones** formales (*interoperability report*)
+* Aprende a leer **BNF**, **DTD** y [**WebIDL**](http://www.w3.org/TR/WebIDL/)
 * *UA* ≃ ***User Agent*** ≃ el navegador
 * **Estable** (`www.w3.org/…`) vs. **en desarrollo** (`dev.w3.org/…`)
 * Y sobre todo, recuerda que no deberías estar leyéndolo **tú**&hellip; ;¬)
@@ -392,7 +392,7 @@ Si no lo encuentras, usa Node.js:
 
 ```bash
 $ cd web-platform-tests
-$ nodejs tools/scripts/id2path.js '
+$ nodejs tools/scripts/id2path.js [id]
 ```
 
 En cualquier caso, ¡recuerda que puede que no exista!
@@ -407,19 +407,93 @@ Reto: escribir un *test* para [`http://w3.org/TR/webstorage/#disk-space`](http:/
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-# foo
+# Hay distintos tipos de *tests*
+1. [Manuales](http://testthewebforward.org/docs/manual-test.html), en los que es necesaria intervención del usuario
+1. [*Reftests*](http://testthewebforward.org/docs/reftests.html), en los que el usuario debe comparar dos resultados
+1. [JavaScript con *testharness.js*](http://testthewebforward.org/docs/testharness.html), completamente automáticos
 
 ---
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-# foo
+# Tipos de *tests*, nº 1: manuales
+Completamente abiertos a la imaginación del programador <br /> (y a los límites de la inteligencia humana)
 
 ---
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-# foo
+# Tipos de *tests*, nº 2: *reftests*
+* Siempre pares de archivos: *asunto*`.html` y *asunto*`-ref.html`
+* Los resultados de *renderizar* ambos deben ser idénticos
+* El usuario es responsable de decidir si el *test* pasa o no, *a ojímetro*
+
+```html
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>BDO element dir=rtl</title>
+<link rel="help"
+  href="http://www.whatwg.org/specs/web-apps/current-work/#the-bdo-element">
+<meta name="assert"
+  content="BDO element's DIR content attribute renders well with 'rtl'.">
+<link rel="match" href="test-bdo-001.html">
+<p>Pass if you see WAS displayed below.</p>
+<bdo dir="rtl">SAW</bdo>
+```
+
+```html
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>HTML Reference File</title>
+<p>Pass if you see WAS displayed below.</p>
+<p>WAS</p>```
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# Tipos de *tests*, nº 3: <br /> JavaScript con *testharness.js*
+ * [Documentación de la API de *testharness.js*](http://testthewebforward.org/docs/testharness-library.html)
+ * [Cómo usar *testharness.js* en tus *tests*](http://testthewebforward.org/docs/testharness-idlharness.html)
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# Es mejor empezar con una plantilla
+[`http://testthewebforward.org/docs/test-templates.html`](http://testthewebforward.org/docs/test-templates.html)
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# Cómo enviar tus *tests* al proyecto
+Básicamente, siguiendo el modelo de GitHub
+
+*Fork* → *branch* → *commit* → *PR*
+
+[`http://testthewebforward.org/docs/submission-process.html`](http://testthewebforward.org/docs/submission-process.html)
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# Consultar el estado actual de los *tests*
+[`http://w3c-test.org/`](http://w3c-test.org/)
+
+---
+
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/prs.png)
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+[`https://github.com/w3c/web-platform-tests/pulls`](https://github.com/w3c/web-platform-tests/pulls)
+
+---
+
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/issues.png)
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+[`https://github.com/w3c/web-platform-tests/issues`](https://github.com/w3c/web-platform-tests/issues)
 
 ---
 

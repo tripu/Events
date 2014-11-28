@@ -91,8 +91,17 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#5. Installar Git y Python **2.7**
+\#5. Instalar y configurar Git
 ### `$ sudo apt-get install git`
+### `$ git config --global user.name '`*usuario*`'`
+### `$ git config --global user.email '`*email*`'`
+### `$ git config --global`<br />`  push.default upstream`
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+\#6. Instalar Python **2.7**
 ### `$ sudo apt-get install python2.7`
 ???
 **Not** Python `3.x`.
@@ -101,7 +110,7 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#6. Installar *html5lib*
+\#7. Installar *html5lib*
 ### `$ sudo apt-get install python-html5lib`
 .center[o bien]
 ### `$ pip install html5lib`
@@ -112,14 +121,14 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#7. Installar Node.js (no es imprescindible)
+\#8. Installar Node.js (no es imprescindible)
 ### `$ sudo apt-get install nodejs`
 
 ---
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#8. Añadir algunas entradas al archivo `/etc/hosts`
+\#9. Añadir algunas entradas al archivo `/etc/hosts`
 
 ```bash
 127.0.0.1    localhost
@@ -145,16 +154,20 @@ ff02::2      ip6-allrouters
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#9. *Clonar* tu *fork* del proyecto
-### `$ git clone`<br />`git@github.com:`*usuario*`/`<br />`web-platform-tests.git`
+\#10. *Clonar* tu *fork* del proyecto
+### `$ git clone --recursive`<br />`git@github.com:`*usuario*`/`<br />`web-platform-tests.git`
 .center[o bien]
-### `$ git clone`<br />`https://github.com/`*usuario*`/`<br />`web-platform-tests.git`
+### `$ git clone --recursive`<br />`https://github.com/`*usuario*`/`<br />`web-platform-tests.git`
 
 ---
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#10. Actualizar los *submódulos* de Git
+\#11. Confirmar que tenemos los *submódulos* de Git
+
+Si clonaste con `--recursive`, tu directorio `resources/` tendrá archivos, y no tienes que hacer nada.
+
+En caso contrario:
 ### `$ cd web-platform-tests`
 ### `$ git submodule update --init --recursive`
 
@@ -162,7 +175,16 @@ ff02::2      ip6-allrouters
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#11. Generar el *manifiesto* para los *tests*, `MANIFEST.json`
+\#12. Configurar *remote*/*upstream*
+### `$ cd web-platform-tests`
+### `$ git checkout master`
+### `$ git remote add upstream https://github.com/w3c/`<br />`web-platform-tests.git`
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+\#13. Generar el *manifiesto* para los *tests*, `MANIFEST.json`
 ### `$ cd web-platform-tests`
 ### `$ python tools/scripts/manifest.py`
 
@@ -170,7 +192,7 @@ ff02::2      ip6-allrouters
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#12. Lanzar el servidor web, *wptserve*
+\#14. Lanzar el servidor web, *wptserve*
 ### `$ cd web-platform-tests`
 ### `$ python serve.py`
 
@@ -188,12 +210,18 @@ INFO:WebSocketServer:Bind on: (2, 1, 6, '', ('127.0.0.1', 54971))
 INFO:WebSocketServer:Listen on: (2, 1, 6, '', ('127.0.0.1', 54971))
 ```
 
+Si hay conflictos con los puertos:
+
+`$ sudo service apache2 stop`
+
+o bien, editar `config.default.json` y cambiar el puerto `8000` a otro libre.
+
 ---
 
 background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/test-runner.png)
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-\#13. ¡Probar! [`http://web-platform.test:8000/tools/runner/index.html`](http://web-platform.test:8000/tools/runner/index.html)
+\#15. ¡Probar! [`http://web-platform.test:8000/tools/runner/index.html`](http://web-platform.test:8000/tools/runner/index.html)
 
 ---
 
@@ -212,6 +240,8 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 # Proyectos relacionados: <br /> *wptrunner* y *webdriver*
 [`https://github.com/w3c/wptrunner`](https://github.com/w3c/wptrunner)
+
+[`http://wptrunner.readthedocs.org`](http://wptrunner.readthedocs.org/en/latest/)
 
 [`https://github.com/w3c/webdriver`](https://github.com/w3c/webdriver)
 
@@ -295,6 +325,14 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 ## La *Plataforma Web Abierta*
 
+### El trabajo de estos *working groups*:
+* *HTML WG*
+* *Web Apps WG*
+* *Device APIs WG*
+* *Web Apps Security WG*
+
+&hellip;entre otros.
+
 ---
 
 background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/tr.png)
@@ -311,15 +349,59 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 ---
 
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/html5.png)
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-# foo
+[`http://w3.org/TR/html5`](http://w3.org/TR/html5)
 
 ---
 
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-# foo
+# ¿Cómo se lee un estándar del W3C? (I)
+* Lee atentamente **el principio**: *abstract* y *TOC*
+* Entiende el **tipo** de *spec* (el &laquo;perfil&raquo;), y lo que implica
+* Fíjate en las distintas **versiones**, y cómo están enlazadas entre sí
+* [Presta atención a los **verbos**](http://www.ietf.org/rfc/rfc2119.txt): *must [not]*, *should [not]*, *may [not]*
+* Fíjate en la diferencia entre lo que es **vinculante**, y lo que no: <br /> *normativo* y *no-normativo* (o *informativo*)
+* Confirma el significado de **siglas** (ej. *RCF*) y **definiciones** formales (*interoperability report*)
+* Aprende a leer **BNF**, **DTD** y [**WebIDL**](http://www.w3.org/TR/WebIDL/)
+???
+*No-normativo*: las traducciones, por ejemplo.
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# ¿Cómo se lee un estándar del W3C? (II)
+* *UA* ≃ ***User Agent*** ≃ el navegador
+* **Estable** (`www.w3.org/…`) vs. **en desarrollo** (`dev.w3.org/…`)
+* Y sobre todo, recuerda que no deberías estar leyéndolo **tú**&hellip; ;¬)
+
+[*How to read W3C specs*](http://alistapart.com/article/readspec)
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# Cómo encontrar los *tests* que te interesan
+* Se usan los *shortname* de las *specs* (los de la URL)
+* Máximo 3 niveles de directorios
+
+Si no lo encuentras, usa Node.js:
+
+```bash
+$ cd web-platform-tests
+$ nodejs tools/scripts/id2path.js '
+```
+
+En cualquier caso, ¡recuerda que puede que no exista!
+???
+Ejemplo: *Web Applications WG*, *Web Storage*, *Disk space*.
+
+Resultado: el directorio está vacío (no hay *tests*), pero además ni siquiera se refiere a la *spec* que buscábamos.
+
+Reto: escribir un *test* para [`http://w3.org/TR/webstorage/#disk-space`](http://w3.org/TR/webstorage/#disk-space)
 
 ---
 

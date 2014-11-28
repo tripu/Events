@@ -242,6 +242,39 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 # Proyectos relacionados: *testharness.js*
+
+```html
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Example testharness.js Tests</title>
+    <script type="text/javascript" src="testharness.js"></script>
+    <script type="text/javascript" src="testharnessreport.js"></script>
+
+    <script type="text/javascript">
+      test(function() {
+        assert_equals(document.body,
+          document.getElementsByTagName("body")[0]));
+      }, "document.body test");
+      var t = async_test("Load event fires");
+      onload = t.step_func(function() {t.done()});
+    </script>
+
+  </head>
+
+  <body>
+    <div id="log"></div>
+  </body>
+
+</html>
+```
+
+---
+
+.watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+# Proyectos relacionados: *testharness.js*
 ## Tutorial breve:
 [`https://github.com/w3c/testharness.js/blob/master/docs/api.md`](https://github.com/w3c/testharness.js/blob/master/docs/api.md)
 ## Tutorial detallado:
@@ -261,19 +294,20 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 # ¿Y qué demonios queremos probar?
 
 ## La *Plataforma Web Abierta*
-[`http://w3.org/TR`](http://w3.org/TR)
 
 ---
 
 background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/tr.png)
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
-df
+[`http://w3.org/TR`](http://w3.org/TR)
 
 ---
 
 background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/tr-filtered.png)
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
+
+[`http://w3.org/TR/tr-groups-stds`](http://w3.org/TR/tr-groups-stds)
 
 ---
 

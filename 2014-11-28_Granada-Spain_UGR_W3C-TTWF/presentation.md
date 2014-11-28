@@ -220,6 +220,8 @@ class: center, middle
 
 ***Open***: de vital importancia.
 
+OWP = formatos + APIs
+
 Videoconferencia, jugar en tiempo real, maquetar periódicos digitales en árabe&hellip;
 
 DOM, rich editing, DB, presentation, App Cache, XHTML, HTML modules.
@@ -233,7 +235,29 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 .watermark[`\#w3cugr`]
 
-# HTML5 y demás
+# HTML5: ¿qué hay de nuevo?
+* Sintaxis simplificada
+* Integración de MathML y SVG
+* Añadidos nuevos elementos y atributos
+* Eliminados viejos elementos y atributos
+* Añadidas APIs nuevas para *scripting*
+
+---
+
+.watermark[`\#w3cugr`]
+
+# HTML5: nuevos elementos
+* `<video>` y `<audio>`
+* `<canvas>`
+* `<ruby>`
+* `<article>`, `<section>`, `<header>`&hellip;
+* `<details>`, `<progress>`&hellip;
+
+---
+
+.watermark[`\#w3cugr`]
+
+# HTML5: la historia
 * HTML5 es un estándar (*recommendation*) desde hace apenas un mes.
 * Se ha trabajado en él durante *años*.
 * HTML5 es un estándar muy grande.
@@ -255,6 +279,18 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 * *Canvas 2D* (sí)
 * *WebGL* (no)
 * *SVG* (no)
+
+---
+
+.watermark[`\#w3cugr`]
+
+# HTML5: APIs relacionadas
+* *Canvas 2D Context API*
+* WebGL (*canvas 3D API*)
+* *Web Storage API*
+* *Indexed DB API* (noSQL)
+* *Web Workers*
+* *WebSocket*
 
 ---
 
@@ -327,7 +363,7 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html-validator2.png)
 .watermark[`\#w3cugr`]
 
-[`http://validator.w3.org/nu`](http://validator.w3.org/nu)
+[`http://validator.w3.org/nu`](http://validator.w3.org/nu)&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;[`https://validator.nu`](https://validator.nu)
 
 ---
 

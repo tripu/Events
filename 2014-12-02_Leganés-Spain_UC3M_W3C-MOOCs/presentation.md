@@ -11,7 +11,6 @@
 
   .remark-slide-container:nth-child(1) .remark-slide-number,
   .remark-slide-container:nth-child(2) .remark-slide-number,
-  .remark-slide-container:nth-child(3) .remark-slide-number,
   .remark-slide-container:last-child .remark-slide-number {
     visibility: hidden;
   }
@@ -37,26 +36,18 @@ Publicaré la presentación en GH.
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/uk-flag.jpeg)
-
-# Before we start&hellip;
-## Quick question:
-### *Would you be able to understand this talk, <br /> and to follow up with further questions or comments, <br /> **in English**?*
-(Hint: you should!)
-
----
-
 class: center, middle
-# La *plataforma web abierta*, <br /> el futuro de la web, <br /> y por qué debería interesarte
+# La *Plataforma Web Abierta* y los *MOOCs*
+## Tecnologías para la educación online
 ![Logo](//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/w3c-logo.png)
-## Antonio Olmo Titos
+### Antonio Olmo Titos
 
 ---
 
 .watermark[`\#w3cuc3m`]
 
 # Sobre mí
-* Acabé **ingeniería informática** aquí en la ETSII<del>T</del> en 2.004.
+* Estudié **ingeniería informática** en la **Universidad de Granada**.
 * He trabajado para **8 empresas**; en **5 ciudades** de **3 países**.
 * Soy **programador web** en el [equipo de sistemas](http://www.w3.org/People/domain/systeam) del [W3C](http://www.w3.org/).
 * Me interesan el ***software* libre**, los **sistemas abiertos**, los **estándares**, **GNU/Linux**, la **web**, **JavaScript**, la **usabilidad**, las **interfaces de usuario** y en general el código que se puede *ver*.
@@ -76,11 +67,11 @@ Tenéis mi tarjeta, y pegatinas, aquí al lado.
 .watermark[`\#w3cuc3m`]
 
 # De qué vamos a hablar
-* El **W3C**: qué es &hellip;y qué **no** es.
-* La ***plataforma web abierta***.
-* **HTML** y otros estándares recientes e importantes.
-* **Herramientas y recursos** que te pueden interesar.
-* *Offtopic*: **ideas** para estudiantes de la ETSIIT.
+* Breve introducción al **W3C** y a sus estándares.
+* La ***Plataforma Web Abierta***.
+* **HTML[5]** y otras tecnologías relacionadas.
+* La web y los ***MOOCs***.
+* **Herramientas y recursos** para *MOOCs*.
 * &hellip;y cualquier otra cosa que surja.
 
 ---
@@ -182,7 +173,7 @@ class: center, middle
 class: center, middle
 .watermark[`\#w3cuc3m`]
 
-# 9. Los estándares **no** se redactan para programadores y diseñadores web
+# 9. Los estándares no se redactan <br /> (solamente) <br /> para programadores y diseñadores
 ???
 &hellip;sino para un público mucho más reducido.
 
@@ -199,13 +190,6 @@ class: center, middle
 .watermark[`\#w3cuc3m`]
 
 [`http://www.w3.org/TR/`](http://www.w3.org/TR/)
-
----
-
-class: center, middle
-.watermark[`\#w3cuc3m`]
-
-[`http://w3.org/Consortium/Recruitment`](http://w3.org/Consortium/Recruitment)
 
 ---
 
@@ -448,111 +432,6 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 .watermark[`\#w3cuc3m`]
 
 [`http://webplatform.org`](http://webplatform.org)
-
----
-
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/whatwg.png)
-.watermark[`\#w3cuc3m`]
-
-[`https://whatwg.org`](https://whatwg.org)
-
----
-
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/whatwg-html.png)
-.watermark[`\#w3cuc3m`]
-
-[`https://whatwg.org`](https://whatwg.org)
-
----
-
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/specifiction.png)
-.watermark[`\#w3cuc3m`]
-
-[`http://specifiction.org`](http://specifiction.org)
-
----
-
-class: center, middle
-.watermark[`\#w3cuc3m`]
-
-# <code>&lt;/talk&gt;</code>
-# &nbsp;
-# <code>&lt;offtopic&gt;</code>
-
----
-
-class: center, middle
-.watermark[`\#w3cuc3m`]
-
-# Siete ideas <br /> para estudiantes <br />de la ETSIIT
-
----
-
-class: center, middle
-.watermark[`\#w3cuc3m`]
-
-# 1. Make English your <br /> default work (or life!) language
-
----
-
-class: center, middle
-.watermark[`\#w3cuc3m`]
-
-Júntate con los *guiris* (¡es divertido!). <!--  -->
-
-Lee/escucha/escribe/busca en inglés primero.
-
-Configura todos tus cacharros en inglés.
-
-No lo estudies como si fuese una asignatura.
-
-Vete de *Erasmus*.
-
-Vete de *Erasmus*.
-
-Vete de *Erasmus*.
-
----
-
-class: center, middle
-.watermark[`\#w3cuc3m`]
-
-# 2. Sacúdete los complejos españoles
-
----
-
-class: center, middle
-.watermark[`\#w3cuc3m`]
-
-# 3. *Exprime* a tus profesores <br /> (sobre todo a los buenos)
-
----
-
-class: center, middle
-.watermark[`\#w3cuc3m`]
-
-# 4. Sé ambicioso
-
----
-
-class: center, middle
-.watermark[`\#w3cuc3m`]
-
-# 5. Pierde el tiempo <br /> (con cabeza)
-
----
-
-class: center, middle
-.watermark[`\#w3cuc3m`]
-
-# 6. Júntate con gente interesante desde ya <!--  -->
-
----
-
-class: center, middle
-.watermark[`\#w3cuc3m`]
-
-# 7. Dedícate a esto sólo si te gusta <br /> (*razonablemente*)
 
 ---
 

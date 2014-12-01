@@ -37,7 +37,7 @@ Publicaré la presentación en GH.
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/uk-flag.jpeg)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/uk-flag.jpeg)
 
 # Before we start&hellip;
 ## Quick question:
@@ -48,7 +48,7 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 
 class: center, middle
 # La *plataforma web abierta*, <br /> el futuro de la web, <br /> y por qué debería interesarte
-![Logo](//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/w3c-logo.png)
+![Logo](//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/w3c-logo.png)
 ## Antonio Olmo Titos
 
 ---
@@ -228,7 +228,7 @@ DOM, rich editing, DB, presentation, App Cache, XHTML, HTML modules.
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/html5-logo.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/html5-logo.png)
 .watermark[`\#w3cuc3m`]
 
 ---
@@ -271,7 +271,7 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/html5-diagram.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/html5-diagram.png)
 .watermark[`\#w3cuc3m`]
 ???
 * *CSS3* (no)
@@ -332,12 +332,12 @@ Para un estudiante (y también para un profesional), <br /> la web es una plataf
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/css.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/css.png)
 .watermark[`\#w3cuc3m`]
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/web-annotation.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/web-annotation.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://w3.org/annotation`](http://w3.org/annotation)
@@ -346,126 +346,126 @@ Ya conocéis un recurso, y lo estáis usando: IRC.
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/validators.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/validators.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://w3.org/QA/Tools`](http://w3.org/QA/Tools)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/html-validator1.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/html-validator1.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://validator.w3.org`](http://validator.w3.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/html-validator2.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/html-validator2.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://validator.w3.org/nu`](http://validator.w3.org/nu)&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;[`https://validator.nu`](https://validator.nu)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/lists.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/lists.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://w3.org/Mail`](http://w3.org/Mail)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/groups.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/groups.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://w3.org/Consortium/activities.html`](http://w3.org/Consortium/activities.html)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/projects.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/projects.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://w3.org/Status`](http://w3.org/Status)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/gh.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/gh.png)
 .watermark[`\#w3cuc3m`]
 
 [`https://github.com/w3c`](https://github.com/w3c)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/caniuse.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/caniuse.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://caniuse.com`](http://caniuse.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/caniuse-video.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/caniuse-video.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://caniuse.com`](http://caniuse.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/caniuse-hyphenation.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/caniuse-hyphenation.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://caniuse.com`](http://caniuse.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/diveintohtml5.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/diveintohtml5.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://diveintohtml5.info`](http://diveintohtml5.info)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/html5rocks-articles.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/html5rocks-articles.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://html5rocks.com`](http://html5rocks.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/html5rocks-resources.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/html5rocks-resources.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://html5rocks.com`](http://html5rocks.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/mdn.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/mdn.png)
 .watermark[`\#w3cuc3m`]
 
 [`https://developer.mozilla.org`](https://developer.mozilla.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/webplatform.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/webplatform.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://webplatform.org`](http://webplatform.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/whatwg.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/whatwg.png)
 .watermark[`\#w3cuc3m`]
 
 [`https://whatwg.org`](https://whatwg.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/whatwg-html.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/whatwg-html.png)
 .watermark[`\#w3cuc3m`]
 
 [`https://whatwg.org`](https://whatwg.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganes-Spain_UC3M_W3C-MOOCs/img/specifiction.png)
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/specifiction.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://specifiction.org`](http://specifiction.org)

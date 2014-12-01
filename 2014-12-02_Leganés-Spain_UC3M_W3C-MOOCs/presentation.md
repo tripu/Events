@@ -38,7 +38,7 @@ Publicaré la presentación en GH.
 
 class: center, middle
 # La *Plataforma Web Abierta* y los *MOOCs*
-## Tecnologías para la educación online
+## Seminario &laquo;Tecnologías para la educación online&raquo;
 ![Logo](//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/w3c-logo.png)
 ### Antonio Olmo Titos
 

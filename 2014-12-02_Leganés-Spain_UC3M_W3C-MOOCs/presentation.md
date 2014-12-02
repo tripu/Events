@@ -327,14 +327,25 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 
 .watermark[`\#w3cuc3m`]
 
-# El ejemplo de edX
+# El mejor sustrato para *MOOCs*
+* Es difícil imaginar la explosión de la *educación digital escalable para todos* sin la web, y sin los últimos estándares.
+* HTML5 está en el centro de la revolución.
+* Su flexibilidad es la clave.
+* La facilidad para reutilizar recursos reduce costes, y populariza la educación.
+* Acerca la información a quien no está cerca de un *campus*.
+* &hellip;aunque sí; hay otras *plataformas* posibles.
+
+---
+
+.watermark[`\#w3cuc3m`]
+
+# El ejemplo de [edX](https://www.edx.org/)
 * MIT + Harvard.
 * Sin ánimo de lucro, y usando *software* libre.
-
-.center[![Logo](//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/edx.png)]
-
 * *&laquo;Over 68,000 captioned videos hosted on our platform.&raquo;*
 * *&laquo;Currently working on integrating [Annotator.js](http://annotatorjs.org/) into our platform.&raquo;*
+
+.center[![Logo](//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/edx.png)]
 
 ---
 
@@ -343,7 +354,7 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 # *Web annotation*
 *&laquo;**Annotation** is going to be a huge breakthrough for online education as we bring another paradigm from the physical world (notes, note taking, highlighting) and bring it to the digital classroom, adding the benefit of collaboration so that students can easily share notes and collaborate together on projects.&raquo;*
 
-.center[[hypothes.is](https://hypothes.is)]
+.center[[`https://hypothes.is`](https://hypothes.is)]
 
 ---
 
@@ -370,8 +381,8 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 * En casa, en centros públicos&hellip; y por el camino.
 * Emisiones diferentes para distintos dispositivos.
 * Por ejemplo, para enviar *sonido descriptivo* a usuarios con necesidades especiales.
-.center[http://www.w3.org/2011/webtv/]
-??
+.center[[`http://w3.org/2011/webtv`](http://w3.org/2011/webtv)
+???
 Los *team contacts* están en la sede de Japón.
 
 ---
@@ -383,13 +394,29 @@ Los *team contacts* están en la sede de Japón.
 * Paginación.
 * Internacionalización (*i18n*).
 * *Web annotation*.
-.center[http://w3.org/dpub/IG/wiki]
+.center[[`http://w3.org/dpub/IG/wiki`](http://w3.org/dpub/IG/wiki)
+
+---
+
+.watermark[`\#w3cuc3m`]
+
+# Gráficos
+* Nueva etiqueta `canvas`.
+** *Hit regions*.
+** *Visual focus indicators* (`drawFocusIfNeeded()`).
+* SVG.
+???
+¡Son pizarras!
 
 ---
 
 .watermark[`\#w3cuc3m`]
 
 # Accesibilidad
+* [http://w3.org/TR/WCAG20](*Web Content Accessibility Guidelines* (*WCAG*) 2.0).
+* [http://w3.org/WAI/intro/aria](*Web Accessibility Initiative - Accessible Rich Internet Applications* (*WAI-ARIA*)), para *mapear* roles, estados y propiedades de componentes avanzados a métodos de bajo nivel del navegador.
+* Incorporándose ahora en SVG 2.0, junto con mejores mecanismos de navegación.
+* [http://w3.org/TR/ttaf1-dfxp](*Timed Text Markup Language* (*TTML*) 1) y [http://dev.w3.org/html5/webvtt](*Web Video Text Tracks* format (*WebVTT*)).
 
 ---
 

@@ -403,9 +403,9 @@ Los *team contacts* están en la sede de Japón.
 .watermark[`\#w3cuc3m`]
 
 # Gráficos
-* Nueva etiqueta `canvas`.
+* Nueva etiqueta `<canvas>`.
  * *Hit regions*.
- * *Visual focus indicators* (`drawFocusIfNeeded()`).
+ * *Visual focus indicators* (`drawFocusIfNeeded`).
 * SVG.
 ???
 ¡Son pizarras!
@@ -415,12 +415,12 @@ Los *team contacts* están en la sede de Japón.
 .watermark[`\#w3cuc3m`]
 
 # Y más
-* Estudiar *offline*. <br /> Importante cuando hay pocos recursos, o mala conexión.
-* Visualizar en 3D (*WebGL*). <br /> Química, arquitectura, ingeniería.
-* Aprovechar el (espectacular) rendimiento de los navegadores. <br /> *asm.js*, *MathML*; ✝ <del>*Mathematica*</del>.
-* Comunicarse con profesor y estudiantes *sin pasar* por un nodo central. <br /> *Web Sockets*, *WebRTC*; <del>censura</del>.
-* Distribuir clases. <br /> `\<video/>`, `\<audio\>`.
-* Aprender idiomas de escritura compleja, o ayudar a aquellos con necesidades especiales. <br /> `\<ruby\>`.
+* **Estudiar *offline*.** <br /> Importante cuando hay pocos recursos, o mala conexión.
+* **Visualizar en 3D (*WebGL*)**: química, arquitectura, ingeniería.
+* **Aprovechar el (espectacular) rendimiento de los navegadores.** <br /> *asm.js*, *MathML*; <del>*Mathematica*</del>.
+* **Comunicarse con profesor y estudiantes sin pasar por nodo central.** <br /> *Web Sockets*, *WebRTC*; <del>censura</del>.
+* **Distribuir clases**: `<video>`, `<audio>`.
+* **Aprender idiomas de escritura compleja, <br /> o ayudar a aquellos con necesidades especiales.** <br /> `<ruby>`.
 
 ---
 

@@ -352,7 +352,10 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 .watermark[`\#w3cuc3m`]
 
 # *Web annotation*
-*&laquo;**Annotation** is going to be a huge breakthrough for online education as we bring another paradigm from the physical world (notes, note taking, highlighting) and bring it to the digital classroom, adding the benefit of collaboration so that students can easily share notes and collaborate together on projects.&raquo;*
+* Las *anotaciones* en la web van a abrir nuevas posibilidades.
+* Se trata de traer a la *clase digital* otro paradigma más del mundo físico.
+* *Notas*, *esquemas*, *apuntes*, *subrayado*, *correcciones*&hellip;
+* Facilitará la colaboración entre estudiantes, que podrán compartir notas más eficientemente cuando trabajen en proyectos conjuntos.
 
 .center[[`https://hypothes.is`](https://hypothes.is)]
 
@@ -367,7 +370,7 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 
 .watermark[`\#w3cuc3m`]
 
-# &hellip;pero no son los únicos
+# &hellip;y no son los únicos
 * [Coursera](https://www.coursera.org/).
 * [Udacity](https://www.udacity.com/).
 * [Khan Academy](https://www.khanacademy.org/).
@@ -379,9 +382,8 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 # *Web and TV Interest Group*
 * Facilitar el consumo de material educativo.
 * En casa, en centros públicos&hellip; y por el camino.
-* Emisiones diferentes para distintos dispositivos.
-* Por ejemplo, para enviar *sonido descriptivo* a usuarios con necesidades especiales.
-.center[[`http://w3.org/2011/webtv`](http://w3.org/2011/webtv)
+* Emisiones diferentes para distintos dispositivos. Por ejemplo, para enviar *sonido descriptivo* a usuarios con necesidades especiales.
+.center[[`http://w3.org/2011/webtv`](http://w3.org/2011/webtv)]
 ???
 Los *team contacts* están en la sede de Japón.
 
@@ -394,7 +396,7 @@ Los *team contacts* están en la sede de Japón.
 * Paginación.
 * Internacionalización (*i18n*).
 * *Web annotation*.
-.center[[`http://w3.org/dpub/IG/wiki`](http://w3.org/dpub/IG/wiki)
+.center[[`http://w3.org/dpub/IG/wiki`](http://w3.org/dpub/IG/wiki)]
 
 ---
 
@@ -402,8 +404,8 @@ Los *team contacts* están en la sede de Japón.
 
 # Gráficos
 * Nueva etiqueta `canvas`.
-** *Hit regions*.
-** *Visual focus indicators* (`drawFocusIfNeeded()`).
+ * *Hit regions*.
+ * *Visual focus indicators* (`drawFocusIfNeeded()`).
 * SVG.
 ???
 ¡Son pizarras!
@@ -412,11 +414,23 @@ Los *team contacts* están en la sede de Japón.
 
 .watermark[`\#w3cuc3m`]
 
+# Y más
+* Estudiar *offline*. <br /> Importante cuando hay pocos recursos, o mala conexión.
+* Visualizar en 3D (*WebGL*). <br /> Química, arquitectura, ingeniería.
+* Aprovechar el (espectacular) rendimiento de los navegadores. <br /> *asm.js*, *MathML*; ✝ <del>*Mathematica*</del>.
+* Comunicarse con profesor y estudiantes *sin pasar* por un nodo central. <br /> *Web Sockets*, *WebRTC*; <del>censura</del>.
+* Distribuir clases. <br /> `\<video/>`, `\<audio\>`.
+* Aprender idiomas de escritura compleja, o ayudar a aquellos con necesidades especiales. <br /> `\<ruby\>`.
+
+---
+
+.watermark[`\#w3cuc3m`]
+
 # Accesibilidad
-* [http://w3.org/TR/WCAG20](*Web Content Accessibility Guidelines* (*WCAG*) 2.0).
-* [http://w3.org/WAI/intro/aria](*Web Accessibility Initiative - Accessible Rich Internet Applications* (*WAI-ARIA*)), para *mapear* roles, estados y propiedades de componentes avanzados a métodos de bajo nivel del navegador.
+* [*Web Content Accessibility Guidelines* (*WCAG*) 2.0](http://w3.org/TR/WCAG20).
+* [*Web Accessibility Initiative - Accessible Rich Internet Applications* (*WAI-ARIA*)](http://w3.org/WAI/intro/aria), para *mapear* roles, estados y propiedades de componentes avanzados a métodos de bajo nivel del navegador.
 * Incorporándose ahora en SVG 2.0, junto con mejores mecanismos de navegación.
-* [http://w3.org/TR/ttaf1-dfxp](*Timed Text Markup Language* (*TTML*) 1) y [http://dev.w3.org/html5/webvtt](*Web Video Text Tracks* format (*WebVTT*)).
+* [*Timed Text Markup Language* (*TTML*) 1](http://w3.org/TR/ttaf1-dfxp) y [*Web Video Text Tracks* format (*WebVTT*)](http://dev.w3.org/html5/webvtt).
 
 ---
 

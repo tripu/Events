@@ -64,6 +64,8 @@ Soy `tripu` en redes sociales **y en el IRC**; preguntad por ahí.
 
 Tenéis mi tarjeta, y pegatinas, aquí al lado.
 
+He probado Coursera un par de veces.
+
 ---
 
 .watermark[`\#w3cuc3m`]
@@ -328,7 +330,9 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 # El ejemplo de edX
 * MIT + Harvard.
 * Sin ánimo de lucro, y usando *software* libre.
-![Logo](//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/edx.png)
+
+.center[![Logo](//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/edx.png)]
+
 * *&laquo;Over 68,000 captioned videos hosted on our platform.&raquo;*
 * *&laquo;Currently working on integrating [Annotator.js](http://annotatorjs.org/) into our platform.&raquo;*
 
@@ -336,7 +340,10 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 
 .watermark[`\#w3cuc3m`]
 
+# *Web annotation*
 *&laquo;**Annotation** is going to be a huge breakthrough for online education as we bring another paradigm from the physical world (notes, note taking, highlighting) and bring it to the digital classroom, adding the benefit of collaboration so that students can easily share notes and collaborate together on projects.&raquo;*
+
+.center[[hypothes.is](https://hypothes.is)]
 
 ---
 
@@ -358,10 +365,40 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 
 .watermark[`\#w3cuc3m`]
 
+# *Web and TV Interest Group*
+* Facilitar el consumo de material educativo.
+* En casa, en centros públicos&hellip; y por el camino.
+* Emisiones diferentes para distintos dispositivos.
+* Por ejemplo, para enviar *sonido descriptivo* a usuarios con necesidades especiales.
+.center[http://www.w3.org/2011/webtv/]
+??
+Los *team contacts* están en la sede de Japón.
+
+---
+
+.watermark[`\#w3cuc3m`]
+
+# *Digital Publishing Interest Group*
+* Maquetación avanzada.
+* Paginación.
+* Internacionalización (*i18n*).
+* *Web annotation*.
+.center[http://w3.org/dpub/IG/wiki]
+
+---
+
+.watermark[`\#w3cuc3m`]
+
+# Accesibilidad
+
+---
+
+.watermark[`\#w3cuc3m`]
+
 # Cerrando el círculo
 * Para los estudiantes de tecnología e ingeniería, la *Plataforma Web Abierta* puede ser un *fin*, además de un *medio*.
 * El trabajo de estandarización está abierto a la participación y los comentarios de cualquiera que desee contribuir.
-* Realimentación entre los estudiantes y aquellos que desarrollan la plataforma sobre la que estudian. 
+* Fácil realimentación entre los estudiantes y aquellos que desarrollan la plataforma sobre la que estudian.
 
 ---
 

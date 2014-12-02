@@ -32,7 +32,7 @@ class: center, middle
 ???
 Soy `tripu`; podéis preguntarme por ahí.
 
-Publicaré la presentación en GH.
+La presentación está publicada en mi GH.
 
 ---
 
@@ -41,6 +41,8 @@ class: center, middle
 ## Seminario &laquo;Tecnologías para la educación online&raquo;
 ![Logo](//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/w3c-logo.png)
 ### Antonio Olmo Titos
+???
+Plan: breve introducción al W3C, tecnologías para MOOCs, tiempo para comentarios.
 
 ---
 
@@ -186,7 +188,7 @@ class: center, middle
 
 ---
 
-class: center, middle
+background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/tr.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://www.w3.org/TR/`](http://www.w3.org/TR/)
@@ -300,7 +302,7 @@ class: center, middle
 .watermark[`\#w3cuc3m`]
 
 # En definitiva
-Para un estudiante (y también para un profesional), <br /> la web es una plataforma ideal:
+Tanto para profesores como para estudiantes, <br /> la web es una plataforma ideal:
 
 **Gratuita**
 
@@ -321,12 +323,45 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 
 ---
 
+.watermark[`\#w3cuc3m`]
+
+# El ejemplo de edX
+* MIT + Harvard.
+* Sin ánimo de lucro, y usando *software* libre.
+![Logo](//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/edx.png)
+* *&laquo;Over 68,000 captioned videos hosted on our platform.&raquo;*
+* *&laquo;Currently working on integrating [Annotator.js](http://annotatorjs.org/) into our platform.&raquo;*
+
+---
+
+.watermark[`\#w3cuc3m`]
+
+*&laquo;**Annotation** is going to be a huge breakthrough for online education as we bring another paradigm from the physical world (notes, note taking, highlighting) and bring it to the digital classroom, adding the benefit of collaboration so that students can easily share notes and collaborate together on projects.&raquo;*
+
+---
+
 background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02_Leganés-Spain_UC3M_W3C-MOOCs/img/web-annotation.png)
 .watermark[`\#w3cuc3m`]
 
 [`http://w3.org/annotation`](http://w3.org/annotation)
-???
-Ya conocéis un recurso, y lo estáis usando: IRC.
+
+---
+
+.watermark[`\#w3cuc3m`]
+
+# &hellip;pero no son los únicos
+* [Coursera](https://www.coursera.org/).
+* [Udacity](https://www.udacity.com/).
+* [Khan Academy](https://www.khanacademy.org/).
+
+---
+
+.watermark[`\#w3cuc3m`]
+
+# Cerrando el círculo
+* Para los estudiantes de tecnología e ingeniería, la *Plataforma Web Abierta* puede ser un *fin*, además de un *medio*.
+* El trabajo de estandarización está abierto a la participación y los comentarios de cualquiera que desee contribuir.
+* Realimentación entre los estudiantes y aquellos que desarrollan la plataforma sobre la que estudian. 
 
 ---
 
@@ -334,6 +369,8 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-12-02
 .watermark[`\#w3cuc3m`]
 
 [`http://w3.org/QA/Tools`](http://w3.org/QA/Tools)
+???
+Ya conocéis un recurso, y lo estáis usando: IRC.
 
 ---
 

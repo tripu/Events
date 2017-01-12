@@ -37,7 +37,7 @@ Publicaré la presentación en GH.
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/uk-flag.jpeg)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/uk-flag.jpeg")
 
 # Before we start&hellip;
 ## Quick question:
@@ -221,7 +221,7 @@ DOM, rich editing, DB, presentation, App Cache, XHTML, HTML modules.
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html5-logo.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html5-logo.png")
 .watermark[`\#w3c-urjc`]
 
 ---
@@ -236,7 +236,7 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html5-diagram.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html5-diagram.png")
 .watermark[`\#w3c-urjc`]
 
 ---
@@ -279,131 +279,131 @@ Para un profesional, o para un estudiante, <br /> la web es una plataforma ideal
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/css.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/css.png")
 .watermark[`\#w3c-urjc`]
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/web-annotation.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/web-annotation.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://w3.org/annotation`](http://w3.org/annotation)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/validators.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/validators.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://w3.org/QA/Tools`](http://w3.org/QA/Tools)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html-validator1.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html-validator1.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://validator.w3.org`](http://validator.w3.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html-validator2.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html-validator2.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://validator.w3.org/nu`](http://validator.w3.org/nu)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/lists.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/lists.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://w3.org/Mail`](http://w3.org/Mail)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/groups.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/groups.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://w3.org/Consortium/activities.html`](http://w3.org/Consortium/activities.html)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/projects.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/projects.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://w3.org/Status`](http://w3.org/Status)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/gh.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/gh.png")
 .watermark[`\#w3c-urjc`]
 
 [`https://github.com/w3c`](https://github.com/w3c)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/caniuse.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/caniuse.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://caniuse.com`](http://caniuse.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/caniuse-video.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/caniuse-video.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://caniuse.com`](http://caniuse.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/caniuse-hyphenation.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/caniuse-hyphenation.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://caniuse.com`](http://caniuse.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/diveintohtml5.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/diveintohtml5.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://diveintohtml5.info`](http://diveintohtml5.info)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html5rocks-articles.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html5rocks-articles.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://html5rocks.com`](http://html5rocks.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html5rocks-resources.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/html5rocks-resources.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://html5rocks.com`](http://html5rocks.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/mdn.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/mdn.png")
 .watermark[`\#w3c-urjc`]
 
 [`https://developer.mozilla.org`](https://developer.mozilla.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/webplatform.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/webplatform.png")
 .watermark[`\#w3c-urjc`]
 
 [`http://webplatform.org`](http://webplatform.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/whatwg.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/whatwg.png")
 .watermark[`\#w3c-urjc`]
 
 [`https://whatwg.org`](https://whatwg.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/whatwg-html.png)
+background-image: url("/Events/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools/img/whatwg-html.png")
 .watermark[`\#w3c-urjc`]
 
 [`https://whatwg.org`](https://whatwg.org)
@@ -497,4 +497,3 @@ class: center, middle
 class: center, middle
 
 # Gracias
-

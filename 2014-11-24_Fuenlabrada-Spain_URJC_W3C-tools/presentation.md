@@ -16,6 +16,10 @@
     visibility: hidden;
   }
 
+  .remark-slide-content {
+    background-size: contain;
+  }
+
   .remark-slide-content .watermark {
     position: absolute;
     bottom: 12px;

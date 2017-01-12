@@ -15,6 +15,10 @@
     visibility: hidden;
   }
 
+  .remark-slide-content {
+    background-size: contain;
+  }
+
   .remark-slide-content .watermark {
     position: absolute;
     bottom: 12px;
@@ -48,7 +52,7 @@ Tenéis mi tarjeta, y pegatinas, aquí al lado.
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/mute.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/mute.png")
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 ---
@@ -59,7 +63,7 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/irc.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/irc.png")
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 \#1. Entrar en el canal de IRC: [`http://irc.w3.org`](http://irc.w3.org)
@@ -68,21 +72,21 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/github.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/github.png")
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 \#2. Crear una cuenta en GitHub: [`https://github.com`](https://github.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/web-platform-tests.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/web-platform-tests.png")
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 \#3. Ir al proyecto *TTWF*: [`https://github.com/w3c/web-platform-tests`](https://github.com/w3c/web-platform-tests)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/fork.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/fork.png")
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 \#4. Hacer un *fork* propio: [`https://github.com/`*usuario*`/web-platform-tests`](https://github.com/usuario/web-platform-tests)
@@ -218,7 +222,7 @@ o bien, editar `config.default.json` y cambiar el puerto `8000` a otro libre.
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/test-runner.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/test-runner.png")
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 \#15. ¡Probar! [`http://web-platform.test:8000/tools/runner/index.html`](http://web-platform.test:8000/tools/runner/index.html)
@@ -335,21 +339,21 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/tr.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/tr.png")
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 [`http://w3.org/TR`](http://w3.org/TR)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/tr-filtered.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/tr-filtered.png")
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 [`http://w3.org/TR/tr-groups-stds`](http://w3.org/TR/tr-groups-stds)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/html5.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/html5.png")
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 [`http://w3.org/TR/html5`](http://w3.org/TR/html5)
@@ -483,14 +487,14 @@ Básicamente, siguiendo el modelo de GitHub
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/prs.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/prs.png")
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 [`https://github.com/w3c/web-platform-tests/pulls`](https://github.com/w3c/web-platform-tests/pulls)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/issues.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img-ttwf/issues.png")
 .watermark[IRC `#testing`&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;Twitter `\#w3cugr`]
 
 [`https://github.com/w3c/web-platform-tests/issues`](https://github.com/w3c/web-platform-tests/issues)
@@ -509,4 +513,3 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 class: center, middle
 
 # Gracias
-

@@ -16,6 +16,10 @@
     visibility: hidden;
   }
 
+  .remark-slide-content {
+    background-size: contain;
+  }
+
   .remark-slide-content .watermark {
     position: absolute;
     bottom: 12px;
@@ -37,7 +41,7 @@ Publicaré la presentación en GH.
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/uk-flag.jpeg)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/uk-flag.jpeg")
 
 # Before we start&hellip;
 ## Quick question:
@@ -228,7 +232,7 @@ DOM, rich editing, DB, presentation, App Cache, XHTML, HTML modules.
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html5-logo.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html5-logo.png")
 .watermark[`\#w3cugr`]
 
 ---
@@ -271,7 +275,7 @@ background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html5-diagram.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html5-diagram.png")
 .watermark[`\#w3cugr`]
 ???
 * *CSS3* (no)
@@ -332,12 +336,12 @@ Para un estudiante (y también para un profesional), <br /> la web es una plataf
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/css.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/css.png")
 .watermark[`\#w3cugr`]
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/web-annotation.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/web-annotation.png")
 .watermark[`\#w3cugr`]
 
 [`http://w3.org/annotation`](http://w3.org/annotation)
@@ -346,126 +350,126 @@ Ya conocéis un recurso, y lo estáis usando: IRC.
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/validators.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/validators.png")
 .watermark[`\#w3cugr`]
 
 [`http://w3.org/QA/Tools`](http://w3.org/QA/Tools)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html-validator1.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html-validator1.png")
 .watermark[`\#w3cugr`]
 
 [`http://validator.w3.org`](http://validator.w3.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html-validator2.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html-validator2.png")
 .watermark[`\#w3cugr`]
 
 [`http://validator.w3.org/nu`](http://validator.w3.org/nu)&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;[`https://validator.nu`](https://validator.nu)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/lists.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/lists.png")
 .watermark[`\#w3cugr`]
 
 [`http://w3.org/Mail`](http://w3.org/Mail)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/groups.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/groups.png")
 .watermark[`\#w3cugr`]
 
 [`http://w3.org/Consortium/activities.html`](http://w3.org/Consortium/activities.html)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/projects.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/projects.png")
 .watermark[`\#w3cugr`]
 
 [`http://w3.org/Status`](http://w3.org/Status)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/gh.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/gh.png")
 .watermark[`\#w3cugr`]
 
 [`https://github.com/w3c`](https://github.com/w3c)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/caniuse.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/caniuse.png")
 .watermark[`\#w3cugr`]
 
 [`http://caniuse.com`](http://caniuse.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/caniuse-video.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/caniuse-video.png")
 .watermark[`\#w3cugr`]
 
 [`http://caniuse.com`](http://caniuse.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/caniuse-hyphenation.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/caniuse-hyphenation.png")
 .watermark[`\#w3cugr`]
 
 [`http://caniuse.com`](http://caniuse.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/diveintohtml5.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/diveintohtml5.png")
 .watermark[`\#w3cugr`]
 
 [`http://diveintohtml5.info`](http://diveintohtml5.info)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html5rocks-articles.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html5rocks-articles.png")
 .watermark[`\#w3cugr`]
 
 [`http://html5rocks.com`](http://html5rocks.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html5rocks-resources.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/html5rocks-resources.png")
 .watermark[`\#w3cugr`]
 
 [`http://html5rocks.com`](http://html5rocks.com)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/mdn.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/mdn.png")
 .watermark[`\#w3cugr`]
 
 [`https://developer.mozilla.org`](https://developer.mozilla.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/webplatform.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/webplatform.png")
 .watermark[`\#w3cugr`]
 
 [`http://webplatform.org`](http://webplatform.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/whatwg.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/whatwg.png")
 .watermark[`\#w3cugr`]
 
 [`https://whatwg.org`](https://whatwg.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/whatwg-html.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/whatwg-html.png")
 .watermark[`\#w3cugr`]
 
 [`https://whatwg.org`](https://whatwg.org)
 
 ---
 
-background-image: url(//raw.githubusercontent.com/tripu/events/master/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/specifiction.png)
+background-image: url("/Events/2014-11-28_Granada-Spain_UGR_W3C-TTWF/img/specifiction.png")
 .watermark[`\#w3cugr`]
 
 [`http://specifiction.org`](http://specifiction.org)
@@ -559,4 +563,3 @@ class: center, middle
 class: center, middle
 
 # Gracias
-

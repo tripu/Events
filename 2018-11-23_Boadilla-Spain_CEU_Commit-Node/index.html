@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="en-GB" class="no-js">
+
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>A sensible architecture for complex Node.js projects</title>
+        <meta name="author" content="tripu <t@tripu.info> https://tripu.info/" />
+        <meta name="description" content="A sensible architecture for complex Node.js projects" />
+        <meta name="keywords" content="Node.js,nodejs,node,architecture,project,tripu,tripu.info,eltripu,トリプ,presentation,commit,talk,conference" />
+
+        <style type="text/css">
+
+            * {
+                font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Trebuchet MS', Helvetica, Verdana, Geneva, Calibri, sans-serif;
+            }
+
+            #source, .js #fallback {
+                visibility: hidden;
+                display: none;
+            }
+
+            .remark-slide-content:not(.smaller) {
+                font-size: 22px;
+            }
+
+            .remark-slide-content .footer,
+            .remark-slide-content .remark-slide-number {
+                font-size: 22px;
+            }
+
+            .remark-slide-content code {
+                font-family: monospace;
+                font-size: 90%;
+                padding-left: .3em;
+                padding-right: .3em;
+                border-radius: .3em;
+                /*background-color: #f0f0f0;*/
+            }
+
+            .remark-slide-container:first-child .remark-slide-number {
+                visibility: hidden;
+            }
+
+            .remark-slide-content h1 {
+                text-align: center;
+            }
+
+            .remark-slide-content .footer {
+                position: absolute;
+                left: 20px;
+                bottom: 12px;
+                opacity: .5;
+            }
+
+            .remark-slide-content .small {
+                font-size: smaller;
+            }
+
+            .remark-slide-content .progress-title,
+            .remark-slide-content .progress {
+                opacity: .333;
+            }
+
+            .remark-slide-content .progress-title {
+                font-size: 66.7%;
+            }
+
+            .remark-slide-content .nb {
+                color: #2da910;
+            }
+
+            .remark-slide-content .ok,
+            .remark-slide-content .no {
+                font-weight: bold;
+            }
+
+            .remark-slide-content .ok {
+                color: #00c000;
+            }
+
+            .remark-slide-content .no {
+                color: #c00000;
+            }
+
+            .remark-slide-content .footnote {
+                position: absolute;
+                bottom: 3em;
+                margin-left: -4em;
+                width: 100%;
+                text-align: center;
+            }
+
+            .remark-slide-content .mark {
+                padding-left: .15em;
+                padding-right: .15em;
+                border-radius: .15em;
+                background-color: #ffff80;
+            }
+
+            .remark-slide-content .twoCols {
+                column-count: 2;
+                column-gap: 4em;
+            }
+
+            .remark-slide-content .column {
+                break-inside: avoid-column;
+            }
+
+            .remark-slide-content table {
+                width: 100%;
+                padding: .25rem .5rem;
+                border: .01rem solid #808080;
+                background-color: #f8f8f8;
+            }
+
+            .remark-slide-content .column:nth-child(2) > *:first-child {
+                padding-top: 20px;
+            }
+
+            .remark-slide-content .screenshot img {
+                width: 100%;
+            }
+
+            .remark-slide-content .eighty-five img {
+                width: 85%;
+            }
+
+            .remark-slide-content abbr {
+                cursor: help;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <section id="fallback">
+            <h1>A sensible architecture for complex Node.js projects</h1>
+            <p>NB: you need a browser with <strong>JavaScript enabled</strong> to watch this presentation!</p>
+            <address>
+                <a href="https://tripu.info/">tripu</a>
+            </address>
+        </section>
+
+        <textarea id="source">
+            name: cover
+            # A <br /> sensible architecture <br /> for <br /> complex Node.js projects
+            .footnote[[Commit conference](https://2018.commit-conf.com/) <br />
+            Copyright &copy; 2018 [tripu](https://tripu.info/) <br /> <br />
+            .nb[(Press `&rarr;` or swipe left)]]
+            ---
+            name: agenda
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Agenda
+            .twoCols[
+            .column[
+            * [`$ whoami`](#me)
+            * [The challenge](#challenge)
+            * [Organisation of code](#organisation)
+            * [Automatic builds](#builds)
+            * [Updates](#updates)
+            * [Vulnerabilities](#vulns)
+            * [Validate markup &amp; CSS](#check)
+            * [Documentation](#doc)
+            ]
+            .column[
+            * [Linting](#lint)
+            * [Hinting](#hint)
+            * [Code coverage](#coverage)
+            * [Testing](#tests)
+            * [Continuous integration](#ci)
+            * [Logging](#logging)
+            * [Process management](#pm2)
+            * [More resources](#resources)
+            * [Questions, comments, debate](#qa)
+            ]
+            ]
+            ---
+            name: me
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # `$ whoami`
+            .twoCols[
+            .column[
+            * Software engineer (University of Granada)
+            * 14 years of international work experience
+            * Web developer at the [W3C](https://www.w3.org/)
+            ]
+            .column[
+            * Many years with JS
+            * 4 years with Node.js
+            * `tripu` everywhere in the Interwebs
+            * [`https://tripu.info`](https://tripu.info/)
+            ]
+            ]
+            ---
+            name: challenge
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # The challenge
+            * A large project
+            * Comprising several modules or applications, varied in nature  
+              (background processing, scheduled tasks, API, web UI&hellip;)
+            * With shared libraries  
+              (persistence layer, utilities)
+            * With some *aspects*  
+              (authentication &amp; authorisation, logging)
+            * With common configuration
+            * Good engineering practices:
+              * Generated documentation
+              * Static analysis
+              * Consistent coding style
+              * One-step builds
+              * Automated tests
+              * Valid markup &amp; CSS
+              * Response to vulnerabilities
+              * Continuous integration
+            ---
+            name: organisation
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Organisation of code
+            * *Manyrepos* vs. *monorepos*
+            * npm vs. Yarn
+            * [Workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/) in Yarn
+            * [Lerna](https://github.com/lerna/lerna) for npm
+            ---
+            name: builds
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Automatic builds
+            @TODO: Bash script to build everything
+            ---
+            name: updates
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Updates
+            * Manual updates:
+              * [`updtr`](https://www.npmjs.com/package/updtr)
+              * [`npm-check`](https://www.npmjs.com/package/npm-check)
+            * Automatic updates on GH: [Greenkeeper](https://greenkeeper.io/)
+            ---
+            name: vulns
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Vulnerabilities
+            * Node Security Project
+              * With `nsp`, we had the file `.nsprc`
+              * `npm audit` doesn't understand exceptions :(
+              * @TODO: script to diff known vulns
+            ---
+            name: check
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Validate markup &amp; CSS
+            @TODO https://github.com/validator/validator and scripts
+            ---
+            name: doc
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Documentation
+            @TODO https://www.npmjs.com/package/jsdoc-to-markdown , script and HBS templates
+            ---
+            name: lint
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Linting
+            @TODO eslint, eslint-plugin-node &amp; config
+            ---
+            name: hint
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Hinting
+            @TODO jshint &amp; config
+            ---
+            name: coverage
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Code coverage
+            @TODO: nyc, coveralls, config &amp; scripts
+            ---
+            name: tests
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Testing
+            @TODO mocha, assertion libraries
+            ---
+            name: ci
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Continuous integration
+            @TODO Travis, Circle, GH Actions
+            ---
+            name: logging
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Logging
+            @TODO: Winston
+            ---
+            name: pm2
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Process management
+            @TODO: pm2
+            ---
+            name: resources
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # More resources
+            * https://w3c.github.io/nodejs/doc/
+            * https://www.w3.org/wiki/Resources_about_JavaScript_and_Node.js
+            * https://github.com/w3c?language=js
+            * https://codesandbox.io/
+            * https://runkit.com/home
+            ---
+            name: qa
+            class: middle
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Questions, <br /> comments, <br /> debate
+
+        </textarea>
+
+        <script type="text/javascript" src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js"></script>
+        <script type="text/javascript" src="remark-latest.min.js"></script> -->
+
+        <script type="text/javascript">
+
+            {
+                'use strict';
+
+                var html = document.getElementsByTagName('html')[0];
+                html.classList.remove('no-js');
+                html.classList.add('js');
+
+                remark.create({ratio: '16:9'});
+            }
+
+        </script>
+
+    </body>
+
+</html>

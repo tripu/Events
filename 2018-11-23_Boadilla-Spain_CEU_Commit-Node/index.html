@@ -31,9 +31,12 @@
                 font-size: 22px;
             }
 
-            .remark-slide-content code {
+            pre, pre *, code, code * {
                 font-family: monospace;
                 font-size: 90%;
+            }
+
+            .remark-slide-content code {
                 padding-left: .3em;
                 padding-right: .3em;
                 border-radius: .3em;
@@ -132,6 +135,10 @@
                 cursor: help;
             }
 
+            a {
+              text-decoration: none;
+            }
+
         </style>
 
     </head>
@@ -225,6 +232,9 @@
             * npm vs. Yarn
             * [Workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/) in Yarn
             * [Lerna](https://github.com/lerna/lerna) for npm
+            * https://medium.com/@maoberlehner/monorepos-in-the-wild-33c6eb246cb9
+            * https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/
+            * https://github.com/lerna/lerna
             ---
             name: builds
             .footer[*A sensible architecture for complex Node.js projects*]
@@ -241,11 +251,47 @@
             ---
             name: vulns
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Vulnerabilities
-            * Node Security Project
-              * With `nsp`, we had the file `.nsprc`
-              * `npm audit` doesn't understand exceptions :(
-              * @TODO: script to diff known vulns
+            # Vulnerabilities: ~~`nsp`~~ ✗
+            Before: *Node Security Platform* &mdash; now deprecated
+
+            With `nsp`, there was a file for exceptions
+
+            `.nsprc`:
+
+            ```json
+            {
+              "exceptions": [
+                "https://nodesecurity.io/advisories/577",
+                "https://nodesecurity.io/advisories/581"
+              ]
+            }
+            ```
+
+            ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            # Vulnerabilities: `npm audit` ✓
+            Today: `npm audit`
+
+            `npm audit` doesn't have a mechanism for exceptions
+
+            `known-vulnerabilities.txt`:
+
+            ```yml
+            https://nodesecurity.io/advisories/577
+            https://nodesecurity.io/advisories/577
+            https://nodesecurity.io/advisories/581
+            ```
+
+            `package.json`:
+
+            ```json
+            "scripts": {
+              "audit": "npm audit | grep -oP 'https://nodesecurity.io/advisories/(\\d+)' | diff known-vulns.txt -",
+                ⋮
+              "build": "npm run audit &amp;&amp; npm run lint &amp;&amp; npm run hint &amp;&amp; npm run test &amp;&amp; npm run jsdoc"
+            }
+            ```
+
             ---
             name: check
             .footer[*A sensible architecture for complex Node.js projects*]

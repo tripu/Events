@@ -47,7 +47,7 @@
                 visibility: hidden;
             }
 
-            .remark-slide-content h1 {
+            .remark-slide-content h1, .remark-slide-content h2, .remark-slide-content h3 {
                 text-align: center;
             }
 
@@ -90,7 +90,7 @@
 
             .remark-slide-content .footnote {
                 position: absolute;
-                bottom: 3em;
+                bottom: 2em;
                 margin-left: -4em;
                 width: 100%;
                 text-align: center;
@@ -135,8 +135,17 @@
                 cursor: help;
             }
 
-            a {
-              text-decoration: none;
+            .portrait img {
+                width: 25%;
+            }
+
+            a, a:visited {
+                color: #8080ff;
+                text-decoration: none;
+            }
+
+            a:hover, a:active, a:focus {
+                text-decoration: underline;
             }
 
         </style>
@@ -155,18 +164,23 @@
 
         <textarea id="source">
             name: cover
-            # A <br /> sensible architecture <br /> for <br /> complex Node.js projects
+            # <br /> A sensible architecture <br /> <br /> for complex Node.js projects
             .footnote[[Commit conference](https://2018.commit-conf.com/) <br />
             Copyright &copy; 2018 [tripu](https://tripu.info/) <br /> <br />
             .nb[(Press `&rarr;` or swipe left)]]
             ---
+            name: about
+            class: middle
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Expected audience <br /> <br /> and caveats
+            ---
             name: agenda
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Agenda
+            ## Agenda
             .twoCols[
             .column[
             * [`$ whoami`](#me)
-            * [The challenge](#challenge)
+            * [The challenges](#challenges)
             * [Organisation of code](#organisation)
             * [Automatic builds](#builds)
             * [Updates](#updates)
@@ -183,13 +197,13 @@
             * [Logging](#logging)
             * [Process management](#pm2)
             * [More resources](#resources)
-            * [Questions, comments, debate](#qa)
+            * **[Questions, comments, debate](#qa)**
             ]
             ]
             ---
             name: me
             .footer[*A sensible architecture for complex Node.js projects*]
-            # `$ whoami`
+            ## `$ whoami`
             .twoCols[
             .column[
             * Software engineer (University of Granada)
@@ -197,37 +211,59 @@
             * Web developer at the [W3C](https://www.w3.org/)
             ]
             .column[
-            * Many years with JS
-            * 4 years with Node.js
-            * `tripu` everywhere in the Interwebs
-            * [`https://tripu.info`](https://tripu.info/)
+            * Many years with JS; ~4 years with Node.js
+            * &ldquo;tripu&rdquo; everywhere on the Interwebs
+            * `[https://tripu.info](https://tripu.info/)`
             ]
             ]
+            .center[.portrait[![a](tripu-640.jpeg)]]
             ---
-            name: challenge
+            name: challenges
             .footer[*A sensible architecture for complex Node.js projects*]
-            # The challenge
-            * A large project
-            * Comprising several modules or applications, varied in nature  
-              (background processing, scheduled tasks, API, web UI&hellip;)
+            ## The challenges
+            .twoCols[
+            .column[
+            * A large project (large codebase)
+            * Made up of several &ldquo;parts&rdquo;, varied in nature  
+              .nb[(background processing, scheduled tasks, API, mail handling, web UI&hellip;)]
+            * Those &ldquo;parts&rdquo; should be ready to be:
+              * published (to npm) independently
+              * deployed independently (*microservices*)
+              * managed in prod as separate processes
             * With shared libraries  
-              (persistence layer, utilities)
-            * With some *aspects*  
-              (authentication &amp; authorisation, logging)
-            * With common configuration
-            * Good engineering practices:
-              * Generated documentation
-              * Static analysis
-              * Consistent coding style
+              .nb[(persistence layer, utilities&hellip;)]
+            * With &ldquo;aspects&rdquo;  
+              .nb[(authentication &amp; authorisation, logging&hellip;)]
+            * With (some) shared configuration
+            ]
+            .column[
+            * Following good engineering practices:
               * One-step builds
+              * Coherent releases of all &ldquo;parts&rdquo;
+              * Generated documentation
+              * Static analysis of code
+              * Consistent coding style
               * Automated tests
               * Valid markup &amp; CSS
-              * Response to vulnerabilities
-              * Continuous integration
+              * Always latest npm packages
+              * No unused npm packages
+              * Automatic response to vulnerabilities
+              * Parseable logs
+              * Generation of static front-end assets
+              * Continuous integration/deployment  
+                ⋮
+            ]
+            ]
             ---
             name: organisation
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Organisation of code
+            ## Organisation of code
+            The temptations:
+            * Monolithic project (single repos, single `package.json`)
+            * Independent projects (several repos, several `package.json`)
+            ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Organisation of code
             * *Manyrepos* vs. *monorepos*
             * npm vs. Yarn
             * [Workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/) in Yarn
@@ -236,14 +272,153 @@
             * https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/
             * https://github.com/lerna/lerna
             ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Organisation of code
+            Contents of the single Git repo for *Project Foo*:
+            .twoCols[
+            .column[
+            ```yml
+            .gitignore
+
+            .eslintrc.json
+            .jsdoc.json
+            .jshintrc
+            .mocha.opts
+
+            config.json
+
+            build.sh
+
+            doc/
+                index.html
+                ⋮
+
+            logs/
+                ⋮
+                2018-11-21.log
+                2018-11-22.log
+                2018-11-23.log
+            ```
+            ]
+            .column[
+            ```yml
+            foo-api/
+                package.json
+                package-lock.json
+                known-vulns.txt
+                server.js
+                lib/
+                doc/
+                    index.html
+                    ⋮
+                test/
+                    test.js
+                node_modules/
+
+            foo-auth/
+            foo-db/
+            foo-logger/
+            foo-ui/
+            foo-utils/
+            ⋮
+            ```
+            ]
+            ]
+            ---
             name: builds
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Automatic builds
-            @TODO: Bash script to build everything
+            ## Automatic builds
+            ```bash
+            #!/bin/bash
+
+            SELF=$(basename $0)
+
+            if [[ $# -gt 1 ]]; then
+                echo "$SELF: wrong syntax; try “--help”"
+                exit 1
+            elif [[ $# -eq 1 ]]; then
+                if [[ $1 == "-h" || $1 == "--help" ]]; then
+                    echo 'Build all Foo modules at once'
+                    echo "Syntax: “$SELF [options]”"
+                    echo '    “--scratch”, “-s”'
+                    echo '    “--clean”, “-c”'
+                    echo '    “--help”, “-h”   '
+                    exit 0
+                elif [[ $1 == "-c" || $1 == "--clean" ]]; then
+                    ONLYCLEAN=true
+                elif [[ $1 == "-s" || $1 == "--scratch" ]]; then
+                    SCRATCH=true
+                else
+                    echo "$SELF: wrong syntax; try “--help”"
+                    exit 1
+                fi
+            fi
+            ```
+            ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Automatic builds
+            ```bash
+            $ ./build.sh run
+            build.sh: wrong syntax; try “--help”
+
+            $ ./build.sh -h
+            Build all Foo modules at once
+            Syntax: “build.sh [options]”
+                “--scratch”, “-s”
+                “--clean”, “-c”
+                “--help”, “-h”
+            ```
+            ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Automatic builds
+            ```bash
+            for i in `ls -d foo-*/`; do
+
+                echo "--------------------------------------- Checking “$i”"
+                cd $i
+                rm package-lock.json
+
+                if [[ $SCRATCH == true || $ONLYCLEAN == true ]]; then
+                    rm -rf node_modules/ doc/
+                fi
+
+                if [[ $ONLYCLEAN != true ]]; then
+                    npm install
+                    npm run build || break
+                fi
+
+                cd ../
+
+            done
+            ```
+            ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Automatic builds
+            ```bash
+            if [[ $SCRATCH == true ]]; then
+                rm -rf doc/
+            fi
+
+            if [[ $ONLYCLEAN != true ]]; then
+                echo "--------------------------------------- Generating aggregated documentation"
+                npx jsdoc --configure .jsdoc.json                                       \
+                    foo-api/server.js    foo-api/test/                                  \
+                    foo-auth/server.js   foo-auth/test/                                 \
+                    foo-db/server.js     foo-db/test/                                   \
+                    foo-logger/server.js foo-logger/test/                               \
+                    foo-ui/server.js     foo-ui/test/     foo-ui/lib/ foo-ui/static/js/ \
+                    foo-utils/server.js  foo-utils/test/
+                    ⋮
+            fi
+            ```
+            ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Automatic builds
+            .center[### `<demo>`]
             ---
             name: updates
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Updates
+            ## Updates
             * Manual updates:
               * [`updtr`](https://www.npmjs.com/package/updtr)
               * [`npm-check`](https://www.npmjs.com/package/npm-check)
@@ -251,7 +426,7 @@
             ---
             name: vulns
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Vulnerabilities: ~~`nsp`~~ ✗
+            ## Vulnerabilities: ~~`nsp`~~ ✗
             Before: *Node Security Platform* &mdash; now deprecated
 
             With `nsp`, there was a file for exceptions
@@ -260,19 +435,21 @@
 
             ```json
             {
-              "exceptions": [
-                "https://nodesecurity.io/advisories/577",
-                "https://nodesecurity.io/advisories/581"
-              ]
+                "exceptions": [
+                    "https://nodesecurity.io/advisories/577",
+                    "https://nodesecurity.io/advisories/581"
+                ]
             }
             ```
 
+            (Caveat: no fine-grained control of exceptions)
+
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Vulnerabilities: `npm audit` ✓
+            ## Vulnerabilities: `npm audit` ✓
             Today: `npm audit`
 
-            `npm audit` doesn't have a mechanism for exceptions
+            `npm audit` doesn't have a mechanism for exceptions&nbsp;&mdash;&nbsp;but here's a solution:
 
             `known-vulnerabilities.txt`:
 
@@ -286,61 +463,61 @@
 
             ```json
             "scripts": {
-              "audit": "npm audit | grep -oP 'https://nodesecurity.io/advisories/(\\d+)' | diff known-vulns.txt -",
+                "audit": "npm audit | grep -oP 'https://nodesecurity.io/advisories/(\\d+)' | diff known-vulns.txt -",
                 ⋮
-              "build": "npm run audit &amp;&amp; npm run lint &amp;&amp; npm run hint &amp;&amp; npm run test &amp;&amp; npm run jsdoc"
+                "build": "npm run audit &amp;&amp; npm run lint &amp;&amp; npm run hint &amp;&amp; npm run test &amp;&amp; npm run jsdoc"
             }
             ```
 
             ---
             name: check
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Validate markup &amp; CSS
+            ## Validate markup &amp; CSS
             @TODO https://github.com/validator/validator and scripts
             ---
             name: doc
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Documentation
+            ## Documentation
             @TODO https://www.npmjs.com/package/jsdoc-to-markdown , script and HBS templates
             ---
             name: lint
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Linting
+            ## Linting
             @TODO eslint, eslint-plugin-node &amp; config
             ---
             name: hint
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Hinting
+            ## Hinting
             @TODO jshint &amp; config
             ---
             name: coverage
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Code coverage
+            ## Code coverage
             @TODO: nyc, coveralls, config &amp; scripts
             ---
             name: tests
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Testing
+            ## Testing
             @TODO mocha, assertion libraries
             ---
             name: ci
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Continuous integration
+            ## Continuous integration
             @TODO Travis, Circle, GH Actions
             ---
             name: logging
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Logging
+            ## Logging
             @TODO: Winston
             ---
             name: pm2
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Process management
+            ## Process management
             @TODO: pm2
             ---
             name: resources
             .footer[*A sensible architecture for complex Node.js projects*]
-            # More resources
+            ## More resources
             * https://w3c.github.io/nodejs/doc/
             * https://www.w3.org/wiki/Resources_about_JavaScript_and_Node.js
             * https://github.com/w3c?language=js
@@ -350,13 +527,13 @@
             name: qa
             class: middle
             .footer[*A sensible architecture for complex Node.js projects*]
-            # Questions, <br /> comments, <br /> debate
+            ## Questions, <br /> <br /> comments, <br /> <br /> debate
 
         </textarea>
 
-        <script type="text/javascript" src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js"></script>
-        <script type="text/javascript" src="remark-latest.min.js"></script> -->
+        <!-- <script type="text/javascript" src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js"></script> -->
+        <script type="text/javascript" src="remark-latest.min.js"></script>
 
         <script type="text/javascript">
 

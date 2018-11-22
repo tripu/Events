@@ -22,18 +22,22 @@
                 display: none;
             }
 
-            .remark-slide-content:not(.smaller) {
-                font-size: 22px;
+            .remark-slide-content {
+                padding: 1rem 2rem;
             }
 
-            .remark-slide-content .footer,
+            .remark-slide-content {
+                font-size: 1.5rem;
+            }
+
+            /*.remark-slide-content .footer,
             .remark-slide-content .remark-slide-number {
                 font-size: 22px;
-            }
+            }*/
 
             pre, pre *, code, code * {
                 font-family: monospace;
-                font-size: 90%;
+                /*font-size: 90%;*/
             }
 
             .remark-slide-content code {
@@ -49,6 +53,11 @@
 
             .remark-slide-content h1, .remark-slide-content h2, .remark-slide-content h3 {
                 text-align: center;
+                text-shadow: 0 .2rem .2rem #c0c0c0;
+            }
+
+            .remark-slide-content h2 {
+                margin-top: 0;
             }
 
             .remark-slide-content .footer {
@@ -58,18 +67,14 @@
                 opacity: .5;
             }
 
-            .remark-slide-content .small {
-                font-size: smaller;
-            }
-
-            .remark-slide-content .progress-title,
+            /*.remark-slide-content .progress-title,
             .remark-slide-content .progress {
                 opacity: .333;
             }
 
             .remark-slide-content .progress-title {
                 font-size: 66.7%;
-            }
+            }*/
 
             .remark-slide-content .nb {
                 color: #2da910;
@@ -91,7 +96,7 @@
             .remark-slide-content .footnote {
                 position: absolute;
                 bottom: 2em;
-                margin-left: -4em;
+                margin-left: -2em;
                 width: 100%;
                 text-align: center;
             }
@@ -105,7 +110,7 @@
 
             .remark-slide-content .twoCols {
                 column-count: 2;
-                column-gap: 4em;
+                column-gap: 2em;
             }
 
             .remark-slide-content .column {
@@ -123,29 +128,28 @@
                 padding-top: 20px;
             }
 
-            .remark-slide-content .screenshot img {
-                width: 100%;
-            }
-
-            .remark-slide-content .eighty-five img {
-                width: 85%;
-            }
-
             .remark-slide-content abbr {
                 cursor: help;
             }
 
             .portrait img {
                 width: 25%;
+                box-shadow: 0 .5rem 1rem #000000;
             }
 
             a, a:visited {
-                color: #8080ff;
+                color: #4040c0;
                 text-decoration: none;
             }
 
             a:hover, a:active, a:focus {
                 text-decoration: underline;
+            }
+
+            .logo img {
+                padding: 0 1rem;
+                height: 5.5rem;
+                vertical-align: top;
             }
 
         </style>
@@ -164,7 +168,7 @@
 
         <textarea id="source">
             name: cover
-            # <br /> A sensible architecture <br /> <br /> for complex Node.js projects
+            # <br /> A sensible architecture <br /> <br /> for complex .logo[![Node.js](nodejs.png)] projects
             .footnote[[Commit conference](https://2018.commit-conf.com/) <br />
             Copyright &copy; 2018 [tripu](https://tripu.info/) <br /> <br />
             .nb[(Press `&rarr;` or swipe left)]]
@@ -180,8 +184,8 @@
             .twoCols[
             .column[
             * [`$ whoami`](#me)
-            * [The challenges](#challenges)
-            * [Organisation of code](#organisation)
+            * **[The challenges](#challenges)**
+            * **[Organisation of code](#organisation)**
             * [Automatic builds](#builds)
             * [Updates](#updates)
             * [Vulnerabilities](#vulns)
@@ -206,17 +210,17 @@
             ## `$ whoami`
             .twoCols[
             .column[
-            * Software engineer (University of Granada)
-            * 14 years of international work experience
+            * Software engineer, Granada University
+            * 14 years of work experience
             * Web developer at the [W3C](https://www.w3.org/)
             ]
             .column[
-            * Many years with JS; ~4 years with Node.js
+            * Many years with JS; ~4 with Node.js
             * &ldquo;tripu&rdquo; everywhere on the Interwebs
             * `[https://tripu.info](https://tripu.info/)`
             ]
             ]
-            .center[.portrait[![a](tripu-640.jpeg)]]
+            .center[.portrait[![Portrait](tripu-640.jpeg)]]
             ---
             name: challenges
             .footer[*A sensible architecture for complex Node.js projects*]
@@ -224,22 +228,41 @@
             .twoCols[
             .column[
             * A large project (large codebase)
-            * Made up of several &ldquo;parts&rdquo;, varied in nature  
+            * Several &ldquo;pieces&rdquo;, varied in nature  
               .nb[(background processing, scheduled tasks, API, mail handling, web UI&hellip;)]
-            * Those &ldquo;parts&rdquo; should be ready to be:
+            * Those &ldquo;pieces&rdquo; should be ready to be:
               * published (to npm) independently
-              * deployed independently (*microservices*)
-              * managed in prod as separate processes
+              * deployed alone (*microservices*)
+              * managed as separate processes
             * With shared libraries  
               .nb[(persistence layer, utilities&hellip;)]
             * With &ldquo;aspects&rdquo;  
-              .nb[(authentication &amp; authorisation, logging&hellip;)]
+              .nb[(authorisation, logging&hellip;)]
+            * With (some) shared configuration
+            ]
+            ]
+            ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## The challenges
+            .twoCols[
+            .column[
+            * A large project (large codebase)
+            * Several &ldquo;pieces&rdquo;, varied in nature  
+              .nb[(background processing, scheduled tasks, API, mail handling, web UI&hellip;)]
+            * Those &ldquo;pieces&rdquo; should be ready to be:
+              * published (to npm) independently
+              * deployed alone (*microservices*)
+              * managed as separate processes
+            * With shared libraries  
+              .nb[(persistence layer, utilities&hellip;)]
+            * With &ldquo;aspects&rdquo;  
+              .nb[(authorisation, logging&hellip;)]
             * With (some) shared configuration
             ]
             .column[
             * Following good engineering practices:
               * One-step builds
-              * Coherent releases of all &ldquo;parts&rdquo;
+              * Coherent releases of all &ldquo;pieces&rdquo;
               * Generated documentation
               * Static analysis of code
               * Consistent coding style
@@ -247,9 +270,9 @@
               * Valid markup &amp; CSS
               * Always latest npm packages
               * No unused npm packages
-              * Automatic response to vulnerabilities
+              * Handling of vulnerabilities
               * Parseable logs
-              * Generation of static front-end assets
+              * Static front-end asset generation
               * Continuous integration/deployment  
                 ⋮
             ]
@@ -259,18 +282,22 @@
             .footer[*A sensible architecture for complex Node.js projects*]
             ## Organisation of code
             The temptations:
-            * Monolithic project (single repos, single `package.json`)
+            * Monolithic project (single repo, single `package.json`)
             * Independent projects (several repos, several `package.json`)
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
             ## Organisation of code
-            * *Manyrepos* vs. *monorepos*
-            * npm vs. Yarn
-            * [Workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/) in Yarn
-            * [Lerna](https://github.com/lerna/lerna) for npm
-            * https://medium.com/@maoberlehner/monorepos-in-the-wild-33c6eb246cb9
-            * https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/
-            * https://github.com/lerna/lerna
+            * [*Manyrepos* vs. *monorepos*](https://medium.com/@maoberlehner/monorepos-in-the-wild-33c6eb246cb9)
+            * *Monorepo*:  
+              *&ldquo;single repository holding the code of multiple projects  
+              which may or may not be related in some way&rdquo;*
+            * Examples:
+              * Google (~86 TB, *Piper*)
+              * Facebook (*Mercurial*)
+              * Twitter (several GB, *Git*)
+            * Handy tools:
+              * npm: [Lerna](https://github.com/lerna/lerna)
+              * Yarn: [Workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/)
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
             ## Organisation of code
@@ -325,12 +352,48 @@
             ]
             ]
             ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Organisation of code
+            `foo-ui/package.json`:
+            ```json
+            "name": "foo-ui",
+            ⋮
+            "dependencies": {
+                "foo-auth":   "file:../foo-auth/",
+                "foo-db":     "file:../foo-db/",
+                "foo-logger": "file:../foo-logger/",
+                "foo-utils":  "file:../foo-utils/",
+                ⋮
+            }
+            ```
+            `foo-streaming/package.json`:
+            ```json
+            "name": "foo-streaming",
+            ⋮
+            "dependencies": {
+                "foo-db":     "file:../foo-db/",
+                ⋮
+            }
+            ```
+            ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Organisation of code
+            `foo-ui/server.js`:
+            ```js
+            const logger = require('foo-logger');
+            // Use it
+            ```
+            `foo-streaming/server.js`:
+            ```js
+            const db = require('foo-db');
+            // Use it
+            ```
+            ---
             name: builds
             .footer[*A sensible architecture for complex Node.js projects*]
             ## Automatic builds
             ```bash
             #!/bin/bash
-
             SELF=$(basename $0)
 
             if [[ $# -gt 1 ]]; then
@@ -420,8 +483,23 @@
             .footer[*A sensible architecture for complex Node.js projects*]
             ## Updates
             * Manual updates:
-              * [`updtr`](https://www.npmjs.com/package/updtr)
-              * [`npm-check`](https://www.npmjs.com/package/npm-check)
+              * [`npm-check`](https://www.npmjs.com/package/npm-check)  
+                ```yml
+                $ npx npm-check -i minami -i eslint-plugin-node
+                ❤️  Your modules look amazing. Keep up the great work. ❤️
+                ```
+              * [`updtr`](https://www.npmjs.com/package/updtr)  
+                ```yml
+                $ npx updtr -s exact -t 'npm run build'
+                Running updtr with custom configuration:
+                ● test command: npm run build
+                ● save: exact
+                Found 2 updates.
+                ● popper.js 1.14.5 success
+                ● eslint-plugin-node 8.0.0 success
+                2 successful updates.
+                Finished after 99.0s.
+                ```
             * Automatic updates on GH: [Greenkeeper](https://greenkeeper.io/)
             ---
             name: vulns
@@ -442,14 +520,17 @@
             }
             ```
 
-            (Caveat: no fine-grained control of exceptions)
+            Problems:
+
+            * No fine-grained control of exceptions
+            * This masks vulnerabilities already solved
 
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
             ## Vulnerabilities: `npm audit` ✓
             Today: `npm audit`
 
-            `npm audit` doesn't have a mechanism for exceptions&nbsp;&mdash;&nbsp;but here's a solution:
+            `npm audit` doesn't have a mechanism for exceptions&nbsp;&mdash;&nbsp;but here's a solution
 
             `known-vulnerabilities.txt`:
 
@@ -463,9 +544,11 @@
 
             ```json
             "scripts": {
-                "audit": "npm audit | grep -oP 'https://nodesecurity.io/advisories/(\\d+)' | diff known-vulns.txt -",
+                "audit": "npm audit |
+                          grep -oP https://nodesecurity.io/advisories/\\d+ |
+                          diff known-vulns.txt -",
                 ⋮
-                "build": "npm run audit &amp;&amp; npm run lint &amp;&amp; npm run hint &amp;&amp; npm run test &amp;&amp; npm run jsdoc"
+                "build": "npm run audit &amp;&amp; npm run lint &amp;&amp; ⋯ &amp;&amp; npm run test &amp;&amp; npm run jsdoc"
             }
             ```
 
@@ -473,7 +556,48 @@
             name: check
             .footer[*A sensible architecture for complex Node.js projects*]
             ## Validate markup &amp; CSS
-            @TODO https://github.com/validator/validator and scripts
+            [`https://github.com/validator/validator`](https://github.com/validator/validator)
+
+            `package.json`:
+            ```json
+            "scripts": {
+                "validate": "npm run launch-server &amp;&amp; \
+                    java -jar ../../validator/build/dist/vnu.jar \
+                    http://localhost:3000/register \
+                    http://localhost:3000/login \
+                    http://localhost:3000/sitemap \
+                    http://localhost:3000/films/the-matrix \
+                    ⋮
+                    static/about.html
+                    static/terms-and-conditions.html
+                    ⋮
+                    "
+                ⋮
+            }
+            ```
+            ---
+            [A few more slides to add here]
+            ---
+            name: resources
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## More resources
+            * W3C:
+              * [Node.js best practices and recommended tools](https://w3c.github.io/nodejs/doc/)
+              * [Resources about JavaScript and Node.js](https://www.w3.org/wiki/Resources_about_JavaScript_and_Node.js)
+              * [Public JS repos on GH](https://github.com/w3c?language=js)
+              * [W3C Developers](https://www.w3.org/developers/) (validators, checkers, MOOCs, events&hellip;)
+            * For demos, PoCs, tests, quick experiments:
+              * [CodeSandbox](https://codesandbox.io/)
+              * [RunKit](https://runkit.com/home)
+            ---
+            name: qa
+            class: middle
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Questions, <br /> <br /> comments, <br /> <br /> debate
+
+        </textarea>
+
+        <textarea style="display: none; visibility: hidden;">
             ---
             name: doc
             .footer[*A sensible architecture for complex Node.js projects*]
@@ -514,21 +638,6 @@
             .footer[*A sensible architecture for complex Node.js projects*]
             ## Process management
             @TODO: pm2
-            ---
-            name: resources
-            .footer[*A sensible architecture for complex Node.js projects*]
-            ## More resources
-            * https://w3c.github.io/nodejs/doc/
-            * https://www.w3.org/wiki/Resources_about_JavaScript_and_Node.js
-            * https://github.com/w3c?language=js
-            * https://codesandbox.io/
-            * https://runkit.com/home
-            ---
-            name: qa
-            class: middle
-            .footer[*A sensible architecture for complex Node.js projects*]
-            ## Questions, <br /> <br /> comments, <br /> <br /> debate
-
         </textarea>
 
         <!-- <script type="text/javascript" src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->
@@ -544,7 +653,8 @@
                 html.classList.remove('no-js');
                 html.classList.add('js');
 
-                remark.create({ratio: '16:9'});
+                // remark.create({ratio: '16:9'});
+                remark.create({ratio: '8:5'});
             }
 
         </script>

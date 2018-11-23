@@ -152,6 +152,11 @@
                 vertical-align: top;
             }
 
+            .small img {
+                width: 24%;
+                box-shadow: 0 .5rem 1rem #000000;
+            }
+
         </style>
 
     </head>
@@ -186,20 +191,17 @@
             * [`$ whoami`](#me)
             * **[The challenges](#challenges)**
             * **[Organisation of code](#organisation)**
-            * [Automatic builds](#builds)
+            * **[Automatic builds](#builds)**
             * [Updates](#updates)
             * [Vulnerabilities](#vulns)
-            * [Validate markup &amp; CSS](#check)
-            * [Documentation](#doc)
+            * [Linting &amp; hinting](#lint)
             ]
             .column[
-            * [Linting](#lint)
-            * [Hinting](#hint)
             * [Code coverage](#coverage)
-            * [Testing](#tests)
             * [Continuous integration](#ci)
-            * [Logging](#logging)
-            * [Process management](#pm2)
+            * [Validate markup &amp; CSS](#check)
+            * [Documentation](#doc)
+            * [Other tasks](#other)
             * [More resources](#resources)
             * **[Questions, comments, debate](#qa)**
             ]
@@ -224,7 +226,7 @@
             ---
             name: challenges
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## The challenges
+            ## The challenges ◼◻
             .twoCols[
             .column[
             * A large project (large codebase)
@@ -243,7 +245,7 @@
             ]
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## The challenges
+            ## The challenges ◼◼
             .twoCols[
             .column[
             * A large project (large codebase)
@@ -280,13 +282,13 @@
             ---
             name: organisation
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## Organisation of code
+            ## Organisation of code ◼◻◻◻◻
             The temptations:
             * Monolithic project (single repo, single `package.json`)
             * Independent projects (several repos, several `package.json`)
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## Organisation of code
+            ## Organisation of code ◼◼◻◻◻
             * [*Manyrepos* vs. *monorepos*](https://medium.com/@maoberlehner/monorepos-in-the-wild-33c6eb246cb9)
             * *Monorepo*:  
               *&ldquo;single repository holding the code of multiple projects  
@@ -300,7 +302,7 @@
               * Yarn: [Workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/)
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## Organisation of code
+            ## Organisation of code ◼◼◼◻◻
             Contents of the single Git repo for *Project Foo*:
             .twoCols[
             .column[
@@ -353,7 +355,7 @@
             ]
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## Organisation of code
+            ## Organisation of code ◼◼◼◼◻
             `foo-ui/package.json`:
             ```json
             "name": "foo-ui",
@@ -377,21 +379,24 @@
             ```
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## Organisation of code
+            ## Organisation of code ◼◼◼◼◼
             `foo-ui/server.js`:
             ```js
             const logger = require('foo-logger');
+
             // Use it
             ```
             `foo-streaming/server.js`:
             ```js
-            const db = require('foo-db');
-            // Use it
+            const db = require('foo-db'),
+                  auth = require('foo-auth');
+
+            // Use them
             ```
             ---
             name: builds
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## Automatic builds
+            ## Automatic builds ◼◻◻◻
             ```bash
             #!/bin/bash
             SELF=$(basename $0)
@@ -419,7 +424,7 @@
             ```
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## Automatic builds
+            ## Automatic builds ◼◼◻◻
             ```bash
             $ ./build.sh run
             build.sh: wrong syntax; try “--help”
@@ -433,7 +438,7 @@
             ```
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## Automatic builds
+            ## Automatic builds ◼◼◼◻
             ```bash
             for i in `ls -d foo-*/`; do
 
@@ -456,7 +461,7 @@
             ```
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## Automatic builds
+            ## Automatic builds ◼◼◼◼
             ```bash
             if [[ $SCRATCH == true ]]; then
                 rm -rf doc/
@@ -475,14 +480,11 @@
             fi
             ```
             ---
-            .footer[*A sensible architecture for complex Node.js projects*]
-            ## Automatic builds
-            .center[### `<demo>`]
-            ---
             name: updates
             .footer[*A sensible architecture for complex Node.js projects*]
             ## Updates
-            * Manual updates:
+            * Automatic on GH: [Greenkeeper](https://greenkeeper.io/)
+            * Semi-automatic using tools:
               * [`npm-check`](https://www.npmjs.com/package/npm-check)  
                 ```yml
                 $ npx npm-check -i minami -i eslint-plugin-node
@@ -500,12 +502,12 @@
                 2 successful updates.
                 Finished after 99.0s.
                 ```
-            * Automatic updates on GH: [Greenkeeper](https://greenkeeper.io/)
+            * Manual: `$ sed -i 's/"mocha":\s\+"5\.0\.9"/"mocha":\ "5.2.0"/g' */package.json`
             ---
             name: vulns
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## Vulnerabilities: ~~`nsp`~~ ✗
-            Before: *Node Security Platform* &mdash; now deprecated
+            ## Vulnerabilities: ◼◻
+            Before: *Node Security Platform* &mdash; now deprecated ✗
 
             With `nsp`, there was a file for exceptions
 
@@ -527,8 +529,8 @@
 
             ---
             .footer[*A sensible architecture for complex Node.js projects*]
-            ## Vulnerabilities: `npm audit` ✓
-            Today: `npm audit`
+            ## Vulnerabilities: ◼◼
+            Today: `npm audit` ✓
 
             `npm audit` doesn't have a mechanism for exceptions&nbsp;&mdash;&nbsp;but here's a solution
 
@@ -553,6 +555,102 @@
             ```
 
             ---
+            name: lint
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Linting &amp; hinting ◼◻
+            `package.json`:
+
+            ```json
+            "devDependencies": {
+                "eslint": "5.9.0",
+                "eslint-plugin-node": "8.0.0",
+                "jshint": "2.9.6"              
+            },
+            "scripts": {
+                "lint": "eslint server.js utils.js tests.js",
+                "hint": "jshint server.js utils.js tests.js",
+                "build": "npm run audit &amp;&amp; npm run lint &amp;&amp; npm run hint &amp;&amp; ⋯ ",
+            }
+            ```
+            ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Linting &amp; hinting ◼◼
+            `.eslintrc.json`:
+
+            ```json
+            {
+              "env": {
+                  "node": true, "browser": true, "mocha": true
+              },
+              "plugins": ["node"],
+              "extends": ["eslint:recommended", "plugin:node/recommended"],
+              "rules": { "node/no-unpublished-require": "off" },
+              "overrides": [ ⋯ ]
+            }
+            ```
+
+            `.jshintrc`:
+
+            ```json
+            {
+                "esversion": 6,
+                "strict": "global",
+                "undef": true,
+                "unused": true
+            }            
+            ```
+            ---
+            name: coverage
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Code coverage ◼◻◻
+            With [`nyc`](https://www.npmjs.com/package/nyc) and [Coveralls](https://coveralls.io/)
+
+            `package.json`:
+
+            ```json
+            "devDependencies": {
+                "coveralls": "3.0.2",
+                "mocha": "5.2.0",
+                "nyc": "13.1.0"
+            },
+            "scripts": {
+                "test": "nyc -r html -r text mocha \"tests.js\" --timeout 2000 -R spec --colors",
+                "build": "npm run audit &amp;&amp; ⋯ &amp;&amp; npm test &amp;&amp; npm run browserify &amp;&amp; npm run jsdoc",
+                "coveralls": "nyc report --reporter=text-lcov | coveralls"
+            },
+            "nyc": {
+                "include": [
+                    "server.js",
+                    "utils.js"
+                ]
+            }
+            ```
+            ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Code coverage ◼◼◻
+            ```json
+            7 passing (5s)
+            -----------|----------|----------|----------|----------|-------------------|
+            File       |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+            -----------|----------|----------|----------|----------|-------------------|
+            All files  |    69.77 |    59.62 |    66.67 |     70.4 |                   |
+             server.js |    83.95 |    66.67 |      100 |    84.62 |... 45,147,152,154 |
+             utils.js  |    45.83 |    52.83 |       20 |    46.81 |... 53,55,57,59,61 |
+            -----------|----------|----------|----------|----------|-------------------|
+            ```
+            ---
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Code coverage ◼◼◼
+            .center[.small[![Coveralls](coveralls.png)]]
+            ---
+            name: ci
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Continuous integration
+            * [Tracis CI](https://travis-ci.com/)
+            * [CircleCI](https://circleci.com/)
+            * GitLab CI/CD (pipelines, jobs, schedules)
+            * [GitHub Actions](https://github.com/features/actions) (?)
+            ---
             name: check
             .footer[*A sensible architecture for complex Node.js projects*]
             ## Validate markup &amp; CSS
@@ -576,7 +674,56 @@
             }
             ```
             ---
-            [A few more slides to add here]
+            name: doc
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Documentation
+            With [`jsdoc-to-markdown`](https://www.npmjs.com/package/jsdoc-to-markdown), Handlebars templates, and some post-processing
+
+            `package.json`:
+
+            ```json
+            "devDependencies": {
+                "jsdoc-to-markdown": "4.0.1",
+            },
+            "scripts": {
+                "doc": "jsdoc2md *.js lib/*.js | sed 's/^### $//' > .github/README.md",
+            },
+            "jsdoc2md": {
+                "template": "template.hbs",
+                "heading-depth": "3",
+            }            
+            ```
+            
+            `template.hbs`:
+
+            ```json
+            ⋮
+            ## Documentation
+            {{>main}}
+            ```            
+            ---
+            name: other
+            .footer[*A sensible architecture for complex Node.js projects*]
+            ## Other tasks
+
+            **Testing**: [`mocha`](https://www.npmjs.com/package/mocha) + assertion libraries
+
+            **Logging** (neglected &ldquo;aspect&rdquo;): [`winston`](https://www.npmjs.com/package/winston)
+
+            **Generation of client-side assets**:
+
+            ```json
+            "devDependencies": {
+                "sass": "1.15.1"
+            },
+            "scripts": {
+                "compile": "npx sass --no-source-map -s expanded foo-bs.scss static/foo-bs.css &amp;&amp;
+                            npx sass --no-source-map -s compressed foo-bs.scss static/foo-bs.min.css",
+                "build": "npm run audit &amp;&amp; ⋯ &amp;&amp; npm run compile &amp;&amp; npm run test &amp;&amp; ⋯ "
+            }            
+            ```
+
+            **Process management** in production: [PM2](https://pm2.io/doc/en/runtime/overview/)
             ---
             name: resources
             .footer[*A sensible architecture for complex Node.js projects*]
@@ -595,49 +742,6 @@
             .footer[*A sensible architecture for complex Node.js projects*]
             ## Questions, <br /> <br /> comments, <br /> <br /> debate
 
-        </textarea>
-
-        <textarea style="display: none; visibility: hidden;">
-            ---
-            name: doc
-            .footer[*A sensible architecture for complex Node.js projects*]
-            ## Documentation
-            @TODO https://www.npmjs.com/package/jsdoc-to-markdown , script and HBS templates
-            ---
-            name: lint
-            .footer[*A sensible architecture for complex Node.js projects*]
-            ## Linting
-            @TODO eslint, eslint-plugin-node &amp; config
-            ---
-            name: hint
-            .footer[*A sensible architecture for complex Node.js projects*]
-            ## Hinting
-            @TODO jshint &amp; config
-            ---
-            name: coverage
-            .footer[*A sensible architecture for complex Node.js projects*]
-            ## Code coverage
-            @TODO: nyc, coveralls, config &amp; scripts
-            ---
-            name: tests
-            .footer[*A sensible architecture for complex Node.js projects*]
-            ## Testing
-            @TODO mocha, assertion libraries
-            ---
-            name: ci
-            .footer[*A sensible architecture for complex Node.js projects*]
-            ## Continuous integration
-            @TODO Travis, Circle, GH Actions
-            ---
-            name: logging
-            .footer[*A sensible architecture for complex Node.js projects*]
-            ## Logging
-            @TODO: Winston
-            ---
-            name: pm2
-            .footer[*A sensible architecture for complex Node.js projects*]
-            ## Process management
-            @TODO: pm2
         </textarea>
 
         <!-- <script type="text/javascript" src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->

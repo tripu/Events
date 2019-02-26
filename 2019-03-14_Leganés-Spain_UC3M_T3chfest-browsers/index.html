@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="en-GB" class="no-js">
+
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Beware the bloated browser!</title>
+        <meta name="author" content="tripu <t@tripu.info> https://tripu.info/" />
+        <meta name="description" content="Beware the bloated browser!" />
+        <meta name="keywords" content="Node.js,nodejs,node,architecture,project,tripu,tripu.info,eltripu,トリプ,presentation,commit,talk,conference" />
+
+        <style type="text/css">
+
+            * {
+                font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Trebuchet MS', Helvetica, Verdana, Geneva, Calibri, sans-serif;
+            }
+
+            #source, .js #fallback {
+                visibility: hidden;
+                display: none;
+            }
+
+            .remark-slide-content {
+                padding: 1rem 2rem;
+            }
+
+            .remark-slide-content {
+                font-size: 1.5rem;
+            }
+
+            /*.remark-slide-content .footer,
+            .remark-slide-content .remark-slide-number {
+                font-size: 22px;
+            }*/
+
+            pre, pre *, code, code * {
+                font-family: monospace;
+                /*font-size: 90%;*/
+            }
+
+            .remark-slide-content code {
+                padding-left: .3em;
+                padding-right: .3em;
+                border-radius: .3em;
+                /*background-color: #f0f0f0;*/
+            }
+
+            .remark-slide-container:first-child .remark-slide-number {
+                visibility: hidden;
+            }
+
+            .remark-slide-content h1, .remark-slide-content h2, .remark-slide-content h3 {
+                text-align: center;
+                text-shadow: 0 .2rem .2rem #c0c0c0;
+            }
+
+            .remark-slide-content h2 {
+                margin-top: 0;
+            }
+
+            .remark-slide-content .footer {
+                position: absolute;
+                left: 20px;
+                bottom: 12px;
+                opacity: .5;
+            }
+
+            /*.remark-slide-content .progress-title,
+            .remark-slide-content .progress {
+                opacity: .333;
+            }
+
+            .remark-slide-content .progress-title {
+                font-size: 66.7%;
+            }*/
+
+            .remark-slide-content .nb {
+                color: #2da910;
+            }
+
+            .remark-slide-content .ok,
+            .remark-slide-content .no {
+                font-weight: bold;
+            }
+
+            .remark-slide-content .ok {
+                color: #00c000;
+            }
+
+            .remark-slide-content .no {
+                color: #c00000;
+            }
+
+            .remark-slide-content .footnote {
+                position: absolute;
+                bottom: 2em;
+                margin-left: -2em;
+                width: 100%;
+                text-align: center;
+            }
+
+            .remark-slide-content .mark {
+                padding-left: .15em;
+                padding-right: .15em;
+                border-radius: .15em;
+                background-color: #ffff80;
+            }
+
+            .remark-slide-content .twoCols {
+                column-count: 2;
+                column-gap: 2em;
+            }
+
+            .remark-slide-content .column {
+                break-inside: avoid-column;
+            }
+
+            .remark-slide-content table {
+                width: 100%;
+                padding: .25rem .5rem;
+                border: .01rem solid #808080;
+                background-color: #f8f8f8;
+            }
+
+            .remark-slide-content .column:nth-child(2) > *:first-child {
+                padding-top: 20px;
+            }
+
+            .remark-slide-content abbr {
+                cursor: help;
+            }
+
+            .portrait img {
+                width: 25%;
+                box-shadow: 0 .5rem 1rem #000000;
+            }
+
+            a, a:visited {
+                color: #4040c0;
+                text-decoration: none;
+            }
+
+            a:hover, a:active, a:focus {
+                text-decoration: underline;
+            }
+
+            .small img {
+                width: 24%;
+                box-shadow: 0 .5rem 1rem #000000;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <section id="fallback">
+            <h1>Beware the bloated browser!</h1>
+            <p>NB: you need a browser with <strong>JavaScript enabled</strong> to watch this presentation!</p>
+            <address>
+                <a href="https://tripu.info/">tripu</a>
+            </address>
+        </section>
+
+        <textarea id="source">
+            name: cover
+            # <br /> Beware the <br /> <br /> bloated browser!
+            .footnote[[T3chfest](https://t3chfest.uc3m.es/2019/) <br />
+            Copyright &copy; 2019 [tripu](https://tripu.info/) <br /> <br />
+            .nb[(Press `&rarr;` or swipe left)]]
+            ---
+            name: agenda
+            .footer[*Beware the bloated browser!*]
+            ## Agenda
+            .twoCols[
+            .column[
+            * [`$ whoami`](#me)
+            * [What is the web?](#what)
+            * [What was the web *supposed to be*?](#supposed)
+            * [What's the big deal?](#deal)
+            ]
+            .column[
+            * [Resources](#resources)
+            * [Questions, comments, debate](#qa)
+            ]
+            ]
+            ---
+            name: me
+            .footer[*Beware the bloated browser!*]
+            ## `$ whoami`
+            .twoCols[
+            .column[
+            * Software engineer, Granada University
+            * ~15 years of work experience
+            * *CTO in residence* at [7r Ventures](https://7r.ventures/)
+            ]
+            .column[
+            * Many years of [web development](https://twitter.com/MSalt69/status/476684833221926912)
+            * &ldquo;tripu&rdquo; everywhere on the Interwebs
+            * `[https://tripu.info](https://tripu.info/)`
+            ]
+            ]
+            .center[.portrait[![Portrait](tripu-640.jpeg)]]
+            ---
+            name: what
+            .footer[*Beware the bloated browser!*]
+            ## What is the web?
+            ---
+            name: supposed
+            .footer[*Beware the bloated browser!*]
+            ## What was the web *supposed to be*?
+            ---
+            name: deal
+            .footer[*Beware the bloated browser!*]
+            ## What's the big deal?
+            * Fingerprinting  
+               - [Battery Status API](https://www.w3.org/TR/battery-status/) was [leaking](https://eprint.iacr.org/2015/616.pdf)
+            ---
+            name: XXXX
+            .footer[*Beware the bloated browser!*]
+            ## XXXX
+            ---
+            name: XXXX
+            .footer[*Beware the bloated browser!*]
+            ## XXXX
+            ---
+            name: XXXX
+            .footer[*Beware the bloated browser!*]
+            ## XXXX
+            ---
+            name: XXXX
+            .footer[*Beware the bloated browser!*]
+            ## XXXX
+            ---
+            name: resources
+            .footer[*Beware the bloated browser!*]
+            ## Resources
+            * [Peter-Paul Koch: *&ldquo;Stop pushing the web forward&rdquo;*](https://www.quirksmode.org/blog/archives/2015/07/stop_pushing_th.html)
+            * [Apocryphal: *&ldquo;Do we need browsers?&rdquo;*](http://blog.justletit.be/posts/do_we_need_browsers/)
+            ---
+            name: qa
+            class: middle
+            .footer[*Beware the bloated browser!*]
+            ## Questions, <br /> <br /> comments, <br /> <br /> debate
+
+        </textarea>
+
+        <!-- <script type="text/javascript" src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js"></script> -->
+        <script type="text/javascript" src="remark-latest.min.js"></script>
+
+        <script type="text/javascript">
+
+            {
+                'use strict';
+
+                var html = document.getElementsByTagName('html')[0];
+                html.classList.remove('no-js');
+                html.classList.add('js');
+
+                remark.create({ratio: '16:9'});
+            }
+
+        </script>
+
+    </body>
+
+</html>

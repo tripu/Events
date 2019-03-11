@@ -19,6 +19,7 @@
         
         * {
             font-family: 'Droid Serif', 'Lucida Sans Unicode', 'Lucida Grande', 'Trebuchet MS', Helvetica, Verdana, Geneva, Calibri, sans-serif;
+            line-height: 1.5;
         }
         
         #source, .js #fallback {
@@ -51,6 +52,7 @@
         
         pre, pre *, code, code * {
             font-family: monospace;
+            /* background-color: #f0f0f0; */
             /*font-size: 90%;*/
         }
         
@@ -154,8 +156,17 @@
         }
         
         .portrait img {
-            width: 25%;
+            width: 40%;
+            margin-bottom: 1rem;
             box-shadow: 0 .5rem 1rem #000000;
+        }
+        
+        .logo img {
+            width: 40%;
+        }
+        
+        .screenshots img {
+            width: 55%;
         }
         
         a, a:visited {
@@ -188,7 +199,7 @@
     
     <textarea id="source">
         name: cover
-        # <br /> Beware the<br /><br />bloated browser!
+        # <br /> Beware the<br />bloated browser!
         .footnote[[T3chfest](https://t3chfest.uc3m.es/2019/) <br />
         Copyright &copy; 2019 [tripu](https://tripu.info/) <br /> <br />
         .nb[(Press `&rarr;` or swipe left)]]
@@ -199,11 +210,12 @@
         .twoCols[
         .column[
         * [`$ whoami`](#me)
-        * [What was the web *supposed to be*?](#supposed)
-        * [What is the web?](#what)
+        * [What was the web supposed to be?](#supposed)
+        * [What is the web today?](#what)
         * [What's the big deal?](#deal)
         ]
         .column[
+        * [The UNIX philosophy](#unix)
         * [Resources](#resources)
         * [Questions, comments, debate](#qa)
         ]
@@ -211,28 +223,31 @@
         ---
         name: me
         .footer[*Beware the bloated browser!*]
-        ## `$ whoami`
+        ## $ whoami
         .twoCols[
         .column[
-        * Software engineer, Granada University
+        .center[.portrait[![Portrait](tripu-640.jpeg)]]
+        * Antonio Olmo Titos
+        * Software engineer
         * ~15 years of work experience
-        * *CTO in residence* at [7r Ventures](https://7r.ventures/)
         * Many years of [web development](https://twitter.com/MSalt69/status/476684833221926912)
         * &ldquo;tripu&rdquo; everywhere on the Interwebs
         * [`https://tripu.info`](https://tripu.info/)
         ]
         .column[
-        .center[.portrait[![Portrait](tripu-640.jpeg)]]
+        .center[.logo[![Logo](7r-logo.png)]]
+        * *CTO in residence* at .company[[7r Ventures](https://7r.ventures/)]
         ]
         ]
         ---
         name: supposed
         .footer[*Beware the bloated browser!*]
-        ## What was the web *supposed to be*?
+        ## What was the web supposed to be?
         * 1989
         * HTTP (protocol) + HTML (language) + URL (identifier)
-        * Hypertext
         * Documents
+        * Hypertext
+        * Images
         ---
         class: img
         background-image: url("./old.jpeg")
@@ -244,20 +259,25 @@
         [`https://worldwideweb.cern.ch/browser`](https://worldwideweb.cern.ch/browser)
         ---
         class: img
+        background-image: url("./amazing.jpeg")
+        ---
+        class: img
         background-image: url("./contract.png")
         ---
         name: what
         .footer[*Beware the bloated browser!*]
-        ## What *is* the web?
-        * The web ~ the internet ( ~ Google!)
-        * A videogame console
-        * A streaming platform
-        * A shopping centre
-        * A social tool
-        * A runtime environment
-        * A distribution platform
-        * [A human right](https://www.nytimes.com/2012/01/05/opinion/internet-access-is-not-a-human-right.html)
-        * *Everything*
+        ## What is the web today?
+        * The web ~ the internet (~ Google!) (~ my computer!!)
+        * Videogame console
+        * Streaming platform
+        * Shopping centre
+        * Social communication tool
+        * Runtime environment
+        * Distribution platform
+        * Our CV
+        * Our bank
+        * [A human right](https://www.nytimes.com/2012/01/05/opinion/internet-access-is-not-a-human-right.html)?
+        * &hellip;***Everything***
         ---
         name: deal
         .footer[*Beware the bloated browser!*]
@@ -275,21 +295,27 @@
         * https://www.w3.org/History/1991-WWW-NeXT/Implementation/
         * https://www.w3.org/History/1989/proposal.html
         ---
-        name: XXXX
+        name: unix
         .footer[*Beware the bloated browser!*]
         ## The UNIX philosophy
-        * Small, dedicated tools
-        * Common formats
-        * A way to *pipe* inputs and outputs
+        * A set of tools that are:
+           - small
+           - dedicated
+           - interchangeable
+        * A few common formats
+        * A simple way to &ldquo;connect&rdquo; inputs and outputs
+        ---
+        class: img
+        background-image: url("./documents.jpeg")
         ---
         name: XXXX
         .footer[*Beware the bloated browser!*]
         ## The UNIX philosophy
+        ```bash
+        grep -ERhio 'project [a-z]+\s' . | sort -f | uniq -ci | sort -nr > projects.txt
         ```
-        grep -ERhio 'project [a-z]+\s' . | sort -f | uniq -ci | sort -nr
-        ```
-        Produces:
-        ```
+        Produces this file, `projects.txt`:
+        ```bash
         761 project neptune
         444 project haumea
         318 project gaspra
@@ -298,20 +324,18 @@
         122 project dia
         107 project mneme
          64 project helike
-         54 project janus
         ```
         ---
         name: XXXX
         .footer[*Beware the bloated browser!*]
         ## The UNIX philosophy
-        Imagine:
+        .center[.screenshots[![Flights](travel.png)]]
+        ```bash
+        get {skyscanner.net, hipmunk.com, google.com/flights} |
+        filter '#flight, date=2019-03-22, price<=120E' |
+        pick price,company,time |
+        sort -n -f price > flights.txt
         ```
-        $ grep -Rhio '[a-z]*' . | sort -f | uniq -ci | sort -nr > 
-        ```
-        ---
-        name: XXXX
-        .footer[*Beware the bloated browser!*]
-        ## XXXX
         ---
         name: XXXX
         .footer[*Beware the bloated browser!*]
@@ -323,10 +347,16 @@
         * [Peter-Paul Koch: *&ldquo;Stop pushing the web forward&rdquo;*](https://www.quirksmode.org/blog/archives/2015/07/stop_pushing_th.html)
         * [Apocryphal: *&ldquo;Do we need browsers?&rdquo;*](http://blog.justletit.be/posts/do_we_need_browsers/)
         ---
+        name: credits
+        .footer[*Beware the bloated browser!*]
+        ## Credits
+        * [`https://commons.wikimedia.org/`](https://commons.wikimedia.org/wiki/File:Copies_of_documents_at_European_Parliament_in_Strasbourg.jpg)
+        * [`https://www.publicdomainpictures.net/`](https://www.publicdomainpictures.net/en/view-image.php?image=97848&picture=portrait-of-boy-amazed)
+        ---
         name: qa
         class: middle
         .footer[*Beware the bloated browser!*]
-        ## Questions, <br /> <br /> comments, <br /> <br /> debate
+        ## Questions,<br />comments,<br />debate
         
     </textarea>
     

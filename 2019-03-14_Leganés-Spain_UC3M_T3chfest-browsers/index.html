@@ -160,6 +160,10 @@
             margin-bottom: 1rem;
             box-shadow: 0 .5rem 1rem #000000;
         }
+
+        .company {
+            font-family: sans-serif;
+        }
         
         .logo img {
             width: 40%;
@@ -216,6 +220,9 @@
         ]
         .column[
         * [The UNIX philosophy](#unix)
+        * [Enter the semantic web](#semantic)
+        * [What can we do as users?](#users)
+        * [What can we do as engineers?](#engineers)
         * [Resources](#resources)
         * [Questions, comments, debate](#qa)
         ]
@@ -226,17 +233,22 @@
         ## $ whoami
         .twoCols[
         .column[
+        .center[
         .center[.portrait[![Portrait](tripu-640.jpeg)]]
-        * Antonio Olmo Titos
-        * Software engineer
-        * ~15 years of work experience
-        * Many years of [web development](https://twitter.com/MSalt69/status/476684833221926912)
-        * &ldquo;tripu&rdquo; everywhere on the Interwebs
-        * [`https://tripu.info`](https://tripu.info/)
+        **Antonio Olmo Titos**  
+        *software engineer*  
+        ~15 years of work experience  
+        many years of [web development](https://twitter.com/MSalt69/status/476684833221926912)  
+        [`https://tripu.info`](https://tripu.info/)
+        ]
         ]
         .column[
+        .center[
         .center[.logo[![Logo](7r-logo.png)]]
-        * *CTO in residence* at .company[[7r Ventures](https://7r.ventures/)]
+        *CTO in residence* at .company[7r Ventures]  
+        [`https://7r.ventures`](https://7r.ventures/)  
+        (*we are hiring!*)
+        ]
         ]
         ]
         ---
@@ -249,6 +261,15 @@
         * Hypertext
         * Images
         ---
+        class: center, middle, empty
+        [`https://www.w3.org/History/1989/proposal.html`](https://www.w3.org/History/1989/proposal.html)
+        ---
+        class: center, middle, empty
+        [`http://info.cern.ch/hypertext/WWW/TheProject.html`](http://info.cern.ch/hypertext/WWW/TheProject.html)
+        ---
+        class: img, empty
+        background-image: url("./amazing.jpeg")
+        ---
         class: img
         background-image: url("./old.jpeg")
         ---
@@ -258,8 +279,8 @@
         class: center, middle, empty
         [`https://worldwideweb.cern.ch/browser`](https://worldwideweb.cern.ch/browser)
         ---
-        class: img
-        background-image: url("./amazing.jpeg")
+        class: img, empty
+        background-image: url("./amazing2.gif")
         ---
         class: img
         background-image: url("./contract.png")
@@ -285,16 +306,6 @@
         * Fingerprinting  
         - [Battery Status API](https://www.w3.org/TR/battery-status/) was [leaking](https://eprint.iacr.org/2015/616.pdf)
         ---
-        name: XXXX
-        .footer[*Beware the bloated browser!*]
-        ## XXXX
-        * http://line-mode.cern.ch/
-        * https://adactio.com/journal/14821
-        * http://info.cern.ch/hypertext/WWW/TheProject.html
-        * https://browsers.evolt.org/?worldwideweb/
-        * https://www.w3.org/History/1991-WWW-NeXT/Implementation/
-        * https://www.w3.org/History/1989/proposal.html
-        ---
         name: unix
         .footer[*Beware the bloated browser!*]
         ## The UNIX philosophy
@@ -308,7 +319,6 @@
         class: img
         background-image: url("./documents.jpeg")
         ---
-        name: XXXX
         .footer[*Beware the bloated browser!*]
         ## The UNIX philosophy
         ```bash
@@ -326,9 +336,8 @@
          64 project helike
         ```
         ---
-        name: XXXX
         .footer[*Beware the bloated browser!*]
-        ## The UNIX philosophy
+        ## The UNIX philosophy on the web: imagine&hellip;
         .center[.screenshots[![Flights](travel.png)]]
         ```bash
         get {skyscanner.net, hipmunk.com, google.com/flights} |
@@ -337,13 +346,42 @@
         sort -n -f price > flights.txt
         ```
         ---
-        name: XXXX
+        name: semantic
         .footer[*Beware the bloated browser!*]
-        ## XXXX
+        ## Enter the Semantic Web, and Linked Data
+        * *World Wide Web* &rarr; *Giant Global Graph*
+        * [`https://www.w3.org/standards/semanticweb/`](https://www.w3.org/standards/semanticweb/)
+        https://en.wikipedia.org/wiki/File:LOD_Cloud_2014-08.svg
+        https://en.wikipedia.org/wiki/File:Lod_2017-02-20.png
+        ---
+        name: users
+        .footer[*Beware the bloated browser!*]
+        ## What can we do as users?
+        * Support free software
+        * Support open formats
+        * Resist surveillance and tracking
+        * Block ads
+        * Report bugs
+        * Be responsible consumers
+        * Be willing to pay
+        * Resist centralisation
+        ---
+        name: engineers
+        .footer[*Beware the bloated browser!*]
+        ## What can we do as engineers?
+        The same things, plus&hellip;
+        * Resist the hype of shiny things
+        * Embrace what's useful
+        * Think performance
+        * Think A11Y
+        * Think i18n
+        * Think of the future
+        * Think of the past
         ---
         name: resources
         .footer[*Beware the bloated browser!*]
         ## Resources
+        * [Tim Berners-Lee: *&ldquo;30 Years On, What’s Next #ForTheWeb?&rdquo;*](https://onezero.medium.com/30-years-on-whats-next-fortheweb-6ce844ed147f)
         * [Peter-Paul Koch: *&ldquo;Stop pushing the web forward&rdquo;*](https://www.quirksmode.org/blog/archives/2015/07/stop_pushing_th.html)
         * [Apocryphal: *&ldquo;Do we need browsers?&rdquo;*](http://blog.justletit.be/posts/do_we_need_browsers/)
         ---

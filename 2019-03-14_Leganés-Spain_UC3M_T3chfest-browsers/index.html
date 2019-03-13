@@ -10,7 +10,8 @@
     <meta name="author" content="tripu <t@tripu.info> https://tripu.info/" />
     <meta name="description" content="Beware the bloated browser!" />
     <meta name="keywords" content="Node.js,nodejs,node,architecture,project,tripu,tripu.info,eltripu,トリプ,presentation,commit,talk,conference" />
-    
+
+    <!-- Agenda: agrupar (historia, pros y cons, una propuesta mia); mover UNIX + semantic al final -->
     <style type="text/css">
         
         @import url('//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,400italic');
@@ -29,6 +30,8 @@
         
         .remark-slide-content {
             padding: 1rem 2rem;
+            background-image:url(background2.jpeg);
+            background-size: cover;
         }
         
         .remark-slide-content {
@@ -52,7 +55,7 @@
         
         pre, pre *, code, code * {
             font-family: monospace;
-            /* background-color: #f0f0f0; */
+            /* background-color: #ffffff; */
             /*font-size: 90%;*/
         }
         
@@ -60,7 +63,7 @@
             padding-left: .3em;
             padding-right: .3em;
             border-radius: .3em;
-            /*background-color: #f0f0f0;*/
+            /* background-color: #ffffff; */
         }
         
         .remark-slide-container:first-child .remark-slide-number {
@@ -119,7 +122,9 @@
         .remark-slide-content .footnote {
             position: absolute;
             bottom: 2em;
-            margin-left: -2em;
+            left: 0;
+            right: 0;
+            /* margin-left: -2em; */
             width: 100%;
             text-align: center;
         }
@@ -231,7 +236,7 @@
         * [`$ whoami`](#me)
         * [The web in the beginning](#supposed)
         * [What is the web *today*?](#what)
-        * [What's the big deal?](#deal)
+        * [What is the big deal?](#deal)
         * [&ldquo;The UNIX philosophy&rdquo;](#unix)
         ]
         .column[
@@ -240,7 +245,7 @@
         * [What to do *as users*?](#users)
         * [What to do *as engineers*?](#engineers)
         * [Resources](#resources)
-        * [Questions, comments, debate](#qa)
+        * [Questions &amp; comments](#qa)
         ]
         ]
         ---
@@ -269,7 +274,7 @@
         ---
         name: supposed
         .footer[*Beware the bloated browser!*]
-        ## What was the web supposed to be?
+        ## The web in the beginning
         * 1989
         * HTTP (protocol) + HTML (language) + URL (identifier)
         * Documents
@@ -278,8 +283,9 @@
         ---
         class: center, middle, empty
         [`https://www.w3.org/History/1989/proposal.html`](https://www.w3.org/History/1989/proposal.html)
-        ---
-        class: center, middle, empty
+        <br />
+        <br />
+        <br />
         [`http://info.cern.ch/hypertext/WWW/TheProject.html`](http://info.cern.ch/hypertext/WWW/TheProject.html)
         ---
         class: img, empty
@@ -313,7 +319,7 @@
         * Our CV
         * Our bank
         * [A human right](https://www.nytimes.com/2012/01/05/opinion/internet-access-is-not-a-human-right.html)?
-        * &hellip;***Everything***
+        * &hellip;*Everything*
         ---
         name: deal
         .footer[*Beware the bloated browser!*]

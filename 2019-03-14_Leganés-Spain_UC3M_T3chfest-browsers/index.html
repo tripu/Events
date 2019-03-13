@@ -28,7 +28,7 @@
         }
         
         .remark-slide-content {
-            padding: 1rem 4rem;
+            padding: 1rem 2rem;
         }
         
         .remark-slide-content {
@@ -156,7 +156,7 @@
         }
         
         .portrait img {
-            width: 40%;
+            width: 50%;
             margin-bottom: 1rem;
             box-shadow: 0 .5rem 1rem #000000;
         }
@@ -166,12 +166,26 @@
             font-weight: bold;
         }
         
-        .logo img {
+        .logo7 img {
+            width: 50%;
+        }
+        
+        .logo7b img {
             width: 40%;
         }
         
+        .logow img {
+            /* padding: 0 .25rem 0 1rem; */
+            height: 2rem;
+            vertical-align: text-bottom;
+        }
+            
         .screenshots img {
-            width: 55%;
+            width: 65%;
+        }
+        
+        .screenshots2 img {
+            width: 90%;
         }
         
         a, a:visited {
@@ -215,15 +229,16 @@
         .twoCols[
         .column[
         * [`$ whoami`](#me)
-        * [What was the web supposed to be?](#supposed)
-        * [What is the web today?](#what)
+        * [The web in the beginning](#supposed)
+        * [What is the web *today*?](#what)
         * [What's the big deal?](#deal)
+        * [&ldquo;The UNIX philosophy&rdquo;](#unix)
         ]
         .column[
-        * [The UNIX philosophy](#unix)
-        * [Enter the semantic web](#semantic)
-        * [What can we do as users?](#users)
-        * [What can we do as engineers?](#engineers)
+        * [Enter the *semantic web*](#semantic)
+        * [The strengths of the web](#strengths)
+        * [What to do *as users*?](#users)
+        * [What to do *as engineers*?](#engineers)
         * [Resources](#resources)
         * [Questions, comments, debate](#qa)
         ]
@@ -235,21 +250,19 @@
         .twoCols[
         .column[
         .center[
-        .center[.portrait[![Portrait](tripu-640.jpeg)]]
+        .center[.portrait[![Portrait](tripu-640.jpeg)]]  
         **Antonio Olmo Titos**  
         *software engineer*  
-        ~15 years of work experience  
-        4 years at the W3C  
-        many years of [web development](https://twitter.com/MSalt69/status/476684833221926912)  
+        4 years at the [.logow[![w3c-logo.png](w3c-logo.png)]](https://www.w3.org/)  
         [`https://tripu.info`](https://tripu.info/)
         ]
         ]
         .column[
         .center[
-        .center[.logo[![Logo](7r-logo.png)]]
+        .center[.logo7[![Logo](7r-logo.png)]]  
         *CTO in residence* at .company[7r Ventures]  
-        [`https://7r.ventures`](https://7r.ventures/)  
-        (we are hiring!)
+        (we are hiring!)  
+        [`https://7r.ventures`](https://7r.ventures/)
         ]
         ]
         ]
@@ -304,16 +317,29 @@
         ---
         name: deal
         .footer[*Beware the bloated browser!*]
-        ## What's the big deal?
-        * Fingerprinting
-        * https://panopticlick.eff.org/static/browser-uniqueness.pdf
-        * https://en.wikipedia.org/wiki/Canvas_fingerprinting
-        * http://archive.cert.uni-stuttgart.de/bugtraq/2003/11/msg00031.html
-        * https://panopticlick.eff.org/
-        * https://www.helpnetsecurity.com/2019/02/27/modern-browser-apis-can-be-abused-for-hijacking-device-resources/
-        * https://caniuse.com/#index
-        * https://developer.microsoft.com/en-us/microsoft-edge/platform/catalog/
-        - [Battery Status API](https://www.w3.org/TR/battery-status/) was [leaking](https://eprint.iacr.org/2015/616.pdf)
+        ## What's the big deal? &rarr; Security holes
+        .center[The [*Battery Status API*](https://www.w3.org/TR/battery-status/) was [*leaking*](https://eprint.iacr.org/2015/616.pdf)]
+        ---
+        .footer[*Beware the bloated browser!*]
+        ## What's the big deal? &rarr; Web fingerprinting
+        * Tracking users, identifying devices
+        * Works even without cookies (eg, canvas fingerprinting)
+        * [`https://panopticlick.eff.org/`](https://panopticlick.eff.org/)
+        ---
+        .footer[*Beware the bloated browser!*]
+        ## What's the big deal? &rarr; Complexity
+        * [`https://www.w3.org/TR`](https://www.w3.org/TR/) lists today &ldquo;1,169 specs&rdquo;
+        * [`https://caniuse.com/#index`](https://caniuse.com/#index)
+        ---
+        .footer[*Beware the bloated browser!*]
+        ## What's the big deal? &rarr; Resource hijacking
+        * The [*Service Workers API*](https://w3c.github.io/ServiceWorker/) makes it possible
+        * [Help Net Security:<br />*&ldquo;Modern browser APIs can be abused for hijacking device resources&rdquo;*](https://www.helpnetsecurity.com/2019/02/27/modern-browser-apis-can-be-abused-for-hijacking-device-resources/)
+        * [Reuters:<br />*&ldquo;U.S., UK government websites infected with crypto-mining malware: report&rdquo;*](https://www.reuters.com/article/us-bitcoin-cyber/u-s-uk-government-websites-infected-with-crypto-mining-malware-report-idUSKBN1FV0VO)
+        ---
+        .footer[*Beware the bloated browser!*]
+        ## What's the big deal? &rarr; Stalled performance
+        .center[.screenshots2[![Nutrition](./browsers.png)]]
         ---
         name: unix
         .footer[*Beware the bloated browser!*]
@@ -331,7 +357,8 @@
         .footer[*Beware the bloated browser!*]
         ## The UNIX philosophy
         ```bash
-        grep -ERhio 'project [a-z]+\s' . | sort -f | uniq -ci | sort -nr > projects.txt
+        grep -ERhio 'project [a-z]+\s' . |
+        sort -f | uniq -ci | sort -nr > projects.txt
         ```
         Produces this file, `projects.txt`:
         ```bash
@@ -360,8 +387,17 @@
         ## Enter the Semantic Web, and Linked Data
         * *World Wide Web* &rarr; *Giant Global Graph*
         * [`https://www.w3.org/standards/semanticweb/`](https://www.w3.org/standards/semanticweb/)
-        https://en.wikipedia.org/wiki/File:LOD_Cloud_2014-08.svg
-        https://en.wikipedia.org/wiki/File:Lod_2017-02-20.png
+        <br /><br />
+        .center[.screenshots[[![Graph](./graph.png)](https://upload.wikimedia.org/wikipedia/commons/a/a9/LOD_Cloud_2014-08.svg)]]
+        ---
+        name: strengths
+        .footer[*Beware the bloated browser!*]
+        ## The strengths of the web
+        * Interoperability
+        * Immediacy (updates are simple)
+        * Linkability
+        * Simplicity (no dependencies)
+        * &ldquo;Open source&rdquo;
         ---
         name: users
         .footer[*Beware the bloated browser!*]
@@ -371,24 +407,26 @@
         * Resist surveillance and tracking
         * Block ads
         * Report bugs
-        * Be willing to pay
+        * Be willing to pay when it makes sense
         * Resist centralisation
         ---
         .footer[*Beware the bloated browser!*]
         ## What can we do as users?
-        [img]
-        * Be responsible consumers
+        .center[
+        .screenshots[![Nutrition](./nutrition.jpeg)]  
+        Be responsible consumers
+        ]
         ---
         name: engineers
         .footer[*Beware the bloated browser!*]
         ## What can we do as engineers?
         Those same things, plus&hellip;
-        * Support web standards
+        * Support web standards ([.logow[![w3c-logo.png](w3c-logo.png)]](https://www.w3.org/)!)
         * Resist the hype of shiny things
         * Embrace what's useful
         * Think performance
-        * Think A11Y
-        * Think i18n
+        * Think *A11Y*
+        * Think *i18n*
         * Think of the future
         * Think of the past
         ---
@@ -404,11 +442,18 @@
         ## Credits
         * [`https://commons.wikimedia.org/`](https://commons.wikimedia.org/wiki/File:Copies_of_documents_at_European_Parliament_in_Strasbourg.jpg)
         * [`https://www.publicdomainpictures.net/`](https://www.publicdomainpictures.net/en/view-image.php?image=97848&picture=portrait-of-boy-amazed)
+        * [`https://medium.com/mozilla-tech/the-search-for-the-goldilocks-browser-and-why-firefox-may-be-just-right-for-you-1f520506aa35`](https://medium.com/mozilla-tech/the-search-for-the-goldilocks-browser-and-why-firefox-may-be-just-right-for-you-1f520506aa35)
         ---
         name: qa
         class: middle
         .footer[*Beware the bloated browser!*]
         ## Questions,<br />comments,<br />debate
+        ---
+        name: hiring
+        class: middle
+        .footer[*Beware the bloated browser!*]
+        ## We are hiring!<br />[`https://7r.ventures`](https://7r.ventures/)
+        .center[.logo7b[![Logo](7r-logo.png)]]  
         
     </textarea>
     
@@ -425,7 +470,7 @@
             html.classList.remove('no-js');
             html.classList.add('js');
             
-            remark.create({ratio: '16:9'});
+            remark.create({ratio: '4:3'});
         }
         
     </script>

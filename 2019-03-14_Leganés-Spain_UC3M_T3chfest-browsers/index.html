@@ -11,7 +11,6 @@
     <meta name="description" content="Beware the bloated browser!" />
     <meta name="keywords" content="Node.js,nodejs,node,architecture,project,tripu,tripu.info,eltripu,トリプ,presentation,commit,talk,conference" />
 
-    <!-- Agenda: agrupar (historia, pros y cons, una propuesta mia); mover UNIX + semantic al final -->
     <style type="text/css">
         
         @import url('//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,400italic');
@@ -55,8 +54,11 @@
         
         pre, pre *, code, code * {
             font-family: monospace;
-            /* background-color: #ffffff; */
             /*font-size: 90%;*/
+        }
+        
+        .remark-slide-content pre code, .remark-slide-content pre code *, .hljs-default .hljs {
+            background-color: #ffffff;
         }
         
         .remark-slide-content code {
@@ -232,14 +234,14 @@
         .footer[*Beware the bloated browser!*]
         ## Agenda
         * [`$ whoami`](#me)
-        * [The web in the beginning](#supposed)
-        * [What is the web *today*?](#what)
-        * [What is the big deal?](#deal)
-        * [The strengths of the web](#strengths)
-        * [&ldquo;The UNIX philosophy&rdquo;](#unix)
-        * [Enter the *semantic web*](#semantic)
-        * [What to do *as users*?](#users)
-        * [What to do *as engineers*?](#engineers)
+        * **[The web in the beginning](#supposed)**
+        * **[What is the web *today*?](#what)**
+        * **[What is the big deal?](#deal)**
+        * **[The strengths of the web](#strengths)**
+        * **[&ldquo;The UNIX philosophy&rdquo;](#unix)**
+        * **[Enter the *semantic web*](#semantic)**
+        * **[What to do *as users*?](#users)**
+        * **[What to do *as engineers*?](#engineers)**
         * [Resources](#resources)
         * [Questions &amp; comments](#qa)
         ---
@@ -253,15 +255,16 @@
         **Antonio Olmo Titos**  
         *software engineer*  
         4 years at the [.logow[![w3c-logo.png](w3c-logo.png)]](https://www.w3.org/)  
-        [`https://tripu.info`](https://tripu.info/)
+        [`https://`**`tripu.info`**](https://tripu.info/)
         ]
         ]
         .column[
         .center[
         .center[.logo7[![Logo](7r-logo.png)]]  
-        *CTO in residence* at .company[7r Ventures]  
+        *CTO in residence* at  
+        .company[7r Ventures]  
         (we are hiring!)  
-        [`https://7r.ventures`](https://7r.ventures/)
+        [`https://`**`7r.ventures`**](https://7r.ventures/)
         ]
         ]
         ]
@@ -308,7 +311,7 @@
         * Streaming platform
         * Shopping centre
         * Social communication tool
-        * Runtime environment
+        * Runtime environment (a universal emulator)
         * Distribution platform
         * Our CV
         * Our bank
@@ -317,8 +320,17 @@
         ---
         name: deal
         .footer[*Beware the bloated browser!*]
-        ## What is the big deal? &rarr; Security holes
-        .center[The [*Battery Status API*](https://www.w3.org/TR/battery-status/) was [*leaking*](https://eprint.iacr.org/2015/616.pdf)]
+        ## What is the big deal? &rarr; Complexity
+        * [`https://www.w3.org/TR`](https://www.w3.org/TR/) lists today &ldquo;1,169 specs&rdquo;
+        * &hellip;most of them, still &ldquo;valid&rdquo;!
+        * Some APIs on browsers: [`https://caniuse.com/#index`](https://caniuse.com/#index)
+        * This leads to:
+           - Fragmentation
+           - Unpredictability
+           - Security holes
+           - Bugs
+           - Developers: cognitive overload
+        * Compare to more homogeneous platforms out there
         ---
         .footer[*Beware the bloated browser!*]
         ## What is the big deal? &rarr; Web fingerprinting
@@ -327,9 +339,15 @@
         * [`https://panopticlick.eff.org/`](https://panopticlick.eff.org/)
         ---
         .footer[*Beware the bloated browser!*]
-        ## What is the big deal? &rarr; Complexity
-        * [`https://www.w3.org/TR`](https://www.w3.org/TR/) lists today &ldquo;1,169 specs&rdquo;
-        * [`https://caniuse.com/#index`](https://caniuse.com/#index)
+        ## What is the big deal? &rarr; Web fingerprinting
+        * The [*Battery Status API*](https://www.w3.org/TR/battery-status/) was [&ldquo;leaking&rdquo;](https://eprint.iacr.org/2015/616.pdf)
+        >  *&ldquo;Privacy implications of the Battery Status API, with a focus on its implementation
+        in Firefox for Linux operating system: [&hellip;] the high precision battery
+        level readings provided by Firefox can lead to an unexpected fingerprinting surface: the detection
+        of battery capacity.
+        In short time intervals, Battery Status API can be used to reinstantiate tracking identifiers of
+        users, similar to evercookies. Moreover, battery information can be used in cases where a user can
+        go to great lenghts to clear her evercookies.&rdquo;*
         ---
         .footer[*Beware the bloated browser!*]
         ## What is the big deal? &rarr; Resource hijacking
@@ -339,7 +357,8 @@
         ---
         .footer[*Beware the bloated browser!*]
         ## What is the big deal? &rarr; Redundancy
-        .center[Web apps today have to look and feel *&ldquo;as native&rdquo;* (why!?)]
+        .center[Web apps today have to look and feel *&ldquo;as native&rdquo;*. But&hellip; *why!?*]
+        .center[.screenshots[![versus](./versus.jpeg)]]
         ---
         .footer[*Beware the bloated browser!*]
         ## What is the big deal? &rarr; Stalled performance
@@ -350,9 +369,9 @@
         ## The strengths of the web
         * Interoperability
         * Immediacy (updates are simple)
-        * Linkability
+        * Linkability, shareability (*deeply*)
         * Simplicity (no dependencies)
-        * &ldquo;Open source&rdquo;
+        * &ldquo;Open source&rdquo; almost by definition
         ---
         name: unix
         .footer[*Beware the bloated browser!*]
@@ -408,10 +427,10 @@
         ## What can we do as users?
         * Support free software
         * Support open formats
-        * Resist surveillance and tracking
         * Block ads
         * Report bugs
         * Be willing to pay when it makes sense
+        * Resist surveillance and tracking
         * Resist centralisation
         ---
         .footer[*Beware the bloated browser!*]
@@ -447,6 +466,7 @@
         * [`https://commons.wikimedia.org/`](https://commons.wikimedia.org/wiki/File:Copies_of_documents_at_European_Parliament_in_Strasbourg.jpg)
         * [`https://www.publicdomainpictures.net/`](https://www.publicdomainpictures.net/en/view-image.php?image=97848&picture=portrait-of-boy-amazed)
         * [`https://medium.com/mozilla-tech/the-search-for-the-goldilocks-browser-and-why-firefox-may-be-just-right-for-you-1f520506aa35`](https://medium.com/mozilla-tech/the-search-for-the-goldilocks-browser-and-why-firefox-may-be-just-right-for-you-1f520506aa35)
+        * [`https://imagexmedia.com/blog/2017/01/native-or-web-which-app-me`](https://imagexmedia.com/blog/2017/01/native-or-web-which-app-me)
         ---
         name: qa
         class: middle
@@ -456,7 +476,7 @@
         name: hiring
         class: middle
         .footer[*Beware the bloated browser!*]
-        ## We are hiring!<br />[`https://7r.ventures`](https://7r.ventures/)
+        ## We are hiring!<br />[`https://`**`7r.ventures`**](https://7r.ventures/)
         .center[.logo7b[![Logo](7r-logo.png)]]  
         
     </textarea>

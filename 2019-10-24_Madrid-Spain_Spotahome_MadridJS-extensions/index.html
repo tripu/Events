@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="en-GB" class="no-js">
+
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>El W3C: para qué puede servirnos en 7r Ventures</title>
+    <meta name="author" content="tripu <t@tripu.info> https://tripu.info/" />
+    <meta name="description" content="El W3C: para qué puede servirnos en 7r Ventures" />
+    <meta name="keywords" content="Node.js,nodejs,node,architecture,project,tripu,tripu.info,eltripu,トリプ,presentation,commit,talk,conference" />
+    
+    <style type="text/css">
+        
+        @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700');        
+        @import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic');
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+        
+        * {
+            font-family: 'Droid Serif', 'Lucida Sans Unicode', 'Lucida Grande', 'Trebuchet MS', Helvetica, Verdana, Geneva, Calibri, sans-serif;
+            line-height: 1.5;
+        }
+        
+        #source, .js #fallback {
+            visibility: hidden;
+            display: none;
+        }
+        
+        .remark-slide-content {
+            padding: 1rem 4rem;
+        }
+        
+        .remark-slide-content {
+            font-size: 1.5rem;
+        }
+        
+        .remark-slide-content.img {
+            background-color: #000000;
+            background-size: contain;
+        }
+        
+        .remark-slide-content.empty .remark-slide-number {
+            /* .remark-slide-container:nth-child(1) .remark-slide-number { */
+                visibility: hidden;
+            }
+            
+            /*.remark-slide-content .footer,
+            .remark-slide-content .remark-slide-number {
+                font-size: 22px;
+            }*/
+            
+            pre, pre *, code, code * {
+                font-family: monospace;
+                /*font-size: 90%;*/
+            }
+            
+            .remark-slide-content code {
+                padding-left: .3em;
+                padding-right: .3em;
+                border-radius: .3em;
+                /*background-color: #f0f0f0;*/
+            }
+            
+            .remark-slide-container:first-child .remark-slide-number {
+                visibility: hidden;
+            }
+            
+            .remark-slide-content h1,
+            .remark-slide-content h2,
+            .remark-slide-content h3,
+            .remark-slide-content h4,
+            .remark-slide-content h5,
+            .remark-slide-content h6 {
+                text-align: center;
+                font-family: 'Yanone Kaffeesatz';
+                font-weight: normal;
+                text-shadow: 0 .2rem .2rem #c0c0c0;
+            }
+            
+            .remark-slide-content h2 {
+                margin-top: 0;
+            }
+            
+            .remark-slide-content .footer {
+                position: absolute;
+                left: 20px;
+                bottom: 12px;
+                opacity: .5;
+            }
+            
+            /*.remark-slide-content .progress-title,
+            .remark-slide-content .progress {
+                opacity: .333;
+            }
+            
+            .remark-slide-content .progress-title {
+                font-size: 66.7%;
+            }*/
+            
+            .remark-slide-content .nb {
+                color: #2da910;
+            }
+            
+            .remark-slide-content .ok,
+            .remark-slide-content .no {
+                font-weight: bold;
+            }
+            
+            .remark-slide-content .ok {
+                color: #00c000;
+            }
+            
+            .remark-slide-content .no {
+                color: #c00000;
+            }
+            
+            .remark-slide-content .footnote {
+                position: absolute;
+                bottom: 2em;
+                margin-left: -2em;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .remark-slide-content .mark {
+                padding-left: .15em;
+                padding-right: .15em;
+                border-radius: .15em;
+                background-color: #ffff80;
+            }
+            
+            .remark-slide-content .twoCols {
+                column-count: 2;
+                column-gap: 2em;
+            }
+            
+            .remark-slide-content .column {
+                break-inside: avoid-column;
+            }
+            
+            .remark-slide-content table {
+                width: 100%;
+                padding: .25rem .5rem;
+                border: .01rem solid #808080;
+                background-color: #f8f8f8;
+            }
+            
+            .remark-slide-content .column:nth-child(2) > *:first-child {
+                padding-top: 20px;
+            }
+            
+            .remark-slide-content abbr {
+                cursor: help;
+            }
+            
+            .portrait img {
+                width: 25%;
+                box-shadow: 0 .5rem 1rem #000000;
+            }
+            
+            a, a:visited {
+                color: #4040c0;
+                text-decoration: none;
+            }
+            
+            a:hover, a:active, a:focus {
+                text-decoration: underline;
+            }
+            
+            .small img {
+                width: 24%;
+                box-shadow: 0 .5rem 1rem #000000;
+            }
+            
+            .logo img {
+                padding: 0 .25rem 0 1rem;
+                height: 4rem;
+                vertical-align: middle;
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <section id="fallback">
+            <h1>El W3C: para qué puede servirnos en 7r Ventures</h1>
+            <p>NB: you need a browser with <strong>JavaScript enabled</strong> to watch this presentation!</p>
+            <address>
+                <a href="https://tripu.info/">tripu</a>
+            </address>
+        </section>
+        
+        <textarea id="source">
+            name: cover
+            #<br />El .logo[![w3c-logo.png](w3c-logo.png)]:<br />para qué puede servirnos<br />en .logo[![7r-logo.png](7r-logo.png)]7r Ventures
+            .footnote[6 de marzo de 2019<br /><br />
+            .nb[(Press `&rarr;` or swipe left)]]
+            ---
+            name: agenda
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## De qué vamos a hablar
+            .twoCols[
+            .column[
+            * [Qué es el W3C](#what)
+            * [Diez cosas sobre el W3C y sus estándares](#ten)
+            * [Desafíos de los estándares](#challenges)
+            * **[`/TR`](#tr)**
+            * **[*Software* disponible](#tools)**
+            * **[*Checkers*](#checkers)**
+            * **[El *checker* de HTML5](#html)**
+            ]
+            .column[
+            * **[Cursos en línea](#courses)**
+            * [Grupos de trabajo](#groups)
+            * [API pública](#api)
+            * **[Otros recursos](#other)**
+            * **[Fuentes alternativas](#extra)**
+            * [Cómo contribuir](#contribute)
+            * [Ideas, preguntas, comentarios](#qa)
+            ]
+            ]
+            ---
+            name: what
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Qué es el W3C
+            *&laquo;In October 1994, [Tim&nbsp;Berners-Lee](http://www.w3.org/People/Berners-Lee/) founded the [World Wide Web Consortium (W3C)](http://www.w3.org/) at the Massachusetts Institute of Technology.&raquo;* [[fuente](http://www.w3.org/Consortium/facts#history)]
+            * Internacional
+            * Sin ánimo de lucro
+            * Financiada a través de:
+               * Cuotas de empresas miembro
+               * Donaciones
+            * Comprometida con una web:
+               * Abierta
+               * Interoperable
+               * Agnóstica
+               * Duradera
+            ---
+            name: ten
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Diez cosas que (quizá) no sabías sobre el W3C y sus estándares
+            ---
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Diez cosas que (quizá) no sabías sobre el W3C y sus estándares
+            1. El W3C &laquo;no existe&raquo;
+            ---
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Diez cosas que (quizá) no sabías sobre el W3C y sus estándares
+            1. El W3C &laquo;no existe&raquo;
+            1. W3C &ne; W3Schools
+            ---
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Diez cosas que (quizá) no sabías sobre el W3C y sus estándares
+            1. El W3C &laquo;no existe&raquo;
+            1. W3C &ne; W3Schools
+            1. [El W3C está también en España](http://w3c.es) (y en muchos otros países)
+            ---
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Diez cosas que (quizá) no sabías sobre el W3C y sus estándares
+            1. El W3C &laquo;no existe&raquo;
+            1. W3C &ne; W3Schools
+            1. [El W3C está también en España](http://w3c.es) (y en muchos otros países)
+            1. Muchas empresas diminutas también [están en el W3C](https://www.w3.org/Consortium/Member/List) (453 en total)
+            ---
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Diez cosas que (quizá) no sabías sobre el W3C y sus estándares
+            1. El W3C &laquo;no existe&raquo;
+            1. W3C &ne; W3Schools
+            1. [El W3C está también en España](http://w3c.es) (y en muchos otros países)
+            1. Muchas empresas diminutas también [están en el W3C](https://www.w3.org/Consortium/Member/List) (453 en total)
+            1. El W3C es una organización pequeña ([58 &laquo;empleados&raquo;](https://www.w3.org/People/))
+            ---
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Diez cosas que (quizá) no sabías sobre el W3C y sus estándares
+            1. El W3C &laquo;no existe&raquo;
+            1. W3C &ne; W3Schools
+            1. [El W3C está también en España](http://w3c.es) (y en muchos otros países)
+            1. Muchas empresas diminutas también [están en el W3C](https://www.w3.org/Consortium/Member/List) (453 en total)
+            1. El W3C es una organización pequeña ([58 &laquo;empleados&raquo;](https://www.w3.org/People/))
+            1. El W3C es una organización [abierta](https://github.com/w3c), y lo es cada vez más
+            ---
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Diez cosas que (quizá) no sabías sobre el W3C y sus estándares
+            1. El W3C &laquo;no existe&raquo;
+            1. W3C &ne; W3Schools
+            1. [El W3C está también en España](http://w3c.es) (y en muchos otros países)
+            1. Muchas empresas diminutas también [están en el W3C](https://www.w3.org/Consortium/Member/List) (453 en total)
+            1. El W3C es una organización pequeña ([58 &laquo;empleados&raquo;](https://www.w3.org/People/))
+            1. El W3C es una organización [abierta](https://github.com/w3c), y lo es cada vez más
+            1. La parte legal es muy importante
+            ---
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Diez cosas que (quizá) no sabías sobre el W3C y sus estándares
+            1. El W3C &laquo;no existe&raquo;
+            1. W3C &ne; W3Schools
+            1. [El W3C está también en España](http://w3c.es) (y en muchos otros países)
+            1. Muchas empresas diminutas también [están en el W3C](https://www.w3.org/Consortium/Member/List) (453 en total)
+            1. El W3C es una organización pequeña ([58 &laquo;empleados&raquo;](https://www.w3.org/People/))
+            1. El W3C es una organización [abierta](https://github.com/w3c), y lo es cada vez más
+            1. La parte legal es muy importante
+            1. La gente del W3C **no** trabaja &laquo;haciendo estándares&raquo;
+            ---
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Diez cosas que (quizá) no sabías sobre el W3C y sus estándares
+            1. El W3C &laquo;no existe&raquo;
+            1. W3C &ne; W3Schools
+            1. [El W3C está también en España](http://w3c.es) (y en muchos otros países)
+            1. Muchas empresas diminutas también [están en el W3C](https://www.w3.org/Consortium/Member/List) (453 en total)
+            1. El W3C es una organización pequeña ([58 &laquo;empleados&raquo;](https://www.w3.org/People/))
+            1. El W3C es una organización [abierta](https://github.com/w3c), y lo es cada vez más
+            1. La parte legal es muy importante
+            1. La gente del W3C **no** trabaja &laquo;haciendo estándares&raquo;
+            1. Los estándares **no** se redactan para programadores y diseñadores web
+            ---
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Diez cosas que (quizá) no sabías sobre el W3C y sus estándares
+            1. El W3C &laquo;no existe&raquo;
+            1. W3C &ne; W3Schools
+            1. [El W3C está también en España](http://w3c.es) (y en muchos otros países)
+            1. Muchas empresas diminutas también [están en el W3C](https://www.w3.org/Consortium/Member/List) (453 en total)
+            1. El W3C es una organización pequeña ([58 &laquo;empleados&raquo;](https://www.w3.org/People/))
+            1. El W3C es una organización [abierta](https://github.com/w3c), y lo es cada vez más
+            1. La parte legal es muy importante
+            1. La gente del W3C **no** trabaja &laquo;haciendo estándares&raquo;
+            1. Los estándares **no** se redactan para programadores y diseñadores web
+            1. Los estándares son más interesantes cuando aún no son estándares
+            ---
+            name: challenges
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Desafíos de los estándares
+            * *Inclusión y consenso* vs. *agilidad*
+            * *Bleeding edge* vs. *conservadurismo*
+            ---
+            name: tr
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## /TR
+            [`w3.org/TR`](https://www.w3.org/TR/)
+            ---
+            name: tools
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Software disponible
+            * [`w3c.github.io/developers/tools`](https://w3c.github.io/developers/tools/)
+            * [`w3.org/Status`](https://www.w3.org/Status)
+            ---
+            name: checkers
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Checkers
+            * *Markup*:
+               - El *clásico* (XHTML, HTML4): [`validator.w3.org`](https://validator.w3.org/)
+               - El *bueno* (HTML5): [`validator.w3.org/nu`](https://validator.w3.org/nu/) &mdash; [`validator.nu`](https://validator.nu/)
+            * De CSS: [`jigsaw.w3.org/css-validator`](https://jigsaw.w3.org/css-validator/)
+            * De *i18n*: [`validator.w3.org/i18n-checker`](https://validator.w3.org/i18n-checker/)
+            * De *enlaces rotos*: [`validator.w3.org/checklink`](https://validator.w3.org/checklink)
+            * De RSS: [`validator.w3.org/feed`](https://validator.w3.org/feed/)
+            * Validador *unificado*: [`validator.w3.org/unicorn`](https://validator.w3.org/unicorn/)
+            ---
+            name: html
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## El checker de HTML5
+            * Fuentes (Java): [`github.com/validator/validator`](https://github.com/validator/validator)
+            * Instrucciones para compilarlo: [`validator.github.io/validator`](https://validator.github.io/validator/)
+            ```bash
+            java -jar validator/build/dist/vnu.jar index.html
+            java -jar validator/build/dist/vnu.jar https://7r.ventures/
+            ```
+            ---
+            name: courses
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Cursos en línea
+            * [W3Cx (edX)](https://w3cx.org/)
+            * [W3DevCampus](https://www.w3devcampus.com/)
+            ---
+            name: groups
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Grupos de trabajo
+            * *Working groups*: [`w3.org/Consortium/activities`](https://www.w3.org/Consortium/activities)
+            * *Community groups*: [`w3.org/community`](https://www.w3.org/community/)
+            ---
+            name: api
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## API Pública
+            [`w3c.github.io/w3c-api`](https://w3c.github.io/w3c-api/)
+            ---
+            name: other
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Otros recursos
+            * Listas de correo públicas: [`w3.org/Mail`](https://www.w3.org/Mail/)
+            *  Canales de IRC públicos (también en interfaz web): [`irc.w3.org`](http://irc.w3.org/)
+            * Twitter: [`@w3cdevs`](https://twitter.com/w3cdevs)
+            ---
+            name: extra
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Fuentes alternativas
+            * SDOs:
+               - [`whatwg.org`](https://whatwg.org/)
+               - [`discourse.wicg.io`](https://discourse.wicg.io/)
+            * Documentación:
+               - [`developer.mozilla.org`](https://developer.mozilla.org/)
+               - [`webplatform.github.io`](https://webplatform.github.io/)
+               - [`caniuse.com`](https://caniuse.com/)
+               - [`kangax.github.io/compat-table`](https://kangax.github.io/compat-table/)
+            ---
+            name: contribute
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Cómo contribuir
+            * [`github.com/w3c`](https://github.com/w3c)
+            * [`web-platform-tests.org`](https://web-platform-tests.org/)
+            ---
+            name: qa
+            class: middle
+            .footer[*El W3C: para qué puede servirnos en 7r Ventures*]
+            ## Ideas,<br /><br />preguntas,<br /><br />comentarios
+            
+        </textarea>
+        
+        <!-- <script type="text/javascript" src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js"></script> -->
+        <script type="text/javascript" src="remark-latest.min.js"></script>
+        
+        <script type="text/javascript">
+            
+            {
+                'use strict';
+                
+                var html = document.getElementsByTagName('html')[0];
+                html.classList.remove('no-js');
+                html.classList.add('js');
+                
+                remark.create({ratio: '16:9'});
+            }
+            
+        </script>
+        
+    </body>
+    
+    </html>
+    

@@ -35,7 +35,7 @@
         }
 
         .remark-slide-content {
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
 
         .remark-slide-content.img {
@@ -59,6 +59,12 @@
         code * {
             font-family: monospace;
             /*font-size: 90%;*/
+        }
+
+        .chunk {
+            background-color: #ffffff;
+            border: 1px solid #c0c0c0;
+            border-radius: .25rem;
         }
 
         .remark-slide-content pre code,
@@ -169,18 +175,13 @@
         }
 
         .portrait img {
-            width: 65%;
+            width: 55%;
             box-shadow: 0 .5rem 1rem #000000;
         }
 
-        .company {
-            font-family: sans-serif;
-            font-weight: bold;
-        }
-
         .logod img {
-            width: 50%;
-            margin-top: 2rem;
+            width: 60%;
+            margin: .5rem 0;
         }
 
         .logod2 img {
@@ -231,60 +232,132 @@
     </section>
 
     <textarea id="source">
+
         name: cover
-        # <br /> Developing our first<br />browser extension
+        # <br /> Developing our first browser extension
         .footnote[[MadridJS](https://www.meetup.com/madridjs/) / [Spotahome](https://www.spotahome.com/) <br />
         Copyright &copy; 2019 [tripu](https://tripu.info/) <br /> <br />
         .nb[(Press `&rarr;` or swipe left)]]
+
         ---
+
         name: agenda
         .footer[*Developing our first browser extension*]
         ## Agenda
         * [`$ whoami`](#me)
+        * [Solving a personal need with a simple extension](#need)
+        * [Anatomy of an extension](#anatomy)
+        * [`manifest.json`](#manifest)
+        * [Some tricks](#tricks)
+        * [How to make it cross-browser](#cross)
+        * [Publishing our extension](#publishing)
         * [Resources](#resources)
         * [Questions &amp; comments](#qa)
+
         ---
+
         name: me
         .footer[*Developing our first browser extension*]
         ## $ whoami
         .twoCols[
         .column[
         .center[
-        .center[.portrait[![Portrait](tripu-640.jpeg)]]  
+        .portrait[![Portrait](tripu-640.jpeg)]  
         **tripu**  
-        4 years at the [.logow[![w3c-logo.png](w3c-logo.png)]](https://www.w3.org/)  
         [`https://tripu.info`](https://tripu.info/)
         ]
         ]
         .column[
         .center[
-        .center[.logod[![Logo](devo-logo.png)]]  
-        *software engineer* at .company[Devo]  
+        4 years at the [.logow[![w3c-logo.png](w3c-logo.png)]](https://www.w3.org/)
+        <br />
+        <br />
+        <br />
+        *Software engineer* at
+        .logod[![Logo](devo-logo.png)]  
         (we are hiring!)  
-        [`https://devo.com`](https://www.devo.com/)
+        [`https://devo.com`](https://www.devo.com/careers/openings/)
         ]
         ]
         ]
+
         ---
+
+        name: need
+        .footer[*Developing our first browser extension*]
+        ## Solving a personal need with a simple extension
+
+        .center[
+        .chunk[Her request --> "room surface >= 9x6 m" -- quite large!]  
+        &ne;  
+        .chunk[Her request &rarr; &ldquo;room surface &ge; 9&times;4 m&rdquo; &mdash; quite large!]
+        ]
+
+        ---
+
+        name: anatomy
+        .footer[*Developing our first browser extension*]
+        ## Anatomy of an extension
+
+        ---
+
+        name: manifest
+        .footer[*Developing our first browser extension*]
+        ## manifest.json
+
+        ---
+
+        name: tricks
+        .footer[*Developing our first browser extension*]
+        ## Some tricks
+
+        ---
+
+        name: cross
+        .footer[*Developing our first browser extension*]
+        ## How to make it cross-browser
+
+        Summaries of incompatibilities on MDN:
+
+        * [*&ldquo;Building a cross-browser extension&rdquo;*](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension)
+        * [*&ldquo;Differences between API implementations&rdquo;*](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations)
+
+        ---
+
+        name: publishing
+        .footer[*Developing our first browser extension*]
+        ## Publishing our extension
+
+        ---
+
         name: resources
         .footer[*Developing our first browser extension*]
         ## Resources
+
+        * Best reference: [MDN *&ldquo;Browser extensions&rdquo;*](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) (for FF)
+        * [Google Chrome *&ldquo;What are extensions?&rdquo;*](https://developer.chrome.com/extensions) (for Chrom*)
+
         ---
+
         name: credits
         .footer[*Developing our first browser extension*]
         ## Credits
+
         ---
+
         name: qa
         class: middle
         .footer[*Developing our first browser extension*]
         ## Questions,<br />comments,<br />debate
+
         ---
+
         name: hiring
         class: middle
         .footer[*Developing our first browser extension*]
         .center[.logod2[![Logo](devo-logo.png)]]
-        ## <br />We are hiring!<br /><br />[`https://devo.com`](https://www.devo.com/)
-        
+        ## <br />[We are hiring!](https://www.devo.com/careers/openings/)<br /><br />[`t@tripu.info`](mailto:t@tripu.info)
+
     </textarea>
 
     <!-- <script type="text/javascript" src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->

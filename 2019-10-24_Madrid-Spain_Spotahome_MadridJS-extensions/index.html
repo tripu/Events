@@ -239,6 +239,7 @@
         * [Anatomy of an extension](#anatomy)
         * [`manifest.json`](#manifest)
         * [How to make it cross-browser](#cross)
+        * [Debugging](#debugging)
         * [Publishing our extension](#publishing)
         * [Tips &amp; tricks](#tips)
         * [Resources](#resources)
@@ -469,11 +470,14 @@
         * [Documentation](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/)
         * No registration fee
         * No 2FA required
-        * Format: ZIP (extension `.xpi`)
+        * Format: ZIP (expected extension `.xpi`); *signed*
         * Can target [Firefox for
         Android](https://extensionworkshop.com/documentation/develop/developing-extensions-for-firefox-for-android/)!
         * Facilitated by the CLI tool
         [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
+        * Only other ways outside AMO:
+          - As *temporary* add-ons on `about:debugging#/runtime/this-firefox`
+          - Dev/nightly FF: `about:config` &rarr; setting `xpinstall.signatures.required` to `true`
 
         ---
 
@@ -485,7 +489,7 @@
         * 2FA required
         * Format: ZIP (extension `.crx`)
         * Only other ways outside Chrome Web Store:
-          - Unpacked extensions, under developer mode
+          - Unpacked *temporary* extensions, under developer mode
           - Enterprise policy
           - Linux!
 
@@ -550,6 +554,7 @@
         cat manifest.json
             | jq 'del(.options_ui.chrome_style)'
             > dist/firefox/manifest.json
+        cd dist/firefox && zip -r -FS ../glypher-firefox-unsigned.xpi * && cd -
 
         # Chrome:
         cat manifest.json
@@ -570,10 +575,10 @@
 
         .footer[*Developing our first browser extension*]
         ## Worth noting: user scripts are a simpler alternative!
-        ✓ Simpler to develop, debug and tinker with  
+        ✓ Simpler to develop, debug, and tinker with  
         ✓ Unbounded by security restrictions (do whatever you want)
 
-        ✗ Harder to use for regular users  
+        ✗ Harder to adopt for regular users  
         ✗ Worse distribution and discoverability  
         ✗ Associated to specific domains only  
         ✗ Can't modify the chrome of the browser

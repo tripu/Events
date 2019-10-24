@@ -35,7 +35,7 @@
         }
 
         .remark-slide-content {
-            font-size: 2rem;
+            font-size: 1.75rem;
         }
 
         .remark-slide-content.img {
@@ -44,21 +44,14 @@
         }
 
         .remark-slide-content.empty .remark-slide-number {
-            /* .remark-slide-container:nth-child(1) .remark-slide-number { */
             visibility: hidden;
         }
-
-        /*.remark-slide-content .footer,
-        .remark-slide-content .remark-slide-number {
-            font-size: 22px;
-        }*/
 
         pre,
         pre *,
         code,
         code * {
             font-family: monospace;
-            /*font-size: 90%;*/
         }
 
         .chunk {
@@ -77,7 +70,6 @@
             padding-left: .3em;
             padding-right: .3em;
             border-radius: .3em;
-            /* background-color: #ffffff; */
         }
 
         .remark-slide-container:first-child .remark-slide-number {
@@ -105,16 +97,8 @@
             left: 20px;
             bottom: 12px;
             opacity: .5;
+            font-size: smaller;
         }
-
-        /*.remark-slide-content .progress-title,
-        .remark-slide-content .progress {
-            opacity: .333;
-        }
-        
-        .remark-slide-content .progress-title {
-            font-size: 66.7%;
-        }*/
 
         .remark-slide-content .nb {
             color: #2da910;
@@ -138,7 +122,6 @@
             bottom: 2em;
             left: 0;
             right: 0;
-            /* margin-left: -2em; */
             width: 100%;
             text-align: center;
         }
@@ -180,8 +163,8 @@
         }
 
         .logod img {
-            width: 60%;
-            margin: .5rem 0;
+            width: 70%;
+            margin: 1rem 0;
         }
 
         .logod2 img {
@@ -191,6 +174,10 @@
         .logow img {
             height: 2rem;
             vertical-align: text-bottom;
+        }
+
+        .logot img {
+            width: 100%;
         }
 
         .screenshot img {
@@ -213,6 +200,13 @@
             width: 24%;
             box-shadow: 0 .5rem 1rem #000000;
         }
+
+        a:hover img,
+        a:focus img,
+        a:active img {
+            transform: scale(1.2);
+            transition: .1s;
+        }
     </style>
 
 </head>
@@ -232,7 +226,7 @@
         name: cover
         # <br /> Developing our first browser extension
         .footnote[[MadridJS](https://www.meetup.com/madridjs/) / [Spotahome](https://www.spotahome.com/) <br />
-        Copyright &copy; 2019 [tripu](https://tripu.info/) <br /> <br />
+        Copyright &copy; 2019 [tripu](https://tripu.info/) <br /> <br /> <br />
         .nb[(Press `&rarr;` or swipe left)]]
 
         ---
@@ -258,8 +252,9 @@
         .twoCols[
         .column[
         .center[
-        .portrait[![Portrait](tripu-640.jpeg)]  
+        [.portrait[![Portrait](tripu-640.jpeg)]](https://tripu.info/)  
         **tripu**  
+        [`t@tripu.info`](mailto:t@tripu.info)  
         [`https://tripu.info`](https://tripu.info/)
         ]
         ]
@@ -268,10 +263,10 @@
         4 years at the [.logow[![w3c-logo.png](w3c-logo.png)]](https://www.w3.org/)
         <br />
         <br />
+        <br />
         *Software engineer* at
-        .logod[![Logo](devo-logo.png)]  
-        (we are hiring!)  
-        [`https://devo.com`](https://www.devo.com/careers/openings/)
+        [.logod[![Logo](devo-logo.png)]](https://www.devo.com/careers/openings/)  
+        (we are hiring!)
         ]
         ]
         ]
@@ -282,56 +277,154 @@
         .footer[*Developing our first browser extension*]
         ## Solving a personal need with a simple extension
         .center[
-        .chunk[&nbsp;&nbsp;Her request --> "room surface >= 9x6 m" -- quite large!&nbsp;&nbsp;]  
+        .chunk[&nbsp;&nbsp;Her request -> "room surface >= 9x6 m" -- quite large!&nbsp;&nbsp;]  
         &ne;  
         .chunk[&nbsp;&nbsp;Her request &rarr; &ldquo;room surface &ge; 9&times;4 m&rdquo; &mdash; quite large!&nbsp;&nbsp;]
         <br /><br />
-        My (bad) solution until now: [`https://gist.github.com/tripu/8964164`](https://gist.github.com/tripu/8964164)
+        My (bad) solution until now:  
+        [`https://gist.github.com/tripu/8964164`](https://gist.github.com/tripu/8964164)
         ]
 
         ---
 
         .footer[*Developing our first browser extension*]
-        ## Introducing *Glypher*
+        ## Introducing Glypher (I)
         .center[
-        ![Glypher logo](logo-glypher.png)  
+        [![Glypher logo](glypher-logo.png)](https://github.com/tripu/glypher)  
         [`https://github.com/tripu/glypher`](https://github.com/tripu/glypher)
+        <br /> <br /> <br />
+        ![Icon](icon.png)
         ]
+
+        ---
+
+        .footer[*Developing our first browser extension*]
+        ## Introducing Glypher (II)
+        .center[.logot[![Pop-up](popup.png)]]
 
         ---
 
         name: anatomy
         .footer[*Developing our first browser extension*]
-        ## Anatomy of an extension
+        ## Anatomy of an extension (I)
         .center[.screenshot[![d](webextension-anatomy.png)]]
 
         ---
 
         .footer[*Developing our first browser extension*]
+        ## Anatomy of an extension (II)
+
+        ```txt
+        Glypher                              ├── LICENSE.md
+        ├── .github                          ├── manifest.json
+        │   └── README.md                    ├── pages
+        ├── build.sh                         │   ├── background.html
+        ├── dist                             │   ├── glyphs.html
+        │   ├── chrome                       │   └── options.html
+        │   └── firefox                      └── screenshots
+        ├── img                                  ├── icon.png
+        │   ├── logo-256.png                     └── popup.png
+        │   ├── logo-48.png
+        │   ├── logo-96.png
+        │   └── logo.svg
+        ├── js
+        │   ├── api-wrapper.js
+        │   ├── background.js
+        │   └── glyphs.js
+        ```
+
+        ---
+
+        .footer[*Developing our first browser extension*]
         ## Installing our own extension
+
+        (*Temporary* extension)
         
-        * FF:
-          - `about:debugging`
-          - *Load Temporary Add-on*
-          - Select the *manifest* (`glypher/dist/firefox/manifest.json`)
-        * Chrom*:
-          - `chrome://extensions/`
-          - *Developer mode*
-          - *Load unpacked*
-          - Select the *directory* (`glypher/dist/chrome/`)
+        * **FF:**
+          1. `about:debugging#/runtime/this-firefox`
+          1. *Load Temporary Add-on&hellip;*
+          1. Select the *manifest* (`glypher/dist/firefox/manifest.json`)
+        * **Chrom*:**
+          1. `chrome://extensions/`
+          1. *Developer mode*
+          1. *Load unpacked*
+          1. Select the *directory* (`glypher/dist/chrome/`)
 
         ---
 
         name: manifest
         .footer[*Developing our first browser extension*]
-        ## manifest.json
+        ## manifest.json (I)
+        ```json
+        {
+            "manifest_version": 2,
+            "name": "Glypher",
+            "description": "Quick copy'n'paste of miscellaneous characters and symbols",
+            "version": "0.1.0",
+            "homepage_url": "https://github.com/tripu/glypher",
+            "applications": {
+                "gecko": {
+                    "id": "glypher@tripu.info"
+                }
+            },
+            "icons": {
+                "48": "img/logo-48.png",
+                "96": "img/logo-96.png",
+                "256": "img/logo-256.png"
+            },
+        ⋮
+        ```
 
         ---
 
         .footer[*Developing our first browser extension*]
+        ## manifest.json (II)
+        ```json
+        ⋮
+            "browser_action": {
+                "default_title": "Glypher [Ctrl+↑ / ⌘+↑]",
+                "default_icon": {
+                    "48": "img/logo-48.png",
+                    "96": "img/logo-96.png",
+                    "256": "img/logo-256.png"
+                }
+            },
+            "commands": {
+                "show": {
+                    "description": "Glypher",
+                    "suggested_key": {
+                        "default": "Ctrl+Up"
+                    }
+                }
+            },
+        ⋮
+        ```
+
+        ---
+
+        .footer[*Developing our first browser extension*]
+        ## manifest.json (III)
+        ```json
+        ⋮
+            "options_ui": {
+                "browser_style": true,
+                "chrome_style": true,
+                "open_in_tab": false,
+                "page": "pages/options.html"
+            },
+            "background": {
+                "page": "pages/background.html"
+            }
+        }
+        ```
+        ---
+
+        .footer[*Developing our first browser extension*]
         ## Options page
-        * FF: `about:addons` &rarr; *Preferences*
-        * Chrom* (two ways):
+        * **FF:**
+          1. `about:addons`
+          1. *Preferences*
+        * **Chrom*** (two ways):
           - `chrome://extensions/` &rarr; *Details* &rarr; *Extension options*
           - right-click on extension icon
 
@@ -340,36 +433,67 @@
         name: cross
         .footer[*Developing our first browser extension*]
         ## How to make it cross-browser
-        Summaries of incompatibilities on MDN:
+        MDN:
+
         * [*&ldquo;Building a cross-browser
         extension&rdquo;*](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension)
         * [*&ldquo;Differences between API
         implementations&rdquo;*](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations)
+        * [*&ldquo;Chrome incompatibilities&rdquo;*](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
+
+        [Extension Workshop: *&ldquo;Porting a Google Chrome extension&rdquo;*](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)
+
+        [`manifest.json` compatibility table](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
 
         ---
 
         name: debugging
         .footer[*Developing our first browser extension*]
         ## Debugging
-        * [FF](https://extensionworkshop.com/documentation/develop/debugging/): `about:debugging` &rarr; *Enable add-on debugging*
-          - *Debug* for the background page/script
-          - Usual developer tools for pop-ups and the option page
-        * Chrom*:
-          - `chrome://extensions/`
-          - *Details*
-          - Under *Inspect views*, click on the page you want to debug
+        * **[FF](https://extensionworkshop.com/documentation/develop/debugging/):**
+          - Background page/script:  
+            `about:debugging#/runtime/this-firefox` &rarr; *Inspect*
+          - Pop-ups and the option page:  
+            usual developer tools
+        * **Chrom*:**
+          1. `chrome://extensions/`
+          1. *Details*
+          1. Under *Inspect views*, click on the page you want to debug
 
         ---
 
         name: publishing
         .footer[*Developing our first browser extension*]
-        ## Publishing our extension
+        ## Publishing our extension (FF)
+        * [AMO (`addons.mozilla.org`)](https://addons.mozilla.org/en-GB/firefox/extensions/)
+        * [Documentation](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/)
+        * No registration fee
+        * No 2FA required
+        * Format: ZIP (extension `.xpi`)
+        * Can target [Firefox for
+        Android](https://extensionworkshop.com/documentation/develop/developing-extensions-for-firefox-for-android/)!
+        * Facilitated by the CLI tool
+        [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
+
+        ---
+
+        .footer[*Developing our first browser extension*]
+        ## Publishing our extension (Chrom*)
+        * [Chrome Web Store](https://chrome.google.com/webstore/category/extensions)
+        * [Documentation](https://developer.chrome.com/extensions/hosting)
+        * Registration fee: $5
+        * 2FA required
+        * Format: ZIP (extension `.crx`)
+        * Only other ways outside Chrome Web Store:
+          - Unpacked extensions, under developer mode
+          - Enterprise policy
+          - Linux!
 
         ---
 
         name: tips
         .footer[*Developing our first browser extension*]
-        ## Tips &amp; tricks I: an API wrapper
+        ## Tips &amp; tricks (I): an API wrapper
         ```js
         let _found_api;
 
@@ -378,30 +502,44 @@
         else if ('undefined' !== typeof chrome && chrome.windows)
             _found_api = chrome;
         else
-            throw new Error(`glypher/api-wrapper: ERROR: cannot detect a valid browser API!`);
+            throw new Error(`glypher/api-wrapper: ERROR: cannot detect API!`);
 
         export default _found_api;
         ```
         ```js
-        import api from 'lib/api-wrapper.js';
+        import api from './api-wrapper.js';
 
         api.windows.create({url: 'pages/list.html'});
+        ⋮
+        api.browserAction.onClicked.addListener(⋯);
         ```
 
         ---
 
         .footer[*Developing our first browser extension*]
-        ## Tips &amp; tricks II: use pages, not scripts
+        ## Tips &amp; tricks (II): use pages, not scripts
         To use ES6 modules,
         [you have to specify *pages* instead of *scripts*](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Specifying_background_scripts)
+        ```json
+        "background": {
+            "page": "pages/background.html"
+        }
+        ```
+        ```html
+        <script type="module" src="../js/background.js"></script>
+        ```
+        ```js
+        import api from './api-wrapper.js';
+        ⋮
+        ```
 
         ---
 
         .footer[*Developing our first browser extension*]
-        ## Tips &amp; tricks III: keep a single manifest.json
+        ## Tips &amp; tricks (III): keep a single manifest.json
         ```sh
         #!/bin/sh
-        
+
         # Common stuff:
         for BROWSER in firefox chrome; do
             rm -r dist/$BROWSER/*
@@ -409,26 +547,36 @@
         done
 
         # Firefox:
-        cat manifest.json |
-            jq 'del(.browser_action.chrome_style) | del(.options_ui.chrome_style)' >
-            dist/firefox/manifest.json
+        cat manifest.json
+            | jq 'del(.options_ui.chrome_style)'
+            > dist/firefox/manifest.json
 
         # Chrome:
-        cat manifest.json |
-            jq 'del(.applications) | del(.browser_action.browser_style) | del(.options_ui.browser_style)' >
-            dist/chrome/manifest.json
-
+        cat manifest.json
+            | jq 'del(.applications) | del(.options_ui.browser_style)'
+            > dist/chrome/manifest.json
         ```
+
+        ---
+        
+        .footer[*Developing our first browser extension*]
+        ## Tips &amp; tricks (IV): refresh
+        * Don't forget to `./build.sh`
+        * Don't forget to *reload* the extension on the browser
+        * Don't forget to clear all previous errors
+        * Remember that in Chrom\*, `console` output is considered an *error*
 
         ---
 
         .footer[*Developing our first browser extension*]
-        ## A simpler alternative to extensions: user scripts
+        ## Worth noting: user scripts are a simpler alternative!
         ✓ Simpler to develop, debug and tinker with  
         ✓ Unbounded by security restrictions (do whatever you want)
 
         ✗ Harder to use for regular users  
-        ✗ Worse distribution and discoverability
+        ✗ Worse distribution and discoverability  
+        ✗ Associated to specific domains only  
+        ✗ Can't modify the chrome of the browser
 
         The best repository: [Greasy Fork](https://greasyfork.org/en)  
         FF add-on: [Greasemonkey](https://addons.mozilla.org/en-GB/firefox/addon/greasemonkey/)  

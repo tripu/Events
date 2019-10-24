@@ -476,8 +476,8 @@
         * Facilitated by the CLI tool
         [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
         * Only other ways outside AMO:
-          - As *temporary* add-ons on `about:debugging#/runtime/this-firefox`
-          - Dev/nightly FF: `about:config` &rarr; setting `xpinstall.signatures.required` to `true`
+          - `about:debugging#/runtime/this-firefox` (*temporary*)
+          - `about:config` &rarr; `xpinstall.signatures.required=true`
 
         ---
 
@@ -565,11 +565,12 @@
         ---
         
         .footer[*Developing our first browser extension*]
-        ## Tips &amp; tricks (IV): refresh
+        ## Tips &amp; tricks (IV): check &amp; refresh
         * Don't forget to `./build.sh`
         * Don't forget to *reload* the extension on the browser
         * Don't forget to clear all previous errors
         * Remember that in Chrom\*, `console` output is considered an *error*
+        * If things fail, check *permissions* in `manifest.json`
 
         ---
 

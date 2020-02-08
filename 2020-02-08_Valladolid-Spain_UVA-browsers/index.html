@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html lang="en-GB" class="no-js">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Tu navegador está roto — criticism of the web</title>
+    <meta name="author" content="tripu <t@tripu.info> https://tripu.info/" />
+    <meta name="description" content="Tu navegador está roto — criticism of the web" />
+    <meta name="keywords" content="Node.js,nodejs,node,architecture,project,tripu,tripu.info,eltripu,トリプ,presentation,commit,talk,conference" />
+
+    <style type="text/css">
+
+        @import url('//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,400italic');
+        @import url('//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic');
+        @import url('//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+
+        * {
+            font-family: 'Droid Serif', 'Lucida Sans Unicode', 'Lucida Grande', 'Trebuchet MS', Helvetica, Verdana, Geneva, Calibri, sans-serif;
+            line-height: 1.5;
+        }
+
+        #source, .js #fallback {
+            visibility: hidden;
+            display: none;
+        }
+
+        .remark-slide-content {
+            padding: 1rem 2rem;
+            background-image:url(background2.jpeg);
+            background-size: cover;
+        }
+
+        .remark-slide-content {
+            font-size: 1.5rem;
+        }
+
+        .remark-slide-content.img {
+            background-color: #000000;
+            background-size: contain;
+        }
+
+        .remark-slide-content.empty .remark-slide-number {
+        /* .remark-slide-container:nth-child(1) .remark-slide-number { */
+            visibility: hidden;
+        }
+
+        /*.remark-slide-content .footer,
+        .remark-slide-content .remark-slide-number {
+            font-size: 22px;
+        }*/
+
+        pre, pre *, code, code * {
+            font-family: monospace;
+            /*font-size: 90%;*/
+        }
+
+        .remark-slide-content pre code, .remark-slide-content pre code *, .hljs-default .hljs {
+            background-color: #ffffff;
+        }
+
+        .remark-slide-content code {
+            padding-left: .3em;
+            padding-right: .3em;
+            border-radius: .3em;
+            /* background-color: #ffffff; */
+        }
+
+        .remark-slide-container:first-child .remark-slide-number {
+            visibility: hidden;
+        }
+
+        .remark-slide-content h1,
+        .remark-slide-content h2,
+        .remark-slide-content h3,
+        .remark-slide-content h4,
+        .remark-slide-content h5,
+        .remark-slide-content h6 {
+            text-align: center;
+            font-family: 'Yanone Kaffeesatz';
+            font-weight: normal;
+            text-shadow: 0 .2rem .2rem #c0c0c0;
+        }
+
+        .remark-slide-content h2 {
+            margin-top: 0;
+        }
+
+        .remark-slide-content .footer {
+            position: absolute;
+            left: 20px;
+            bottom: 12px;
+            opacity: .5;
+        }
+
+        /*.remark-slide-content .progress-title,
+        .remark-slide-content .progress {
+            opacity: .333;
+        }
+
+        .remark-slide-content .progress-title {
+            font-size: 66.7%;
+        }*/
+
+        .remark-slide-content .nb {
+            color: #2da910;
+        }
+
+        .remark-slide-content .ok,
+        .remark-slide-content .no {
+            font-weight: bold;
+        }
+
+        .remark-slide-content .ok {
+            color: #00c000;
+        }
+
+        .remark-slide-content .no {
+            color: #c00000;
+        }
+
+        .remark-slide-content .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 0;
+            right: 0;
+            /* margin-left: -2em; */
+            width: 100%;
+            text-align: center;
+        }
+
+        .remark-slide-content .mark {
+            padding-left: .15em;
+            padding-right: .15em;
+            border-radius: .15em;
+            background-color: #ffff80;
+        }
+
+        .remark-slide-content .twoCols {
+            column-count: 2;
+            column-gap: 2em;
+        }
+
+        .remark-slide-content .column {
+            break-inside: avoid-column;
+        }
+
+        .remark-slide-content table {
+            width: 100%;
+            padding: .25rem .5rem;
+            border: .01rem solid #808080;
+            background-color: #f8f8f8;
+        }
+
+        .remark-slide-content .column:nth-child(2) > *:first-child {
+            padding-top: 20px;
+        }
+
+        .remark-slide-content abbr {
+            cursor: help;
+        }
+
+        .portrait img {
+            width: 50%;
+            margin-bottom: 1rem;
+            box-shadow: 0 .5rem 1rem #000000;
+        }
+
+        .company {
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .logo7 img {
+            width: 50%;
+        }
+
+        .logo7b img {
+            width: 40%;
+        }
+
+        .logow img {
+            /* padding: 0 .25rem 0 1rem; */
+            height: 2rem;
+            vertical-align: text-bottom;
+        }
+
+        .screenshots img {
+            width: 65%;
+        }
+
+        .screenshots2 img {
+            width: 90%;
+        }
+
+        a, a:visited {
+            color: #4040c0;
+            text-decoration: none;
+        }
+
+        a:hover, a:active, a:focus {
+            text-decoration: underline;
+        }
+
+        .small img {
+            width: 24%;
+            box-shadow: 0 .5rem 1rem #000000;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <section id="fallback">
+        <h1>Tu navegador está roto<br />criticism of the web</h1>
+        <p>NB: you need a browser with <strong>JavaScript enabled</strong> to watch this presentation!</p>
+        <address>
+            <a href="https://tripu.info/">tripu</a>
+        </address>
+    </section>
+
+    <textarea id="source">
+        name: cover
+        # <br />Tu navegador está roto
+        ### *Criticism of the web*
+        .footnote[[WeCodeFest](https://wecodefest.com/2020) <br />
+        Copyright &copy; 2020 [tripu](https://tripu.info/) <br /> <br />
+        .nb[(Press `&rarr;` or swipe left)]]
+        ---
+        name: agenda
+        .footer[*Tu navegador está roto*]
+        ## Agenda
+        * [`$ whoami`](#me)
+        * **[The web in the beginning](#supposed)**
+        * **[What is the web *today*?](#what)**
+        * **[What is the big deal?](#deal)**
+        * **[The strengths of the web](#strengths)**
+        * **[&ldquo;The UNIX philosophy&rdquo;](#unix)**
+        * **[Enter the *semantic web*](#semantic)**
+        * **[What to do *as users*?](#users)**
+        * **[What to do *as engineers*?](#engineers)**
+        * [Resources](#resources)
+        * [Questions &amp; comments](#qa)
+        ---
+        name: me
+        .footer[*Tu navegador está roto*]
+        ## $ whoami
+        .twoCols[
+        .column[
+        .center[
+        .center[.portrait[![Portrait](tripu-640.jpeg)]]
+        **Antonio Olmo Titos**
+        *software engineer*
+        4 years at the [.logow[![w3c-logo.png](w3c-logo.png)]](https://www.w3.org/)
+        [`https://`**`tripu.info`**](https://tripu.info/)
+        ]
+        ]
+        .column[
+        .center[
+        .center[.logo7[![Logo](devo-logo.png)]]
+        *software engineer* at
+        .company[Devo]
+        (we are hiring!)
+        [`https://www.devo.com`**](https://www.devo.com/careers/)
+        ]
+        ]
+        ]
+        ---
+        name: supposed
+        .footer[*Tu navegador está roto*]
+        ## The web in the beginning
+        * 1989
+        * HTTP (protocol) + HTML (language) + URL (identifier)
+        * Documents
+        * Hypertext
+        * Images
+        ---
+        class: center, middle, empty
+        [`https://www.w3.org/History/1989/proposal.html`](https://www.w3.org/History/1989/proposal.html)
+        <br />
+        <br />
+        <br />
+        [`http://info.cern.ch/hypertext/WWW/TheProject.html`](http://info.cern.ch/hypertext/WWW/TheProject.html)
+        ---
+        class: img, empty
+        background-image: url("./amazing.jpeg")
+        ---
+        class: img
+        background-image: url("./old.jpeg")
+        ---
+        class: img
+        background-image: url("./old.gif")
+        ---
+        class: center, middle, empty
+        [`https://worldwideweb.cern.ch/browser`](https://worldwideweb.cern.ch/browser)
+        ---
+        class: img, empty
+        background-image: url("./amazing2.gif")
+        ---
+        class: img
+        background-image: url("./contract.png")
+        ---
+        name: what
+        .footer[*Tu navegador está roto*]
+        ## What is the web today?
+        * The web ~ the internet (~ Google!) (~ my computer!!)
+        * Videogame console
+        * Streaming platform
+        * Shopping centre
+        * Social communication tool
+        * Runtime environment (a universal emulator)
+        * Distribution platform
+        * Our CV
+        * Our bank
+        * [A human right](https://www.nytimes.com/2012/01/05/opinion/internet-access-is-not-a-human-right.html)?
+        * &hellip;*Everything*
+        ---
+        name: deal
+        .footer[*Tu navegador está roto*]
+        ## What is the big deal? &rarr; Complexity
+        * [`https://www.w3.org/TR`](https://www.w3.org/TR/) lists today &ldquo;1,169 specs&rdquo;
+        * &hellip;most of them, still &ldquo;valid&rdquo;!
+        * Some APIs on browsers: [`https://caniuse.com/#index`](https://caniuse.com/#index)
+        * This leads to:
+           - Fragmentation
+           - Unpredictability
+           - Security holes
+           - Bugs
+           - Developers: cognitive overload
+        * Compare to more homogeneous platforms out there
+        ---
+        .footer[*Tu navegador está roto*]
+        ## What is the big deal? &rarr; Web fingerprinting
+        * Tracking users, identifying devices
+        * Works even without cookies (eg, canvas fingerprinting)
+        * [`https://panopticlick.eff.org/`](https://panopticlick.eff.org/)
+        ---
+        .footer[*Tu navegador está roto*]
+        ## What is the big deal? &rarr; Web fingerprinting
+        * The [*Battery Status API*](https://www.w3.org/TR/battery-status/) was [&ldquo;leaking&rdquo;](https://eprint.iacr.org/2015/616.pdf)
+        >  *&ldquo;Privacy implications of the Battery Status API, with a focus on its implementation
+        in Firefox for Linux operating system: [&hellip;] the high precision battery
+        level readings provided by Firefox can lead to an unexpected fingerprinting surface: the detection
+        of battery capacity.
+        In short time intervals, Battery Status API can be used to reinstantiate tracking identifiers of
+        users, similar to evercookies. Moreover, battery information can be used in cases where a user can
+        go to great lenghts to clear her evercookies.&rdquo;*
+        ---
+        .footer[*Tu navegador está roto*]
+        ## What is the big deal? &rarr; Resource hijacking
+        * The [*Service Workers API*](https://w3c.github.io/ServiceWorker/) makes it possible
+        * [Help Net Security:<br />*&ldquo;Modern browser APIs can be abused for hijacking device resources&rdquo;*](https://www.helpnetsecurity.com/2019/02/27/modern-browser-apis-can-be-abused-for-hijacking-device-resources/)
+        * [Reuters:<br />*&ldquo;U.S., UK government websites infected with crypto-mining malware: report&rdquo;*](https://www.reuters.com/article/us-bitcoin-cyber/u-s-uk-government-websites-infected-with-crypto-mining-malware-report-idUSKBN1FV0VO)
+        ---
+        .footer[*Tu navegador está roto*]
+        ## What is the big deal? &rarr; Redundancy
+        .center[Web apps today have to look and feel *&ldquo;as native&rdquo;*. But&hellip; *why!?*]
+        .center[.screenshots[![versus](./versus.jpeg)]]
+        ---
+        .footer[*Tu navegador está roto*]
+        ## What is the big deal? &rarr; Stalled performance
+        .center[.screenshots2[![Nutrition](./browsers.png)]]
+        ---
+        name: strengths
+        .footer[*Tu navegador está roto*]
+        ## The strengths of the web
+        * Interoperability
+        * Immediacy (updates are simple)
+        * Linkability, shareability (*deeply*)
+        * Simplicity (no dependencies)
+        * &ldquo;Open source&rdquo; almost by definition
+        ---
+        name: unix
+        .footer[*Tu navegador está roto*]
+        ## The UNIX philosophy
+        * A set of tools that are:
+           - small
+           - dedicated
+           - interchangeable
+        * A few common formats
+        * A simple way to &ldquo;connect&rdquo; inputs and outputs
+        ---
+        class: img
+        background-image: url("./documents.jpeg")
+        ---
+        .footer[*Tu navegador está roto*]
+        ## The UNIX philosophy
+        ```bash
+        grep -ERhio 'project [a-z]+\s' . |
+        sort -f | uniq -ci | sort -nr > projects.txt
+        ```
+        Produces this file, `projects.txt`:
+        ```bash
+        761 project neptune
+        444 project haumea
+        318 project gaspra
+        179 project mathilde
+        150 project callisto
+        122 project dia
+        107 project mneme
+         64 project helike
+        ```
+        ---
+        .footer[*Tu navegador está roto*]
+        ## The UNIX philosophy on the web: imagine&hellip;
+        .center[.screenshots[![Flights](travel.png)]]
+        ```bash
+        get {skyscanner.net, hipmunk.com, google.com/flights} |
+        filter '#flight, date=2019-03-22, price<=120E' |
+        pick price,company,time |
+        sort -n -f price > flights.txt
+        ```
+        ---
+        name: semantic
+        .footer[*Tu navegador está roto*]
+        ## Enter the Semantic Web, and Linked Data
+        * *World Wide Web* &rarr; *Giant Global Graph*
+        * [`https://www.w3.org/standards/semanticweb/`](https://www.w3.org/standards/semanticweb/)
+        <br /><br />
+        .center[.screenshots[[![Graph](./graph.png)](https://upload.wikimedia.org/wikipedia/commons/a/a9/LOD_Cloud_2014-08.svg)]]
+        ---
+        name: users
+        .footer[*Tu navegador está roto*]
+        ## What can we do as users?
+        * Support free software
+        * Support open formats
+        * Block ads
+        * Report bugs
+        * Be willing to pay when it makes sense
+        * Resist surveillance and tracking
+        * Resist centralisation
+        ---
+        .footer[*Tu navegador está roto*]
+        ## What can we do as users?
+        .center[
+        .screenshots[![Nutrition](./nutrition.jpeg)]
+        Be responsible consumers
+        ]
+        ---
+        name: engineers
+        .footer[*Tu navegador está roto*]
+        ## What can we do as engineers?
+        Those same things, plus&hellip;
+        * Support web standards ([.logow[![w3c-logo.png](w3c-logo.png)]](https://www.w3.org/)!)
+        * Resist the hype of shiny things
+        * Embrace what is useful
+        * Think performance
+        * Think *A11Y*
+        * Think *i18n*
+        * Think of the future
+        * Think of the past
+        ---
+        name: resources
+        .footer[*Tu navegador está roto*]
+        ## Resources
+        * [Tim Berners-Lee: *&ldquo;30 Years On, What’s Next #ForTheWeb?&rdquo;*](https://onezero.medium.com/30-years-on-whats-next-fortheweb-6ce844ed147f)
+        * [Peter-Paul Koch: *&ldquo;Stop pushing the web forward&rdquo;*](https://www.quirksmode.org/blog/archives/2015/07/stop_pushing_th.html)
+        * [*&ldquo;Do we need browsers?&rdquo;* (apocryphal)](http://blog.justletit.be/posts/do_we_need_browsers/)
+        ---
+        name: credits
+        .footer[*Tu navegador está roto*]
+        ## Credits
+        * [`https://commons.wikimedia.org/`](https://commons.wikimedia.org/wiki/File:Copies_of_documents_at_European_Parliament_in_Strasbourg.jpg)
+        * [`https://www.publicdomainpictures.net/`](https://www.publicdomainpictures.net/en/view-image.php?image=97848&picture=portrait-of-boy-amazed)
+        * [`https://medium.com/mozilla-tech/the-search-for-the-goldilocks-browser-and-why-firefox-may-be-just-right-for-you-1f520506aa35`](https://medium.com/mozilla-tech/the-search-for-the-goldilocks-browser-and-why-firefox-may-be-just-right-for-you-1f520506aa35)
+        * [`https://imagexmedia.com/blog/2017/01/native-or-web-which-app-me`](https://imagexmedia.com/blog/2017/01/native-or-web-which-app-me)
+        ---
+        name: qa
+        class: middle
+        .footer[*Tu navegador está roto*]
+        ## Questions,<br />comments,<br />debate
+        ---
+        name: hiring
+        class: middle
+        .footer[*Tu navegador está roto*]
+        ## We are hiring!<br />[`https://www.devo.com/careers/`**](https://www.devo.com/careers/)
+        .center[.logo7b[![Logo](devo<``-logo.png)]]
+
+    </textarea>
+
+    <!-- <script type="text/javascript" src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js"></script> -->
+    <script type="text/javascript" src="remark-latest.min.js"></script>
+
+    <script type="text/javascript">
+
+        {
+            'use strict';
+
+            var html = document.getElementsByTagName('html')[0];
+            html.classList.remove('no-js');
+            html.classList.add('js');
+
+            remark.create({ratio: '16:9'});
+        }
+
+    </script>
+
+</body>
+
+</html>

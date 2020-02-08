@@ -1,6 +1,6 @@
 # Events
 
-## &rarr; [WeCodeFest: *tu navegador está roto*](https://tripu.github.io/Events/2020-02-08_Valladolid-Spain_UVA-browsers/)
+## Presentación WeCodeFest &rarr; [*Tu navegador está roto*](https://tripu.github.io/Events/2020-02-08_Valladolid-Spain_UVA-browsers/)
 
 Date | Location | Host | Topic | Resources
 :----|:---------|:-----|:------|:---------

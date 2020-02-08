@@ -209,6 +209,16 @@
             box-shadow: 0 .5rem 1rem #000000;
         }
 
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
     </style>
 
 </head>
@@ -225,8 +235,10 @@
 
     <textarea id="source">
         name: cover
-        # <br />Tu navegador está roto
+        # Tu navegador está roto
         ### *Criticism of the web*
+        <br />
+        ### 👉&nbsp;&nbsp;&nbsp;&nbsp;.blink[[`github.com/tripu/Events`](https://tripu.github.io/Events/2020-02-08_Valladolid-Spain_UVA-browsers/)]&nbsp;&nbsp;&nbsp;&nbsp; 👈
         .footnote[[WeCodeFest](https://wecodefest.com/2020) <br />
         Copyright &copy; 2020 [tripu](https://tripu.info/) <br /> <br />
         .nb[(Press `&rarr;` or swipe left)]]
@@ -252,20 +264,28 @@
         .twoCols[
         .column[
         .center[
-        .center[.portrait[![Portrait](tripu-640.jpeg)]]
+        .portrait[![Portrait](tripu-640.jpeg)]
+        <br />
         **Antonio Olmo Titos**
+        <br />
         *software engineer*
-        4 years at the [.logow[![w3c-logo.png](w3c-logo.png)]](https://www.w3.org/)
+        <br />
         [`https://`**`tripu.info`**](https://tripu.info/)
         ]
         ]
         .column[
         .center[
+        4 years at the [.logow[![w3c-logo.png](w3c-logo.png)]](https://www.w3.org/)
+        <br />
+        <br />
+        <br />
         .center[.logo7[![Logo](devo-logo.png)]]
         *software engineer* at
         .company[Devo]
+        <br />
+        <br />
         (we are hiring!)
-        [`https://www.devo.com`**](https://www.devo.com/careers/)
+        [`https://`**`devo.com`**](https://www.devo.com/careers/openings/)
         ]
         ]
         ]
@@ -284,7 +304,7 @@
         <br />
         <br />
         <br />
-        [`http://info.cern.ch/hypertext/WWW/TheProject.html`](http://info.cern.ch/hypertext/WWW/TheProject.html)
+        [`http://info.cern.ch/hypertext/WWW/TheProject.html`](https://web.archive.org/web/20200202061041/http://info.cern.ch/hypertext/WWW/TheProject.html)
         ---
         class: img, empty
         background-image: url("./amazing.jpeg")
@@ -322,7 +342,7 @@
         name: deal
         .footer[*Tu navegador está roto*]
         ## What is the big deal? &rarr; Complexity
-        * [`https://www.w3.org/TR`](https://www.w3.org/TR/) lists today &ldquo;1,169 specs&rdquo;
+        * [`https://www.w3.org/TR`](https://www.w3.org/TR/) lists today &ldquo;1,207 specs&rdquo;
         * &hellip;most of them, still &ldquo;valid&rdquo;!
         * Some APIs on browsers: [`https://caniuse.com/#index`](https://caniuse.com/#index)
         * This leads to:
@@ -410,7 +430,7 @@
         .center[.screenshots[![Flights](travel.png)]]
         ```bash
         get {skyscanner.net, hipmunk.com, google.com/flights} |
-        filter '#flight, date=2019-03-22, price<=120E' |
+        filter '#flight, date=2019-03-22, price<=120E, to=IT' |
         pick price,company,time |
         sort -n -f price > flights.txt
         ```
@@ -438,6 +458,7 @@
         ## What can we do as users?
         .center[
         .screenshots[![Nutrition](./nutrition.jpeg)]
+        <br />
         Be responsible consumers
         ]
         ---
@@ -477,8 +498,8 @@
         name: hiring
         class: middle
         .footer[*Tu navegador está roto*]
-        ## We are hiring!<br />[`https://www.devo.com/careers/`**](https://www.devo.com/careers/)
-        .center[.logo7b[![Logo](devo<``-logo.png)]]
+        ## We are hiring!<br />[`https://www.devo.com/careers/`](https://www.devo.com/careers/openings/)
+        .center[.logo7b[![Logo](devo-logo.png)]]
 
     </textarea>
 

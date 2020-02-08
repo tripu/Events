@@ -1,10 +1,9 @@
 # Events
 
-## Presentación WeCodeFest &rarr; [*Tu navegador está roto*](https://tripu.github.io/Events/2020-02-08_Valladolid-Spain_UVA-browsers/)
-
 Date | Location | Host | Topic | Resources
 :----|:---------|:-----|:------|:---------
-2019-10-24 | Madrid <br /> (Spain) | [MadridJS](https://www.meetup.com/madridjs/), <br /> [Spotahome](https://www.spotahome.com/) | *Developing our first <br /> browser extension* | Announcement: [#1](https://www.meetup.com/madridjs/events/265620054/). <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/2019-10-24_Madrid-Spain_Spotahome_MadridJS-extensions), [slideshow](https://tripu.github.io/Events/2019-10-24_Madrid-Spain_Spotahome_MadridJS-extensions/). <br /> Source code: [`tripu/glypher`](https://github.com/tripu/glypher)
+2020-02-08 | Valladolid <br /> (Spain) | [WeCodeFest](https://wecodefest.com/), <br /> [INF-UVA](https://www.inf.uva.es/) | *Tu navegador <br /> está roto: <br /> Criticism <br /> of the web* | Announcement: [#1](https://wecodefest.com/#timetable). <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/2020-02-08_Valladolid-Spain_UVA-browsers), [slideshow](https://tripu.github.io/Events/2020-02-08_Valladolid-Spain_UVA-browsers/).
+2019-10-24 | Madrid <br /> (Spain) | [MadridJS](https://www.meetup.com/madridjs/), <br /> [Spotahome](https://www.spotahome.com/) | *Developing our first <br /> browser extension* | Announcement: [#1](https://www.meetup.com/madridjs/events/265620054/). <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/2019-10-24_Madrid-Spain_Spotahome_MadridJS-extensions), [slideshow](https://tripu.github.io/Events/2019-10-24_Madrid-Spain_Spotahome_MadridJS-extensions/). <br /> Source code: [`tripu/glypher`](https://github.com/tripu/glypher).
 2019-03-14 | Legan&eacute;s <br /> (Spain) | [T3chfest](https://t3chfest.uc3m.es/2019/), <br /> [UC3M](http://uc3m.es) | *Beware the <br /> bloated browser!* | Announcement: [#1](https://t3chfest.uc3m.es/2019/programa/beware-the-bloated-browser/). <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/2019-03-14_Legan%C3%A9s-Spain_UC3M_T3chfest-browsers), [slideshow](https://tripu.github.io/Events/2019-03-14_Legan%C3%A9s-Spain_UC3M_T3chfest-browsers/). <br /> Video: [YouTube](https://www.youtube.com/watch?v=dnA6THOT6VA).
 2019-03-06 | | | | [[Internal presentation]](https://tripu.github.io/Events/2019-03-06/)
 2018-11-23 | Boadilla <br /> del Monte <br /> (Spain) | [Commit](https://2018.commit-conf.com/), [CEU](http://www.uspceu.com/) | *A sensible architecture <br /> for complex <br /> Node.js projects* | Announcement: [#1](https://www.koliseo.com/events/commit-2018/r4p/5630471824211968/agenda#/5116072650866688/5711359748603904). <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/2018-11-23_Boadilla-Spain_CEU_Commit-Node), [slideshow](https://tripu.github.io/Events/2018-11-23_Boadilla-Spain_CEU_Commit-Node/). <br /> Video: [YouTube](https://www.youtube.com/watch?v=1iXB1YFVGrk).
@@ -14,6 +13,6 @@ Date | Location | Host | Topic | Resources
 
 ## Credits
 
-Copyright &copy; 2014&ndash;2019 tripu ([`t@tripu.info`](mailto:t@tripu.info), [`https://tripu.info`](https://tripu.info/)).
+Copyright &copy; 2014&ndash;2020 tripu ([`t@tripu.info`](mailto:t@tripu.info), [`https://tripu.info`](https://tripu.info/)).
 
 [All rights reserved](//github.com/tripu/Events/blob/master/LICENSE.md).

@@ -9,7 +9,7 @@
     <title>Abusing ECMAScript for fun and enlightenment</title>
     <meta name="author" content="tripu <t@tripu.info> https://tripu.info/" />
     <meta name="description" content="Abusing ECMAScript for fun and enlightenment" />
-    <meta name="keywords" content="Node.js,nodejs,node,architecture,project,tripu,tripu.info,eltripu,トリプ,presentation,commit,talk,conference" />
+    <meta name="keywords" content="ecmascript,javascript,js,ecma,es,es6,tripu,tripu.info,eltripu,トリプ,presentation,talk,conference,stayathomeconf,stayathome,event" />
 
     <style type="text/css">
 
@@ -163,12 +163,19 @@
             vertical-align: text-bottom;
         }
 
-        .screenshots img {
-            width: 65%;
+        .small-img img {
+            width: 14rem;
+            box-shadow: 0 .5rem 1rem #000000;
         }
 
-        .screenshots2 img {
-            width: 90%;
+        .medium-img img {
+            width: 30rem;
+            box-shadow: 0 .5rem 1rem #000000;
+        }
+
+        .medium2-img img {
+            width: 28rem;
+            box-shadow: 0 .5rem 1rem #000000;
         }
 
         a, a:visited {
@@ -185,14 +192,19 @@
             box-shadow: 0 .5rem 1rem #000000;
         }
 
-        .blink {
-            text-shadow: none;
-            animation: blinker 1s linear infinite;
+        .important {
+            text-shadow:
+                0 .2rem .5rem #808080,
+                .2rem 0 .5rem #808080,
+                0 -.2rem .5rem #808080,
+                -.2rem 0 .5rem #808080;
+            animation: pointers 1s ease-out infinite;
         }
 
-        @keyframes blinker {
+        @keyframes pointers {
             50% {
-                background-color: #ffff00;
+                margin-left: 2rem;
+                margin-right: 2rem;
             }
         }
 
@@ -211,20 +223,29 @@
     </section>
 
     <textarea id="source">
+
         name: cover
         # Abusing ECMAScript<br />for fun and enlightenment
-        .center[.blink[&nbsp;👉&nbsp;[`tripu.info/this`](https://tripu.info/this)&nbsp;👈&nbsp;]]
-        .footnote[[Stay At Home Conf](https://stayathomeconf.com/) <br />
+        .center[.important[👉]&nbsp;&nbsp;[`https://tripu.info/this`](https://tripu.info/this/)&nbsp;&nbsp;.important[👈]]
+        .footnote[[_Stay At Home Conf_](https://stayathomeconf.com/) <br />
         Copyright &copy; 2020 [tripu](https://tripu.info/) <br /> <br />
         .nb[(Press `&rarr;` or swipe left)]]
+
         ---
+
         name: agenda
         .footer[*Abusing ECMAScript for fun and enlightenment*]
         ## Agenda
         * [`$ whoami`](#me)
-        * **[XXXX](#xxxx)**
+        * [What is ~~ECMA~~ Ecma?](#ecma)
+        * [What is ~~EcmaScript~~ ECMAScript?](#ecmascript)
+        * [Going meta](#meta)
+        * [Going tiny](#tiny)
+        * [Going weird](#weird)
         * [Questions, comments, debate](#qa)
+
         ---
+
         name: me
         .footer[*Abusing ECMAScript for fun and enlightenment*]
         ## $ whoami
@@ -257,23 +278,339 @@
         ]
         ]
         ]
+
         ---
-        name: xxxx
+
+        name: ecma
         .footer[*Abusing ECMAScript for fun and enlightenment*]
-        ## XXXX
+        ## What is ~~ECMA~~ Ecma?
+        .center[**Overview**]
+        --
+
+        * 1961: ECMA (_European Computer Manufacturers Association_)
+        * 1994: &ldquo;ECMA&rdquo; &rarr; &ldquo;Ecma International&rdquo;
+        --
+
+        * Membership-based
+        * HQ: Geneva (Switzerland)
+        --
+
+        * 278 [_standards_](https://www.ecma-international.org/publications/standards/Standard.htm)
+        * 54 [_technical reports_](https://www.ecma-international.org/publications/techreports/techrep.htm)
+        --
+
+        * [`https://ecma-international.org`](https://www.ecma-international.org/)
+
         ---
-        name: xxxx
+
         .footer[*Abusing ECMAScript for fun and enlightenment*]
-        ## XXXX
+        ## What is ~~ECMA~~ Ecma?
+        .center[**Members**]
+        --
+
+        * _Ordinary_ (with vote at General Assembly; ~&euro;66K/year):  
+          **Facebook**, **Google**, Hitachi, IBM, Intel, Konica Minolta, **Microsoft**, PayPal, Stripe.
+        --
+
+        * _Associate_ (no vote at General Assembly; ~&euro;33K/year):  
+          Airbnb, **Alibaba**, **Apple**, Bloomberg, Canon, Dell, F5 Networks, GoDaddy,  
+          HP, **Huawei**, **Neftlix**, Ricoh, Salesforce, **Sony**, 360 Technology.
+        --
+
+        * _SME_ (small and medium; ~&euro;16K/year).
+          eg: [🇪🇸 Igalia](https://www.igalia.com/).
+        --
+
+        * _SPC_ (tiny companies; ~&euro;3K/year).
+        --
+
+        * _Not-for-profits_ (&euro;0):
+          [**OpenJS Foundation**](https://openjsf.org/) (∈ Linux Foundation),
+          **Mozilla Foundation**, Small Fan Workshop Association (about thermal cooling)&hellip;
+        --
+
+        * _Related organisations_:
+          **W3C**, ISO, IETF, ITU&hellip;
+
         ---
-        name: xxxx
+
         .footer[*Abusing ECMAScript for fun and enlightenment*]
-        ## XXXX
+        ## What is ~~ECMA~~ Ecma?
+        .center[**Specs**]
+        --
+
+        * C# (_ECMA-334_)
+        * C++/CLI (_ECMA-372_)
+        * Dart (_ECMA-408_)
+        * Eiffel (_ECMA-367_)
+        * Office Open XML File Formats (_ECMA-376_)
+        --
+
+        * **EcmaScript**
+        * **EcmaScript Internationalization API**
+        --
+
+        * **JSON**
+
         ---
+
+        name: ecmascript
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## What is ~~EcmaScript~~ ECMAScript?
+        .center[**The standards**]
+        --
+
+        * **[ECMAScript&reg; Language (_ECMA-262_)](https://www.ecma-international.org/publications/standards/Ecma-262.htm)**
+        --
+
+        * **[ECMAScript&reg; Internationalization API (_ECMA-402_)](https://www.ecma-international.org/publications/standards/Ecma-402.htm)**
+        * **[JSON Data Interchange Syntax (_ECMA-404_)](https://www.ecma-international.org/publications/standards/Ecma-404.htm)**
+        --
+
+        * [ECMAScript&reg; Specification Suite (_ECMA-414_)](https://www.ecma-international.org/publications/standards/Ecma-414.htm)
+        * [ECMAScript&reg; Test Suite (_E-TR-104_)](https://www.ecma-international.org/publications/techreports/E-TR-104.htm)
+          &rarr; just a pointer to [`github.com/tc39/test262`](https://github.com/tc39/test262)
+        --
+
+        * [ECMAScript® Components (_ECMA-290_)](https://www.ecma-international.org/publications/standards/Ecma-290.htm)  
+          &rarr; superseded by [ES6 modules](https://www.ecma-international.org/ecma-262/6.0/#sec-modules), [web components](https://en.wikipedia.org/wiki/Web_Components), etc
+        --
+
+        * ~~[ECMAScript® 3<sup>rd</sup> Edition Compact Profile (_ECMA-327_)](https://www.ecma-international.org/publications/files/ECMA-ST-WITHDRAWN/Ecma-327.pdf)~~  
+          &rarr; withdrawn; for &ldquo;resource-constrained devices&rdquo;
+        * ~~[ECMAScript® for XML (E4X) (_ECMA-357_)](https://www.ecma-international.org/publications/files/ECMA-ST-WITHDRAWN/Ecma-357.pdf)~~
+          &rarr; withdrawn; a precursor of [JSX](https://reactjs.org/docs/introducing-jsx.html)
+
+        ---
+
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## What is ~~EcmaScript~~ ECMAScript?
+        .center[**_Old_ versions** (chaos)]
+        --
+
+        .twoCols[
+        .column[
+        * 1 (1997)
+        * 2 (1998)
+        * 3 (1999)
+        * &nbsp;
+        * &nbsp;
+        * &nbsp;
+        * ~~4 (2003; abandoned)~~
+        * &nbsp;
+        * &nbsp;
+        * &nbsp;
+        * &nbsp;
+        * &nbsp;
+        * 5 (2009)
+        * &nbsp;
+        * 5.1 (2011)
+        * &nbsp;
+        * &nbsp;
+        * &nbsp;
+        ]
+        .column[
+        ]
+        ]
+
+        ---
+  
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## What is ~~EcmaScript~~ ECMAScript?
+        .center[**_New_ versions** (yearly in June)]
+        --
+
+        * [ES 2015](https://www.ecma-international.org/ecma-262/6.0/) (_ES6_, still in PDF)
+        * [ES 2016](https://www.ecma-international.org/ecma-262/7.0/) (_ES7_, first in HTML)
+        * [ES 2017](https://www.ecma-international.org/ecma-262/8.0/) (_ES8_)
+        * [ES 2018](https://www.ecma-international.org/ecma-262/9.0/) (_ES9_)
+        --
+
+        * **[ES 2019](https://www.ecma-international.org/ecma-262/10.0/) (_ES10_, current)**
+        --
+
+        * [ES 2020](https://tc39.es/ecma262/) (_next_, latest draft)
+
+        --
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&darr;  
+        Tests: [`github.com/tc39/test262`](https://github.com/tc39/test262)  
+        Spec: [`github.com/tc39/ecma262`](https://github.com/tc39/ecma262)
+        --
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hellip;written in [Ecmarkup](https://github.com/bterlson/ecmarkup), of course 🙄
+
+        ---
+  
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## What is ~~EcmaScript~~ ECMAScript?
+        .center[**Growing complexity**]
+
+        .center[![Curve #1](curve-1.png)]
+
+        ---
+  
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## What is ~~EcmaScript~~ ECMAScript?
+        .center[**&ldquo;Flattening the curve&rdquo; 😷**]
+
+        .center[![Curve #2](curve-2.png)]
+
+        ---
+  
+        name: meta
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Going meta
+        .center[**_MetaECMAScript_: ~~`eval()`~~ `Function()`**]
+        --
+
+        * `eval()` lets you run ~~ES~~ JS code programmatically, inside a JS program
+        * &hellip;but it's _**very bad**_
+        * So use `Function()` instead
+        --
+
+        .twoCols[
+        .column[
+
+        ```js
+        const snippet = 'Math.pow(2, 10)';
+        console.log(eval(snippet));
+        ```
+
+        ```js
+        1024
+        ```
+
+        _Bad boy!_
+
+        ]
+        .column[
+
+        ```js
+        console.log(
+               Function(
+                   `"use strict"; return (${snippet});`
+                )()
+            );
+        ```
+
+        ```js
+        1024
+        ```
+
+        ]
+        ]
+
+
+        ---
+  
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Going meta
+        .center[**_MetaECMAScript_: a disturbing realisation&hellip;**]
+        --
+
+        * Turing-complete scripting, (almost) perfect embedding of JS within JS
+        * &hellip;at the cost of performance and beauty, of course
+        --
+
+        * How to tell if we're running inside a `Function()`? In principle, we can't.
+        --
+
+        * The theory of [simulated multiverses](https://en.wikipedia.org/wiki/Simulated_reality) is growing traction&hellip;
+        --
+
+        * And stuff in life slow is ugly most of the time!!
+
+        --
+
+        .center[.small-img[![Thinking](thinking.jpeg)]]
+
+        ---
+
+        class: img, empty
+        background-image: url("./simulated-universe.jpeg")
+        background-size: cover
+
+        ---
+  
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Going meta
+        .center[**We live inside a JS `eval()`: evidence**]
+
+        --
+
+        .center[
+        .small-img[![Adam and Eve](adam-and-eve.jpeg)]
+
+        &ldquo;Adam and eval&rdquo; &rarr; &ldquo;Adam and Eve&rdquo;
+        ]
+
+        ---
+  
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Going meta
+        .center[**We live inside a JS `eval()`: evidence**]
+
+        .center[
+        .medium-img[.center[![You had one job](youhadonejob01.webp)]]
+        Stuff is crappy most of the time
+        ]
+
+        ---
+  
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Going meta
+        .center[**We live inside a JS `eval()`: evidence**]
+
+        .center[
+        .medium2-img[.center[![Weakling](weakling.jpeg)]]
+        You are not _strongly typed_
+        ]
+
+        ---
+  
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Going meta
+        .center[**We live inside a JS `eval()`: evidence**]
+
+        .center[
+        .portrait[.center[![No call back](no-call-back.jpeg)]]
+        You miss lots of _call backs_
+        ]
+
+        ---
+  
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Going meta
+        .center[**We live inside a JS `eval()`: evidence**]
+
+        .center[# <br /> _Q.E.D._]
+
+        ---
+  
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Going meta
+        .center[**Onanistic projects**]
+        --
+
+        * [Narcissus](https://github.com/mozilla/narcissus/) (Brendan Eich, Mozilla)
+        * [Sval](https://github.com/Siubaak/sval) ▶️ [online demo](https://jsbin.com/kehahiqono/edit?js,console)
+        * [JS-Interpreter](https://github.com/NeilFraser/JS-Interpreter) (Neil Fraser) ▶️ [online demo](https://neil.fraser.name/software/JS-Interpreter/)
+        * [engine262](https://github.com/engine262/engine262) ▶️ [online demo](https://engine262.js.org/)
+        * [MetaES](http://metaes.org/) ▶️ [online demo](http://metaes.org/playground.html)
+
+        ---
+
         name: credits
         .footer[*Abusing ECMAScript for fun and enlightenment*]
         ## Credits
+        * [&ldquo;Adam and Eve&rdquo;](https://commons.wikimedia.org/wiki/File:Cranach,_adamo_ed_eva,_uffizi.jpg) by Lucas Cranach the Elder (public domain)
+        * [Clipart](https://www.freepik.com/premium-vector/educated-student-thinking-with-think-bubble-head-education-vector-concept_5250217.htm) by Freepik
+        * [Universe visualisation](https://www.nbcnews.com/mach/science/cosmic-hotspots-may-be-evidence-universe-existed-ours-ncna909646) by Mark Garlick / Science Photo Library / Getty Images
+        * [Horrified woman](https://www.videoblocks.com/video/horrified-mature-woman-on-green-screen-caucasian-middle-aged-woman-looking-frightened-and-shocked-on-chroma-key-background-human-negative-expressions-rfumrgrazjhdrh0v1) from Storyblocks
+        * [JS logo](https://commons.wikimedia.org/wiki/File:JavaScript-logo.png) on Wikipedia (public domain)
+
         ---
+
         name: qa
         class: middle
         .footer[*Abusing ECMAScript for fun and enlightenment*]

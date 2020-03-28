@@ -201,6 +201,13 @@
             animation: pointers 1s ease-out infinite;
         }
 
+        /* del {
+            text-decoration-line: line-through;
+            text-decoration-thickness: .1em;
+            text-decoration-style: wavy;
+            text-decoration-color: black;
+        } */
+
         @keyframes pointers {
             50% {
                 margin-left: 2rem;
@@ -239,9 +246,11 @@
         * [`$ whoami`](#me)
         * [What is ~~ECMA~~ Ecma?](#ecma)
         * [What is ~~EcmaScript~~ ECMAScript?](#ecmascript)
-        * [Going meta](#meta)
-        * [Going tiny](#tiny)
-        * [Going weird](#weird)
+        * [MetaECMAScript](#meta)
+        * [Onanistic projects](#onanistic)
+        * [ES for ES](#esfores)
+        * [Tiny ES](#tiny)
+        * [Unsuspected ES](#unsuspected)
         * [Questions, comments, debate](#qa)
 
         ---
@@ -365,11 +374,13 @@
 
         * **[ECMAScript&reg; Internationalization API (_ECMA-402_)](https://www.ecma-international.org/publications/standards/Ecma-402.htm)**
         * **[JSON Data Interchange Syntax (_ECMA-404_)](https://www.ecma-international.org/publications/standards/Ecma-404.htm)**
+          &rarr; short; basic stuff
         --
 
         * [ECMAScript&reg; Specification Suite (_ECMA-414_)](https://www.ecma-international.org/publications/standards/Ecma-414.htm)
+          &rarr; a pointer to the previous three
         * [ECMAScript&reg; Test Suite (_E-TR-104_)](https://www.ecma-international.org/publications/techreports/E-TR-104.htm)
-          &rarr; just a pointer to [`github.com/tc39/test262`](https://github.com/tc39/test262)
+          &rarr; a pointer to [`github.com/tc39/test262`](https://github.com/tc39/test262)
         --
 
         * [ECMAScript® Components (_ECMA-290_)](https://www.ecma-international.org/publications/standards/Ecma-290.htm)  
@@ -459,8 +470,8 @@
   
         name: meta
         .footer[*Abusing ECMAScript for fun and enlightenment*]
-        ## Going meta
-        .center[**_MetaECMAScript_: ~~`eval()`~~ `Function()`**]
+        ## MetaECMAScript
+        .center[**~~`eval()`~~ `Function()`**]
         --
 
         * `eval()` lets you run ~~ES~~ JS code programmatically, inside a JS program
@@ -504,8 +515,8 @@
         ---
   
         .footer[*Abusing ECMAScript for fun and enlightenment*]
-        ## Going meta
-        .center[**_MetaECMAScript_: a disturbing realisation&hellip;**]
+        ## MetaECMAScript
+        .center[**A disturbing realisation&hellip;**]
         --
 
         * Turing-complete scripting, (almost) perfect embedding of JS within JS
@@ -533,7 +544,7 @@
         ---
   
         .footer[*Abusing ECMAScript for fun and enlightenment*]
-        ## Going meta
+        ## MetaECMAScript
         .center[**We live inside a JS `eval()`: evidence**]
 
         --
@@ -547,7 +558,7 @@
         ---
   
         .footer[*Abusing ECMAScript for fun and enlightenment*]
-        ## Going meta
+        ## MetaECMAScript
         .center[**We live inside a JS `eval()`: evidence**]
 
         .center[
@@ -558,48 +569,195 @@
         ---
   
         .footer[*Abusing ECMAScript for fun and enlightenment*]
-        ## Going meta
+        ## MetaECMAScript
         .center[**We live inside a JS `eval()`: evidence**]
 
         .center[
         .medium2-img[.center[![Weakling](weakling.jpeg)]]
-        You are not _strongly typed_
+        Definitely you are _not_ **strongly typed**
         ]
 
         ---
   
         .footer[*Abusing ECMAScript for fun and enlightenment*]
-        ## Going meta
+        ## MetaECMAScript
         .center[**We live inside a JS `eval()`: evidence**]
 
         .center[
         .portrait[.center[![No call back](no-call-back.jpeg)]]
-        You miss lots of _call backs_
+        You miss _lots_ of **call backs**
         ]
 
         ---
   
         .footer[*Abusing ECMAScript for fun and enlightenment*]
-        ## Going meta
+        ## MetaECMAScript
         .center[**We live inside a JS `eval()`: evidence**]
 
         .center[# <br /> _Q.E.D._]
 
         ---
-  
+
+        name: onanistic
         .footer[*Abusing ECMAScript for fun and enlightenment*]
-        ## Going meta
-        .center[**Onanistic projects**]
+        ## Onanistic projects
+        .center[**JS interpreters/engines written in JS**]
         --
 
         * [Narcissus](https://github.com/mozilla/narcissus/) (Brendan Eich, Mozilla)
         * [Sval](https://github.com/Siubaak/sval) ▶️ [online demo](https://jsbin.com/kehahiqono/edit?js,console)
-        * [JS-Interpreter](https://github.com/NeilFraser/JS-Interpreter) (Neil Fraser) ▶️ [online demo](https://neil.fraser.name/software/JS-Interpreter/)
+        * [JS-Interpreter](https://github.com/NeilFraser/JS-Interpreter) ▶️ [online demo](https://neil.fraser.name/software/JS-Interpreter/)
         * [engine262](https://github.com/engine262/engine262) ▶️ [online demo](https://engine262.js.org/)
         * [MetaES](http://metaes.org/) ▶️ [online demo](http://metaes.org/playground.html)
 
         ---
 
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Onanistic projects
+        .center[**Variations on JS**]
+        --
+
+        * [CoffeeScript](https://coffeescript.org/)
+        * [TypeScript](https://www.typescriptlang.org/)
+        * [JSX](https://reactjs.org/docs/introducing-jsx.html)
+        * [EJS](https://ejs.co/) (eg: `<h2><%= user.name %></h2>`)
+
+        --
+
+        .center[
+        _&ldquo;One transpiler to bring them all<br />and in the darkness bind them&rdquo;_
+
+        [.small-img[![Babel logo](babel.png)]](https://babeljs.io/)
+        ]
+
+        ---
+
+        name: esfores
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## ES for ES
+        .center[**IDEs for JS written in JS**]
+        --
+
+        * Electron-based:
+          - VS Code
+          - Atom
+        --
+
+        * Brackets (CEF &mdash; _Chromium Embedded Framework_)
+
+        ---
+
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## ES for ES
+        .center[**IDEs for JS running inside JS on a browser**]
+
+        .center[Codeanywhere]
+
+        ---
+
+        class: img, empty
+        background-image: url("./codeanywhere.jpeg")
+        background-size: cover
+
+        ---
+
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## ES for ES
+        .center[**IDEs for JS running inside JS on a browser**]
+
+        .center[Cloud9 IDE (Amazon)]
+
+        ---
+
+        class: img, empty
+        background-image: url("./cloud9.png")
+        background-size: cover
+
+        ---
+
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## ES for ES
+        .center[**The oldest browser, complete with all its behaviour and features, being emulated in real time inside a modern browser (mine)&nbsp;&mdash;&nbsp;thanks to JS, the programming language of browsers&hellip; a demo served in real time directly to yet another browser (yours) via YouTube, thanks to JS. Yes. That's it.**]
+
+        .center[# [`worldwideweb.cern.ch/browser`](https://worldwideweb.cern.ch/browser/)]
+
+        ---
+
+        name: tiny
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Tiny ES
+        .center[**Duktape**]
+        --
+
+        * Embeddable JS engine
+        * ~160 KB flash memory, ~64 KB RAM
+        * [`https://duktape.org`](https://duktape.org/)
+        * ▶️ [online demo](https://duktape.org/dukweb.html)
+        * Has a debugger
+
+        ---
+
+        class: img, empty
+        background-image: url("./duktape-debugger.png")
+        background-size: cover
+
+        ---
+
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Tiny ES
+        .center[**Espruino**]
+        --
+
+        * For [low power microcontrollers](https://www.espruino.com/)
+        * ~128 KB flash memory, ~8 KB RAM
+        * [`https://github.com/espruino/Espruino`](https://github.com/espruino/Espruino)
+        * Has [a web IDE](https://chrome.google.com/webstore/detail/espruino-web-ide/bleoifhkdalbjfbobjackfdifdneehpo)
+
+        ---
+
+        class: img, empty
+        background-image: url("./espruino.png")
+        background-size: cover
+
+        ---
+
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Tiny ES
+        .center[**mJS**]
+        --
+
+        * Embedded JS engine for C/C++
+        * A very aggressive subset of ES
+        * On 32-bit ARM, the engine takes ~50 KB flash memory, &lt;1 KB RAM (!)
+        * [`https://github.com/cesanta/mjs`](https://github.com/cesanta/mjs)
+        * More restrictions than features 😝
+
+        ---
+
+        name: unsuspected
+        .footer[*Abusing ECMAScript for fun and enlightenment*]
+        ## Unsuspected ES
+        .center[Another implementation of ECMAScript that you may have used a lot is&hellip;]
+        --
+
+        * Flash!
+        --
+
+        * ActionScript3 (AS3), used in Adobe Flash &amp; Adobe AIR
+        --
+
+        * A superset of ECMAScript (ie, an implementation)
+        * eg: got hardware-accelerated 3D
+          [in Jul 2011](https://web.archive.org/web/20110714222550/http://download.macromedia.com/pub/labs/flashplatformruntimes/shared/flashplayer11_air3_b1_releasenotes_071311.pdf)  
+          (years before [WebGL became popular and fully supported](https://caniuse.com/#feat=webgl) on browsers)
+        --
+
+        * But 5 years ago, Flash was already dying
+          ([exhibit #1](https://esdiscuss.org/notes/2015-03-24#what-to-do-with-compact-profile-ecma-327-and-e4x-ecma-357),
+          [exhibit #2](https://esdiscuss.org/notes/2015-03-24#compact-profile))
+
+        ---
+  
         name: credits
         .footer[*Abusing ECMAScript for fun and enlightenment*]
         ## Credits

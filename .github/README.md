@@ -18,7 +18,7 @@ Date | Location | Host / conference | Title / topic | Resources
 
 * **Interview** on [_Bola de Cristal_ podcast](https://www.linkedin.com/company/bola-de-cristal/) on 2020-06-03:  
   _&ldquo;Japón: ¿laboratorio de futuro?&rdquo;_  
-  Audio: [MP3](https://www.ivoox.com/japon-laboratorio-futuro_mf_51716235_feed_1.mp3), [Spotify](https://open.spotify.com/episode/2DlQt6xjN1qqCX74k8umKI), [iVoox](https://www.ivoox.com/japon-laboratorio-futuro-audios-mp3_rf_51716235_1.html)
+  Audio: [MP3](https://www.ivoox.com/japon-laboratorio-futuro_mf_51716235_feed_1.mp3), [YouTube](https://www.youtube.com/watch?v=HcNzPH2BD4w), [Spotify](https://open.spotify.com/episode/2DlQt6xjN1qqCX74k8umKI), [iVoox](https://www.ivoox.com/japon-laboratorio-futuro-audios-mp3_rf_51716235_1.html)
 * **Talk** at [Ignite Madrid](https://www.ignitemad.es/) #6 on 2018-02-16 in Madrid (Spain):  
   _&ldquo;Y ese maratón, ¿de cuántos kilómetros es?&rdquo;_  
   Video: [YouTube](https://www.youtube.com/watch?v=q1riVnzwDrA)

@@ -17,7 +17,7 @@ Date | Location | Host / conference | Title / topic | Resources
 ## Non-tech-related events (all in Spanish)
 
 * **Interview** on [_Bola de Cristal_ podcast](https://www.linkedin.com/company/bola-de-cristal/) on 2020-06-03:  
-  _&ldquo;Japón: ¿laboratorio de futuro?&rdquo;_  
+  [_&ldquo;Japón: ¿laboratorio de futuro?&rdquo;_](http://boladecristal.es/blog/2020/06/04/ep2-japon-laboratorio-de-futuro/)  
   Audio: [MP3](https://www.ivoox.com/japon-laboratorio-futuro_mf_51716235_feed_1.mp3), [YouTube](https://www.youtube.com/watch?v=HcNzPH2BD4w), [Spotify](https://open.spotify.com/episode/2DlQt6xjN1qqCX74k8umKI), [iVoox](https://www.ivoox.com/japon-laboratorio-futuro-audios-mp3_rf_51716235_1.html)
 * **Talk** at [Ignite Madrid](https://www.ignitemad.es/) #6 on 2018-02-16 in Madrid (Spain):  
   _&ldquo;Y ese maratón, ¿de cuántos kilómetros es?&rdquo;_  
@@ -28,6 +28,6 @@ Date | Location | Host / conference | Title / topic | Resources
 
 ## Credits
 
-Copyright &copy; 2014&ndash;2020 tripu ([`t@tripu.info`](mailto:t@tripu.info), [`https://tripu.info`](https://tripu.info/)).
+Copyright &copy; 2014&ndash;2021 tripu ([`t@tripu.info`](mailto:t@tripu.info), [`https://tripu.info`](https://tripu.info/)).
 
 [All rights reserved](//github.com/tripu/Events/blob/master/LICENSE.md).

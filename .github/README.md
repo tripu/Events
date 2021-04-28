@@ -14,7 +14,9 @@ Date | Location | Host / conference | Title / topic | Resources
 2014-11-28 | Granada <br /> (Spain) | [ETSIIT](http://etsiit.ugr.es/?lang=en), <br /> [UGR](https://www.ugr.es/en) | *Intro to the W3C, <br /> tools & resources; <br /> [TTWF](http://testthewebforward.org/) workshop* | Announcements: [#1](https://osl.ugr.es/2014/10/14/el-world-wide-web-consortium-en-granada-antonio-olmo-titos-nos-hablara-sobre-el/), [#2](https://osl.ugr.es/2014/11/11/hackaton-test-the-web-forward-con-antonio-olmos-del-consorcio-w3/) <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/doc/2014-11-28_Granada-Spain_UGR_W3C-TTWF), [W3C](https://tripu.github.io/remark/remarkise?url=https%3A%2F%2Ftripu.github.io%2FEvents%2Fdoc%2F2014-11-28_Granada-Spain_UGR_W3C-TTWF%2Fpresentation.md), [TTWF](https://tripu.github.io/remark/remarkise?url=https%3A%2F%2Ftripu.github.io%2FEvents%2Fdoc%2F2014-11-28_Granada-Spain_UGR_W3C-TTWF%2Fttwf.md) <br /> Docs: [minutes](http://www.w3.org/2014/11/28-w3cugr-minutes.html), [IRC log](http://www.w3.org/2014/11/28-w3cugr-irc) <br /> Tweets: [`#w3cugr`](https://twitter.com/search?f=realtime&q=w3cugr&src=typd), [`#httwf`](https://twitter.com/search?f=realtime&q=httwf&src=typd) <br /> Photos: [Flickr: `w3cugr`](https://secure.flickr.com/search/?q=w3cugr&m=tags&ct=6&mt=all&adv=1), [at `osl.ugr.es`](https://osl.ugr.es/galeria/Hackaton-W3C-Tripu) <br /> Chronicle: [at `osl.ugr.es`](http://osl.ugr.es/2014/12/01/6250/)
 2014-11-24 | Fuenlabrada <br /> (Spain) | [ETSIT](http://www.etsit.urjc.es), <br /> [URJC](https://urjc.es/version_ingles) | *Intro to the W3C, <br /> the Open Web Platform, <br /> specs, tools & resources* | Announcements: [#1](http://docencia.etsit.urjc.es/moodle/mod/forum/discuss.php?d=21202), [#2](http://docencia.etsit.urjc.es/moodle/mod/forum/discuss.php?d=21274) <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/doc/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools), [slideshow](https://tripu.github.io/remark/remarkise?url=https%3A%2F%2Ftripu.github.io%2FEvents%2Fdoc%2F2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools%2Fpresentation.md) <br /> Tweets: [`#w3c-urjc`](https://twitter.com/search?f=realtime&q=w3c-urjc&src=typd) <br /> Photos: [`w3curjc`](https://secure.flickr.com/search/?q=w3curjc&m=tags&ct=6&mt=all&adv=1)
 
-## Non-tech-related events (all in Spanish)
+## Non-tech-related (all in Spanish)
+
+### Events
 
 * **Interview** on [_Bola de Cristal_ podcast](https://www.linkedin.com/company/bola-de-cristal/) on 2020-06-03:  
   [_&ldquo;Japón: ¿laboratorio de futuro?&rdquo;_](http://boladecristal.es/blog/2020/06/04/ep2-japon-laboratorio-de-futuro/)  
@@ -25,6 +27,11 @@ Date | Location | Host / conference | Title / topic | Resources
 * **Interview** on [_No es un día cualquiera_](https://www.rtve.es/radio/no-es-un-dia-cualquiera/) ([_Radio Nacional de España_](https://www.rtve.es/radio/)) on   2015-02-28:  
   life in Tokyo  
   Audio: [SoundCloud](https://soundcloud.com/tripu-info/rne)
+
+### In writing
+
+* **Interview** on [_La Región Internacional_](https://www.laregioninternacional.com/) on 2014-09-05:  
+  [_&laquo;La adaptación en Japón es todo un reto&raquo;_](https://www.laregioninternacional.com/articulo/protagonistas/adaptacion-japon-todo-reto/20140905125013241624.html)
 
 ## Credits
 

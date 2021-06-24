@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en-GB" class="no-js">
+
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Abusando de ECMAScript en abierto</title>
+    <meta name="author" content="tripu <t@tripu.info>" />
+    <meta name="description" content="Abusando de ECMAScript en abierto" />
+    <meta name="keywords" content="talk,presentation,web,slides,slideshow,ecma,ecmascript,eslibre,event" />
+    
+    <style type="text/css">
+        
+        @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700');        
+        @import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic');
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+        
+        * {
+            font-family: 'Droid Serif', 'Lucida Sans Unicode', 'Lucida Grande', 'Trebuchet MS', Helvetica, Verdana, Geneva, Calibri, sans-serif;
+            line-height: 1.5;
+        }
+        
+        #source, .js #fallback {
+            visibility: hidden;
+            display: none;
+        }
+        
+        .remark-slide-content {
+            padding: 1rem 8rem;
+            /* padding: 1rem 4rem; */
+            background-image:url(assets/background.jpeg);
+            background-size: cover;
+        }
+        
+        .remark-slide-content {
+            font-size: 1.5rem;
+        }
+        
+        .remark-slide-content.img {
+            background-color: #000000;
+            background-size: contain;
+        }
+        
+        .remark-slide-content.empty .remark-slide-number {
+            visibility: hidden;
+        }
+        
+        pre, pre *, code, code * {
+            font-family: monospace;
+            background-color: #f0f0f0;
+        }
+        
+        .remark-slide-content code {
+            padding-left: .3em;
+            padding-right: .3em;
+            border-radius: .3em;
+        }
+            
+        .remark-slide-container:first-child .remark-slide-number {
+            visibility: hidden;
+        }
+        
+        .remark-slide-content h1,
+        .remark-slide-content h2,
+        .remark-slide-content h3,
+        .remark-slide-content h4,
+        .remark-slide-content h5,
+        .remark-slide-content h6 {
+            text-align: center;
+            font-family: 'Yanone Kaffeesatz';
+            font-weight: normal;
+            text-shadow: 0 .2rem .2rem #c0c0c0;
+        }
+        
+        .remark-slide-content h2 {
+            margin-top: 0;
+        }
+        
+        .remark-slide-content .footer {
+            position: absolute;
+            left: 20px;
+            bottom: 12px;
+            opacity: .667;
+        }
+        
+        .remark-slide-content .nb {
+            color: #2da910;
+        }
+        
+        .remark-slide-content .ok,
+        .remark-slide-content .no {
+            font-weight: bold;
+        }
+        
+        .remark-slide-content .ok {
+            color: #00c000;
+        }
+        
+        .remark-slide-content .no {
+            color: #c00000;
+        }
+        
+        .remark-slide-content .footnote {
+            position: absolute;
+            bottom: 0;
+            margin-left: -5.5em;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .remark-slide-content .mark {
+            padding-left: .15em;
+            padding-right: .15em;
+            border-radius: .15em;
+            background-color: #ffff80;
+        }
+        
+        .remark-slide-content .twoCols {
+            column-count: 2;
+            column-gap: 2em;
+        }
+        
+        .remark-slide-content .column {
+            break-inside: avoid-column;
+        }
+        
+        .remark-slide-content table {
+            width: 100%;
+            padding: .25rem .5rem;
+            border: .01rem solid #808080;
+            background-color: #f8f8f8;
+        }
+        
+        .remark-slide-content .column:nth-child(2) > *:first-child {
+            padding-top: 20px;
+        }
+        
+        .remark-slide-content abbr {
+            cursor: help;
+        }
+        
+        .portrait img {
+            width: 25%;
+            box-shadow: 0 .5rem 1rem #000000;
+        }
+        
+        a, a:visited {
+            color: #4040c0;
+            text-decoration: none;
+        }
+        
+        a:hover, a:active, a:focus {
+            text-decoration: underline;
+        }
+        
+        .small img {
+            float: right;
+            margin-top: -1em;
+            width: 48%;
+            box-shadow: 0 .5rem 1rem #000000;
+        }
+        
+        .small2 img {
+            float: right;
+            margin-top: 1em;
+            margin-right: -3em;
+            width: 60%;
+            box-shadow: 0 .5rem 1rem #000000;
+        }
+        
+        .small3 img {
+            margin-top: 1em;
+            width: 75%;
+        }
+        
+        .logo img {
+            padding: 0 0 0 .3em;
+            height: .7em;
+            vertical-align: middle;
+        }
+        
+        .footer .logo img {
+            padding: 0;
+            filter: grayscale();
+        }
+
+        .important {
+            animation: pointers 1s ease-out infinite;
+        }
+
+        .center code, .center code * {
+            background-color: white;
+        }
+
+        @keyframes pointers {
+            50% {
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+        }
+
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <section id="fallback">
+            <h1>Abusando de ECMAScript en abierto</h1>
+            <p>NB: you need a browser with <strong>JavaScript enabled</strong> to watch this presentation!</p>
+        </section>
+        
+        <textarea id="source">
+            name: cover
+            .center[.important[👉]&nbsp;&nbsp;[`https://tripu.info/this`](https://tripu.info/this/)&nbsp;&nbsp;.important[👈]]
+            # <br /> Abusando de ECMAScript en abierto
+            .footnote[[_esLibre_](https://eslib.re/2021/ )<br />**tripu**<br />25 de junio de 2021<br /><br />
+            .nb[(Pulsar `&rarr;`, hacer _scroll_, o arrastrar hacia la izquierda)]]
+            ---
+            name: agenda
+            .footer[Abusando de ECMAScript en abierto]
+            ## De qué vamos a hablar
+            .twoCols[
+            .column[
+            * **[⭐ a](#)**
+            ]
+            .column[
+            * **[⭐ b](#)**
+            ]
+            ]
+            ---
+            name: xxxx
+            .footer[Abusando de ECMAScript en abierto]
+            ## XXXX
+            ---
+            name: qa
+            class: middle
+            .footer[Abusando de ECMAScript en abierto]
+            ## Ideas,<br /><br />preguntas,<br /><br />debate
+            
+        </textarea>
+        
+        <!-- <script type="text/javascript" src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js"></script> -->
+        <!-- <script src="https://lab.hakim.se/zoom-js/js/zoom.js" type="text/javascript"></script> -->
+        <script type="text/javascript" src="assets/remark-latest.min.js"></script>
+        
+        <script type="text/javascript">
+            
+            {
+                'use strict';
+                
+                var html = document.getElementsByTagName('html')[0];
+                html.classList.remove('no-js');
+                html.classList.add('js');
+                
+                const slideshow = remark.create({ratio: '16:9'});
+
+                /* slideshow.on( "beforeHideSlide", function( slide ) {
+            		zoom.out();
+            	} );
+
+                slideshow.on( "afterShowSlide", function( slide ) {
+                    document.querySelector( ".remark-visible" ).addEventListener( "click", function( event ) {
+                        event.preventDefault();
+                        zoom.out();
+                        zoom.to( {element: event.target} );
+                    } );
+                } ); */
+
+            }
+            
+        </script>
+        
+    </body>
+    
+    </html>

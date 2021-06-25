@@ -259,14 +259,14 @@
             .footer[_Abusando de ECMAScript en abierto_]
             ## De qué vamos a hablar
             * [`$ whoami`](#me)
-            * [What is ~~ECMA~~ Ecma?](#ecma)
-            * [What is ~~EcmaScript~~ ECMAScript?](#ecmascript)
+            * [¿Qué es ~~ECMA~~ Ecma?](#ecma)
+            * [¿Qué es ~~EcmaScript~~ ECMAScript?](#ecmascript)
             * **[⭐ MetaECMAScript](#meta)**
-            * **[⭐ Onanistic projects](#onanistic)**
-            * **[⭐ ES for ES](#esfores)**
-            * **[⭐ Tiny ES](#tiny)**
-            * **[⭐ Unsuspected ES](#unsuspected)**
-            * [Questions, comments, debate](#qa)
+            * **[⭐ Proyectos onanísticos](#onanistic)**
+            * **[⭐ ES en ES](#esfores)**
+            * **[⭐ ES diminuto](#tiny)**
+            * **[⭐ ES insospechado](#unsuspected)**
+            * [Ideas, preguntas, debate](#qa)
     
             ---
     
@@ -281,25 +281,25 @@
             <br />
             **tripu**
             <br />
-            *software engineer*
+            *ingeniero de software*
             <br />
             [`https://tripu.info`](https://tripu.info/)
             ]
             ]
             .column[
             .center[
-            4+ years at the [.logo-w3c[![w3c-logo.png](assets/w3c-logo.png)]](https://www.w3.org/)
+            <span>&gt;</span> 4 años en el [.logo-w3c[![w3c-logo.png](assets/w3c-logo.png)]](https://www.w3.org/)
             <br />
             <br />
             <br />
             <br />
-            currently at
+            actualmente en
             <br />
             <br />
             .center[.logo-devo[![Logo](assets/devo-logo.png)]]
             [`https://devo.com`](https://www.devo.com/company/working-at-devo/)
             <br />
-            (we are hiring!)
+            (¡estamos contratando!)
             ]
             ]
             ]
@@ -308,8 +308,8 @@
     
             name: ecma
             .footer[_Abusando de ECMAScript en abierto_]
-            ## What is ~~ECMA~~ Ecma?
-            .center[**Overview**]
+            ## ¿Qué es ~~ECMA~~ Ecma?
+            .center[**Datos principales**]
             * 1961: ECMA (_European Computer Manufacturers Association_)
             * 1994: &ldquo;ECMA&rdquo; &rarr; &ldquo;Ecma International&rdquo;
             * Membership-based
@@ -321,8 +321,8 @@
             ---
     
             .footer[_Abusando de ECMAScript en abierto_]
-            ## What is ~~ECMA~~ Ecma?
-            .center[**Members**]
+            ## ¿Qué es ~~ECMA~~ Ecma?
+            .center[**Miembros**]
             * _Ordinary_ (with vote at General Assembly; ~&euro;66K/year):  
               **Facebook**, **Google**, Hitachi, IBM, Intel, Konica Minolta, **Microsoft**, PayPal, Stripe.
             * _Associate_ (no vote at General Assembly; ~&euro;33K/year):  
@@ -340,7 +340,7 @@
             ---
     
             .footer[_Abusando de ECMAScript en abierto_]
-            ## What is ~~ECMA~~ Ecma?
+            ## ¿Qué es ~~ECMA~~ Ecma?
             .center[**Specs**]
             * C# (_ECMA-334_)
             * C++/CLI (_ECMA-372_)
@@ -355,8 +355,8 @@
     
             name: ecmascript
             .footer[_Abusando de ECMAScript en abierto_]
-            ## What is ~~EcmaScript~~ ECMAScript?
-            .center[**The standards**]
+            ## ¿Qué es ~~EcmaScript~~ ECMAScript?
+            .center[**Los estándares**]
             * **[ECMAScript&reg; Language (_ECMA-262_)](https://www.ecma-international.org/publications/standards/Ecma-262.htm)**
             * **[ECMAScript&reg; Internationalization API (_ECMA-402_)](https://www.ecma-international.org/publications/standards/Ecma-402.htm)**
             * **[JSON Data Interchange Syntax (_ECMA-404_)](https://www.ecma-international.org/publications/standards/Ecma-404.htm)**
@@ -375,8 +375,8 @@
             ---
     
             .footer[_Abusando de ECMAScript en abierto_]
-            ## What is ~~EcmaScript~~ ECMAScript?
-            .center[**_Old_ versions** (chaos!)]
+            ## ¿Qué es ~~EcmaScript~~ ECMAScript?
+            .center[**Las versiones _viejas_** (¡el caos!)]
             .twoCols[
             .column[
             * **1** (1997)
@@ -405,8 +405,8 @@
             ---
       
             .footer[_Abusando de ECMAScript en abierto_]
-            ## What is ~~EcmaScript~~ ECMAScript?
-            .center[**_New_ versions** (yearly in June)]
+            ## ¿Qué es ~~EcmaScript~~ ECMAScript?
+            .center[**Las versiones _nuevas_** (anualmente, en junio)]
             .twoCols[
             .column[
             * [ES 2015](https://www.ecma-international.org/ecma-262/6.0/) (_ES6_, still in PDF)
@@ -431,16 +431,16 @@
             ---
       
             .footer[_Abusando de ECMAScript en abierto_]
-            ## What is ~~EcmaScript~~ ECMAScript?
-            .center[**Growing complexity**]
+            ## ¿Qué es ~~EcmaScript~~ ECMAScript?
+            .center[**Complejidad creciente**]
     
             .center[![Curve #1](assets/curve-1.png)]
     
             ---
       
             .footer[_Abusando de ECMAScript en abierto_]
-            ## What is ~~EcmaScript~~ ECMAScript?
-            .center[**&ldquo;Flattening the curve&rdquo; 😷**]
+            ## ¿Qué es ~~EcmaScript~~ ECMAScript?
+            .center[**&laquo;Aplanando la curva&raquo; 😷**]
     
             .center[![Curve #2](assets/curve-2.png)]
     
@@ -489,7 +489,7 @@
 
             .footer[_Abusando de ECMAScript en abierto_]
             ## MetaECMAScript
-            .center[**A disturbing realisation&hellip;**]
+            .center[**Un pensamiento inquietante&hellip;**]
             * Turing-complete scripting, (almost) perfect embedding of JS within JS
             * &hellip;at the cost of performance and beauty, of course
             * How to tell if we're running inside a `Function()`? In principle, we can't.
@@ -508,7 +508,7 @@
       
             .footer[_Abusando de ECMAScript en abierto_]
             ## MetaECMAScript
-            .center[**We live inside a JS `eval()`: evidence**]
+            .center[**Vivimos dentro de un `eval()` de JS: evidencias a favor**]
     
             .center[
             .small-img[![Adam and Eve](assets/adam-and-eve.jpeg)]
@@ -520,7 +520,7 @@
       
             .footer[_Abusando de ECMAScript en abierto_]
             ## MetaECMAScript
-            .center[**We live inside a JS `eval()`: evidence**]
+            .center[**Vivimos dentro de un `eval()` de JS: evidencias a favor**]
     
             .center[
             .medium-img[.center[![You had one job](assets/youhadonejob01.webp)]]
@@ -532,7 +532,7 @@
       
             .footer[_Abusando de ECMAScript en abierto_]
             ## MetaECMAScript
-            .center[**We live inside a JS `eval()`: evidence**]
+            .center[**Vivimos dentro de un `eval()` de JS: evidencias a favor**]
     
             .center[
             .medium2-img[.center[![Weakling](assets/weakling.jpeg)]]
@@ -544,7 +544,7 @@
       
             .footer[_Abusando de ECMAScript en abierto_]
             ## MetaECMAScript
-            .center[**We live inside a JS `eval()`: evidence**]
+            .center[**Vivimos dentro de un `eval()` de JS: evidencias a favor**]
     
             .center[
             .portrait[.center[![No call back](assets/no-call-back.jpeg)]]
@@ -556,7 +556,7 @@
       
             .footer[_Abusando de ECMAScript en abierto_]
             ## MetaECMAScript
-            .center[**We live inside a JS `eval()`: evidence**]
+            .center[**Vivimos dentro de un `eval()` de JS: evidencias a favor**]
     
             .center[# <br /> _Q.E.D._]
     
@@ -564,8 +564,8 @@
     
             name: onanistic
             .footer[_Abusando de ECMAScript en abierto_]
-            ## Onanistic projects
-            .center[**JS interpreters/engines written in JS**]
+            ## Proyectos onanísticos
+            .center[**Motores/intérpretes de JS escritos en JS**]
             * [Narcissus](https://github.com/mozilla/narcissus/) (Brendan Eich, Mozilla)
             * [Sval](https://github.com/Siubaak/sval) ▶️ [online demo](https://jsbin.com/kehahiqono/edit?js,console)
             * [JS-Interpreter](https://github.com/NeilFraser/JS-Interpreter) ▶️ [online demo](https://neil.fraser.name/software/JS-Interpreter/)
@@ -575,8 +575,8 @@
             ---
     
             .footer[_Abusando de ECMAScript en abierto_]
-            ## Onanistic projects
-            .center[**Variations on JS**]
+            ## Proyectos onanísticos
+            .center[**Variaciones sobre JS**]
             * [CoffeeScript](https://coffeescript.org/)
             * [TypeScript](https://www.typescriptlang.org/)
             * [JSX](https://reactjs.org/docs/introducing-jsx.html)
@@ -592,8 +592,8 @@
 
             name: esfores
             .footer[_Abusando de ECMAScript en abierto_]
-            ## ES for ES
-            .center[**IDEs for JS written in JS**]
+            ## ES en ES
+            .center[**IDEs para JS escritos en JS**]
             * Electron-based:
               - VS Code
               - Atom
@@ -602,8 +602,8 @@
             ---
     
             .footer[_Abusando de ECMAScript en abierto_]
-            ## ES for ES
-            .center[**IDEs for JS running inside JS on a browser**]
+            ## ES en ES
+            .center[**IDEs para JS ejecutándose con JS en un navegador**]
     
             .center[Codeanywhere]
     
@@ -616,8 +616,8 @@
             ---
     
             .footer[_Abusando de ECMAScript en abierto_]
-            ## ES for ES
-            .center[**IDEs for JS running inside JS on a browser**]
+            ## ES en ES
+            .center[**IDEs para JS ejecutándose con JS en un navegador**]
     
             .center[Cloud9 IDE (Amazon)]
     
@@ -630,22 +630,22 @@
             ---
     
             .footer[_Abusando de ECMAScript en abierto_]
-            ## ES for ES
-            .center[**IDEs for JS running inside JS on a browser**]
+            ## ES en ES
+            .center[**IDEs para JS ejecutándose con JS en un navegador**]
     
             .center[[github1s](https://github1s.com/) ([source](https://github.com/conwnet/github1s)), based on [VS Code](https://github.com/microsoft/vscode)]
 
             <br />
             <br />
     
-            .center[**Node.js running on a browser**]
+            .center[**Node.js ejecutándose en un navegador**]
 
             .center[[StackBlitz' WebContainers](https://blog.stackblitz.com/posts/introducing-webcontainers/#today-we're-excited-to-announce-webcontainers)]            
 
             ---
     
             .footer[_Abusando de ECMAScript en abierto_]
-            ## ES for ES
+            ## ES en ES
             .center[**The oldest browser, complete with all its behaviour and features, being emulated in real time inside a modern browser (mine)&nbsp;&mdash;&nbsp;thanks to JS, the programming language of browsers&hellip; a demo served in real time directly to yet another browser (yours) thanks to JS. Yes. That's it.**]
     
             .center[# [`worldwideweb.cern.ch/browser`](https://worldwideweb.cern.ch/browser/)]
@@ -654,7 +654,7 @@
     
             name: tiny
             .footer[_Abusando de ECMAScript en abierto_]
-            ## Tiny ES
+            ## ES diminuto
             .center[**Duktape**]
             * Embeddable JS engine
             * ~160 KB flash memory, ~64 KB RAM
@@ -671,7 +671,7 @@
             ---
     
             .footer[_Abusando de ECMAScript en abierto_]
-            ## Tiny ES
+            ## ES diminuto
             .center[**Espruino**]
             * For [low power microcontrollers](https://www.espruino.com/)
             * ~128 KB flash memory, ~8 KB RAM
@@ -687,7 +687,7 @@
             ---
     
             .footer[_Abusando de ECMAScript en abierto_]
-            ## Tiny ES
+            ## ES diminuto
             .center[**mJS**]
             * Embedded JS engine for C/C++
             * A very aggressive subset of ES
@@ -699,7 +699,7 @@
     
             name: unsuspected
             .footer[_Abusando de ECMAScript en abierto_]
-            ## Unsuspected ES
+            ## ES insospechado
             .center[Another (**privative**) implementation of ECMAScript that you _may_ have used a lot is&hellip;]
             * Flash!
             * ActionScript3 (AS3), used in Adobe Flash &amp; Adobe AIR
@@ -715,7 +715,7 @@
       
             name: credits
             .footer[_Abusando de ECMAScript en abierto_]
-            ## Credits
+            ## Créditos
             * [&ldquo;Adam and Eve&rdquo;](https://commons.wikimedia.org/wiki/File:Cranach,_adamo_ed_eva,_uffizi.jpg) by Lucas Cranach the Elder (public domain)
             * [Clipart](https://www.freepik.com/premium-vector/educated-student-thinking-with-think-bubble-head-education-vector-concept_5250217.htm) by Freepik
             * [Universe visualisation](https://www.nbcnews.com/mach/science/cosmic-hotspots-may-be-evidence-universe-existed-ours-ncna909646) by Mark Garlick / Science Photo Library / Getty Images

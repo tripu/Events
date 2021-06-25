@@ -28,9 +28,8 @@
         }
         
         .remark-slide-content {
-            padding: 1rem 8rem;
-            /* padding: 1rem 4rem; */
-            background-image:url(assets/background.jpeg);
+            padding: 1rem 4rem;
+            background-image: url(assets/background.jpeg);
             background-size: cover;
         }
         
@@ -49,9 +48,13 @@
         
         pre, pre *, code, code * {
             font-family: monospace;
-            background-color: #f0f0f0;
+            /* background-color: #f0f0f0; */
         }
         
+        .remark-slide-content pre code, .remark-slide-content pre code *, .hljs-default .hljs {
+            background-color: #ffffff;
+        }
+
         .remark-slide-content code {
             padding-left: .3em;
             padding-right: .3em;
@@ -105,7 +108,9 @@
         .remark-slide-content .footnote {
             position: absolute;
             bottom: 0;
-            margin-left: -5.5em;
+            left: 0;
+            right: 0;
+            /* margin-left: -5.5em; */
             width: 100%;
             text-align: center;
         }
@@ -142,10 +147,38 @@
         }
         
         .portrait img {
-            width: 25%;
+            width: 45%;
             box-shadow: 0 .5rem 1rem #000000;
         }
         
+        .logo-devo img {
+            width: 50%;
+        }
+
+        .logo-devo-small img {
+            width: 30%;
+        }
+
+        .logo-w3c img {
+            height: 2rem;
+            vertical-align: text-bottom;
+        }
+
+        .small-img img {
+            width: 14rem;
+            box-shadow: 0 .5rem 1rem #000000;
+        }
+
+        .medium-img img {
+            width: 28rem;
+            box-shadow: 0 .5rem 1rem #000000;
+        }
+
+        .medium2-img img {
+            width: 26rem;
+            box-shadow: 0 .5rem 1rem #000000;
+        }
+
         a, a:visited {
             color: #4040c0;
             text-decoration: none;
@@ -190,8 +223,8 @@
             animation: pointers 1s ease-out infinite;
         }
 
-        .center code, .center code * {
-            background-color: white;
+        .dim {
+            opacity: .333;
         }
 
         @keyframes pointers {
@@ -213,33 +246,489 @@
         </section>
         
         <textarea id="source">
+
             name: cover
             .center[.important[👉]&nbsp;&nbsp;[`https://tripu.info/this`](https://tripu.info/this/)&nbsp;&nbsp;.important[👈]]
             # <br /> Abusando de ECMAScript en abierto
-            .footnote[[_esLibre_](https://eslib.re/2021/ )<br />**tripu**<br />25 de junio de 2021<br /><br />
+            .footnote[[_esLibre_](https://eslib.re/2021/)<br />**tripu**<br />25 de junio de 2021<br /><br />
             .nb[(Pulsar `&rarr;`, hacer _scroll_, o arrastrar hacia la izquierda)]]
+
             ---
+
             name: agenda
-            .footer[Abusando de ECMAScript en abierto]
+            .footer[_Abusando de ECMAScript en abierto_]
             ## De qué vamos a hablar
+            * [`$ whoami`](#me)
+            * [What is ~~ECMA~~ Ecma?](#ecma)
+            * [What is ~~EcmaScript~~ ECMAScript?](#ecmascript)
+            * **[⭐ MetaECMAScript](#meta)**
+            * **[⭐ Onanistic projects](#onanistic)**
+            * **[⭐ ES for ES](#esfores)**
+            * **[⭐ Tiny ES](#tiny)**
+            * **[⭐ Unsuspected ES](#unsuspected)**
+            * [Questions, comments, debate](#qa)
+    
+            ---
+    
+            name: me
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## `$ whoami`
             .twoCols[
             .column[
-            * **[⭐ a](#)**
+            .center[
+            .portrait[![Portrait](assets/tripu.png)]
+            <br />
+            <br />
+            **tripu**
+            <br />
+            *software engineer*
+            <br />
+            [`https://tripu.info`](https://tripu.info/)
+            ]
             ]
             .column[
-            * **[⭐ b](#)**
+            .center[
+            4+ years at the [.logo-w3c[![w3c-logo.png](assets/w3c-logo.png)]](https://www.w3.org/)
+            <br />
+            <br />
+            <br />
+            <br />
+            currently at
+            <br />
+            <br />
+            .center[.logo-devo[![Logo](assets/devo-logo.png)]]
+            [`https://devo.com`](https://www.devo.com/company/working-at-devo/)
+            <br />
+            (we are hiring!)
             ]
             ]
+            ]
+    
             ---
-            name: xxxx
-            .footer[Abusando de ECMAScript en abierto]
-            ## XXXX
+    
+            name: ecma
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## What is ~~ECMA~~ Ecma?
+            .center[**Overview**]
+            * 1961: ECMA (_European Computer Manufacturers Association_)
+            * 1994: &ldquo;ECMA&rdquo; &rarr; &ldquo;Ecma International&rdquo;
+            * Membership-based
+            * HQ: Geneva (Switzerland)
+            * 278 [_standards_](https://www.ecma-international.org/publications/standards/Standard.htm)
+            * 54 [_technical reports_](https://www.ecma-international.org/publications/techreports/techrep.htm)
+            * [`https://ecma-international.org`](https://www.ecma-international.org/)
+    
             ---
+    
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## What is ~~ECMA~~ Ecma?
+            .center[**Members**]
+            * _Ordinary_ (with vote at General Assembly; ~&euro;66K/year):  
+              **Facebook**, **Google**, Hitachi, IBM, Intel, Konica Minolta, **Microsoft**, PayPal, Stripe.
+            * _Associate_ (no vote at General Assembly; ~&euro;33K/year):  
+              Airbnb, **Alibaba**, **Apple**, Bloomberg, Canon, Dell, F5 Networks, GoDaddy,  
+              HP, **Huawei**, **Neftlix**, Ricoh, Salesforce, **Sony**, 360 Technology.
+            * _SME_ (small and medium; ~&euro;16K/year).
+              eg: [🇪🇸 Igalia](https://www.igalia.com/).
+            * _SPC_ (tiny companies; ~&euro;3K/year).
+            * _Not-for-profits_ (&euro;0):
+              [**OpenJS Foundation**](https://openjsf.org/) (∈ Linux Foundation),
+              **Mozilla Foundation**, Small Fan Workshop Association (about thermal cooling)&hellip;
+            * _Related organisations_:
+              **W3C**, ISO, IETF, ITU&hellip;
+    
+            ---
+    
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## What is ~~ECMA~~ Ecma?
+            .center[**Specs**]
+            * C# (_ECMA-334_)
+            * C++/CLI (_ECMA-372_)
+            * Dart (_ECMA-408_)
+            * Eiffel (_ECMA-367_)
+            * Office Open XML File Formats (_ECMA-376_)
+            * **EcmaScript**
+            * **EcmaScript Internationalization API**
+            * **JSON**
+    
+            ---
+    
+            name: ecmascript
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## What is ~~EcmaScript~~ ECMAScript?
+            .center[**The standards**]
+            * **[ECMAScript&reg; Language (_ECMA-262_)](https://www.ecma-international.org/publications/standards/Ecma-262.htm)**
+            * **[ECMAScript&reg; Internationalization API (_ECMA-402_)](https://www.ecma-international.org/publications/standards/Ecma-402.htm)**
+            * **[JSON Data Interchange Syntax (_ECMA-404_)](https://www.ecma-international.org/publications/standards/Ecma-404.htm)**
+              &rarr; short; basic stuff
+            * [ECMAScript&reg; Specification Suite (_ECMA-414_)](https://www.ecma-international.org/publications/standards/Ecma-414.htm)
+              &rarr; a pointer to the previous three
+            * [ECMAScript&reg; Test Suite (_E-TR-104_)](https://www.ecma-international.org/publications/techreports/E-TR-104.htm)
+              &rarr; a pointer to [`github.com/tc39/test262`](https://github.com/tc39/test262)
+            * [ECMAScript® Components (_ECMA-290_)](https://www.ecma-international.org/publications/standards/Ecma-290.htm)  
+              &rarr; superseded by [ES6 modules](https://www.ecma-international.org/ecma-262/6.0/#sec-modules), [web components](https://en.wikipedia.org/wiki/Web_Components), etc
+            * ~~[ECMAScript® 3<sup>rd</sup> Edition Compact Profile (_ECMA-327_)](https://www.ecma-international.org/publications/files/ECMA-ST-WITHDRAWN/Ecma-327.pdf)~~  
+              &rarr; withdrawn; for &ldquo;resource-constrained devices&rdquo;
+            * ~~[ECMAScript® for XML (E4X) (_ECMA-357_)](https://www.ecma-international.org/publications/files/ECMA-ST-WITHDRAWN/Ecma-357.pdf)~~
+              &rarr; withdrawn; a precursor of [JSX](https://reactjs.org/docs/introducing-jsx.html)
+    
+            ---
+    
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## What is ~~EcmaScript~~ ECMAScript?
+            .center[**_Old_ versions** (chaos!)]
+            .twoCols[
+            .column[
+            * **1** (1997)
+            * **2** (1998)
+            * **3** (1999)
+            * .dim[∅]
+            * .dim[∅]
+            * .dim[∅]
+            * ~~4 (2003; abandoned)~~
+            * .dim[∅]
+            * .dim[∅]
+            ]
+            .column[
+            * .dim[∅]
+            * .dim[∅]
+            * .dim[∅]
+            * **5** (2009)
+            * .dim[∅]
+            * **5.1** (2011)
+            * .dim[∅]
+            * .dim[∅]
+            * .dim[∅]
+            ]
+            ]
+    
+            ---
+      
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## What is ~~EcmaScript~~ ECMAScript?
+            .center[**_New_ versions** (yearly in June)]
+            .twoCols[
+            .column[
+            * [ES 2015](https://www.ecma-international.org/ecma-262/6.0/) (_ES6_, still in PDF)
+            * [ES 2016](https://www.ecma-international.org/ecma-262/7.0/) (_ES7_, first in HTML)
+            * [ES 2017](https://www.ecma-international.org/ecma-262/8.0/) (_ES8_)
+            * [ES 2018](https://www.ecma-international.org/ecma-262/9.0/) (_ES9_)
+            ]
+            .column[
+            * [ES 2019](https://www.ecma-international.org/ecma-262/10.0/) (_ES10_)
+            * [ES 2020](https://www.ecma-international.org/ecma-262/11.0/)
+            * **[ES 2021](https://www.ecma-international.org/ecma-262/12.0/) (_current_)**
+            * **[ES 2022](https://tc39.es/ecma262/) (_next_, latest draft)**
+            ]
+            ]
+
+            <hr />
+
+            Tests: [`github.com/tc39/test262`](https://github.com/tc39/test262)  
+            Spec: [`github.com/tc39/ecma262`](https://github.com/tc39/ecma262)
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hellip;written in [Ecmarkup](https://github.com/bterlson/ecmarkup), of course 🙄
+    
+            ---
+      
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## What is ~~EcmaScript~~ ECMAScript?
+            .center[**Growing complexity**]
+    
+            .center[![Curve #1](assets/curve-1.png)]
+    
+            ---
+      
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## What is ~~EcmaScript~~ ECMAScript?
+            .center[**&ldquo;Flattening the curve&rdquo; 😷**]
+    
+            .center[![Curve #2](assets/curve-2.png)]
+    
+            ---
+      
+            name: meta
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## MetaECMAScript
+            .center[**~~`eval()`~~ `Function()`**]
+            * `eval()` lets you run ~~ES~~ JS code programmatically, inside a JS program
+            * &hellip;but it's _**very bad**_
+            * So use `Function()` instead
+            .twoCols[
+            .column[
+    
+            ```js
+            const snippet = 'Math.pow(2, 10)';
+            console.log(eval(snippet));
+            ```
+    
+            ```js
+            1024
+            ```
+    
+            _Bad boy!_
+    
+            ]
+            .column[
+    
+            ```js
+            console.log(
+                   Function(
+                       `"use strict"; return (${snippet});`
+                    )()
+                );
+            ```
+    
+            ```js
+            1024
+            ```
+    
+            ]
+            ]
+
+            ---
+
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## MetaECMAScript
+            .center[**A disturbing realisation&hellip;**]
+            * Turing-complete scripting, (almost) perfect embedding of JS within JS
+            * &hellip;at the cost of performance and beauty, of course
+            * How to tell if we're running inside a `Function()`? In principle, we can't.
+            * The theory of [simulated multiverses](https://en.wikipedia.org/wiki/Simulated_reality) is growing traction&hellip;
+            * And stuff in life is slow and ugly most of the time!!
+
+            .center[.small-img[![Thinking](assets/thinking.jpeg)]]
+    
+            ---
+    
+            class: img, empty
+            background-image: url("assets/simulated-universe.jpeg")
+            background-size: cover
+    
+            ---
+      
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## MetaECMAScript
+            .center[**We live inside a JS `eval()`: evidence**]
+    
+            .center[
+            .small-img[![Adam and Eve](assets/adam-and-eve.jpeg)]
+    
+            &ldquo;Adam and eval&rdquo; &rarr; &ldquo;Adam and Eve&rdquo;
+            ]
+    
+            ---
+      
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## MetaECMAScript
+            .center[**We live inside a JS `eval()`: evidence**]
+    
+            .center[
+            .medium-img[.center[![You had one job](assets/youhadonejob01.webp)]]
+
+            Stuff is crappy most of the time
+            ]
+    
+            ---
+      
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## MetaECMAScript
+            .center[**We live inside a JS `eval()`: evidence**]
+    
+            .center[
+            .medium2-img[.center[![Weakling](assets/weakling.jpeg)]]
+
+            Definitely you are _not_ **strongly typed**
+            ]
+    
+            ---
+      
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## MetaECMAScript
+            .center[**We live inside a JS `eval()`: evidence**]
+    
+            .center[
+            .portrait[.center[![No call back](assets/no-call-back.jpeg)]]
+
+            You miss _lots_ of **call backs**
+            ]
+    
+            ---
+      
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## MetaECMAScript
+            .center[**We live inside a JS `eval()`: evidence**]
+    
+            .center[# <br /> _Q.E.D._]
+    
+            ---
+    
+            name: onanistic
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## Onanistic projects
+            .center[**JS interpreters/engines written in JS**]
+            * [Narcissus](https://github.com/mozilla/narcissus/) (Brendan Eich, Mozilla)
+            * [Sval](https://github.com/Siubaak/sval) ▶️ [online demo](https://jsbin.com/kehahiqono/edit?js,console)
+            * [JS-Interpreter](https://github.com/NeilFraser/JS-Interpreter) ▶️ [online demo](https://neil.fraser.name/software/JS-Interpreter/)
+            * [engine262](https://github.com/engine262/engine262) ▶️ [online demo](https://engine262.js.org/)
+            * [MetaES](http://metaes.org/) ▶️ [online demo](http://metaes.org/playground.html)
+    
+            ---
+    
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## Onanistic projects
+            .center[**Variations on JS**]
+            * [CoffeeScript](https://coffeescript.org/)
+            * [TypeScript](https://www.typescriptlang.org/)
+            * [JSX](https://reactjs.org/docs/introducing-jsx.html)
+            * [EJS](https://ejs.co/) (eg: `<h2><%= user.name %></h2>`)
+    
+            .center[
+            _&ldquo;One transpiler to bring them all<br />and in the darkness bind them&rdquo;_
+    
+            [.small-img[![Babel logo](assets/babel.png)]](https://babeljs.io/)
+            ]
+
+            ---
+
+            name: esfores
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## ES for ES
+            .center[**IDEs for JS written in JS**]
+            * Electron-based:
+              - VS Code
+              - Atom
+            * Brackets (CEF &mdash; _Chromium Embedded Framework_)
+    
+            ---
+    
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## ES for ES
+            .center[**IDEs for JS running inside JS on a browser**]
+    
+            .center[Codeanywhere]
+    
+            ---
+    
+            class: img, empty
+            background-image: url("assets/codeanywhere.jpeg")
+            background-size: contain
+    
+            ---
+    
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## ES for ES
+            .center[**IDEs for JS running inside JS on a browser**]
+    
+            .center[Cloud9 IDE (Amazon)]
+    
+            ---
+    
+            class: img, empty
+            background-image: url("assets/cloud9.png")
+            background-size: contain
+    
+            ---
+    
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## ES for ES
+            .center[**IDEs for JS running inside JS on a browser**]
+    
+            .center[[github1s](https://github1s.com/) ([source](https://github.com/conwnet/github1s)), based on [VS Code](https://github.com/microsoft/vscode)]
+
+            <br />
+            <br />
+    
+            .center[**Node.js running on a browser**]
+
+            .center[[StackBlitz' WebContainers](https://blog.stackblitz.com/posts/introducing-webcontainers/#today-we're-excited-to-announce-webcontainers)]            
+
+            ---
+    
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## ES for ES
+            .center[**The oldest browser, complete with all its behaviour and features, being emulated in real time inside a modern browser (mine)&nbsp;&mdash;&nbsp;thanks to JS, the programming language of browsers&hellip; a demo served in real time directly to yet another browser (yours) thanks to JS. Yes. That's it.**]
+    
+            .center[# [`worldwideweb.cern.ch/browser`](https://worldwideweb.cern.ch/browser/)]
+    
+            ---
+    
+            name: tiny
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## Tiny ES
+            .center[**Duktape**]
+            * Embeddable JS engine
+            * ~160 KB flash memory, ~64 KB RAM
+            * [`https://duktape.org`](https://duktape.org/)
+            * ▶️ [online demo](https://duktape.org/dukweb.html)
+            * Has a debugger
+    
+            ---
+    
+            class: img, empty
+            background-image: url("assets/duktape-debugger.png")
+            background-size: contain
+    
+            ---
+    
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## Tiny ES
+            .center[**Espruino**]
+            * For [low power microcontrollers](https://www.espruino.com/)
+            * ~128 KB flash memory, ~8 KB RAM
+            * [`https://github.com/espruino/Espruino`](https://github.com/espruino/Espruino)
+            * Has [a web IDE](https://chrome.google.com/webstore/detail/espruino-web-ide/bleoifhkdalbjfbobjackfdifdneehpo)
+    
+            ---
+    
+            class: img, empty
+            background-image: url("assets/espruino.png")
+            background-size: contain
+    
+            ---
+    
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## Tiny ES
+            .center[**mJS**]
+            * Embedded JS engine for C/C++
+            * A very aggressive subset of ES
+            * On 32-bit ARM, the engine takes ~50 KB flash memory, &lt;1 KB RAM (!)
+            * [`https://github.com/cesanta/mjs`](https://github.com/cesanta/mjs)
+            * More restrictions than features 😝
+    
+            ---
+    
+            name: unsuspected
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## Unsuspected ES
+            .center[Another (**privative**) implementation of ECMAScript that you _may_ have used a lot is&hellip;]
+            * Flash!
+            * ActionScript3 (AS3), used in Adobe Flash &amp; Adobe AIR
+            * A superset of ECMAScript (ie, an implementation)
+            * eg: got hardware-accelerated 3D
+              [in Jul 2011](https://web.archive.org/web/20110714222550/http://download.macromedia.com/pub/labs/flashplatformruntimes/shared/flashplayer11_air3_b1_releasenotes_071311.pdf)  
+              (years before [WebGL became popular and fully supported](https://caniuse.com/#feat=webgl) on browsers)
+            * But 5 years ago, Flash was already dying
+              ([exhibit #1](https://esdiscuss.org/notes/2015-03-24#what-to-do-with-compact-profile-ecma-327-and-e4x-ecma-357),
+              [exhibit #2](https://esdiscuss.org/notes/2015-03-24#compact-profile))
+    
+            ---
+      
+            name: credits
+            .footer[_Abusando de ECMAScript en abierto_]
+            ## Credits
+            * [&ldquo;Adam and Eve&rdquo;](https://commons.wikimedia.org/wiki/File:Cranach,_adamo_ed_eva,_uffizi.jpg) by Lucas Cranach the Elder (public domain)
+            * [Clipart](https://www.freepik.com/premium-vector/educated-student-thinking-with-think-bubble-head-education-vector-concept_5250217.htm) by Freepik
+            * [Universe visualisation](https://www.nbcnews.com/mach/science/cosmic-hotspots-may-be-evidence-universe-existed-ours-ncna909646) by Mark Garlick / Science Photo Library / Getty Images
+            * [Horrified woman](https://www.videoblocks.com/video/horrified-mature-woman-on-green-screen-caucasian-middle-aged-woman-looking-frightened-and-shocked-on-chroma-key-background-human-negative-expressions-rfumrgrazjhdrh0v1) from Storyblocks
+            * [JS logo](https://commons.wikimedia.org/wiki/File:JavaScript-logo.png) on Wikipedia (public domain)
+    
+            ---
+
             name: qa
             class: middle
-            .footer[Abusando de ECMAScript en abierto]
+            .footer[_Abusando de ECMAScript en abierto_]
             ## Ideas,<br /><br />preguntas,<br /><br />debate
-            
+
         </textarea>
         
         <!-- <script type="text/javascript" src="https://remarkjs.com/downloads/remark-latest.min.js"></script> -->

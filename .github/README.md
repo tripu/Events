@@ -19,9 +19,11 @@ Date | Location | Host / conference | Title / topic | Resources
 
 ### Events
 
-* **Interview** on [_Bola de Cristal_ podcast](https://www.linkedin.com/company/bola-de-cristal/) on 2020-06-03:  
-  [_&ldquo;Japón: ¿laboratorio de futuro?&rdquo;_](http://boladecristal.es/blog/2020/06/04/ep2-japon-laboratorio-de-futuro/)  
-  Audio: [MP3](https://www.ivoox.com/japon-laboratorio-futuro_mf_51716235_feed_1.mp3), [YouTube](https://www.youtube.com/watch?v=HcNzPH2BD4w), [Spotify](https://open.spotify.com/episode/2DlQt6xjN1qqCX74k8umKI), [iVoox](https://www.ivoox.com/japon-laboratorio-futuro-audios-mp3_rf_51716235_1.html)
+* **Interviews** on [_Bola de Cristal_ podcast](https://www.boladecristal.es/):
+  - On 2021-07-08: [_&ldquo;La magia del vocabulario japonés&rdquo;_](https://www.boladecristal.es/blog/2021/07/08/ep40-la-magia-del-vocabulario-japones/)  
+  Audio: [MP3](https://podcastcdn-26.ivoox.com/audio/1/4/2/3/ep40lamagiadelvocabulariojaponesco-bolacristalpodcast-ivoox72543241.mp3?secure=PcIBOkWi9rl3hxXOK0hEPQ==,1626621100), [Spotify](https://open.spotify.com/episode/6TsOrvD32wu46qPcpgfQwB?go=1&utm_source=embed_v3&t=0&nd=1), [iVoox](https://www.ivoox.com/ep40-la-magia-del-vocabulario-japones-audios-mp3_rf_72543241_1.html), [Google Podcasts](https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuaXZvb3guY29tL3BvZGNhc3QtYm9sYS1jcmlzdGFsX2ZnX2YxOTE2NDEwX2ZpbHRyb18xLnhtbA/episode/aHR0cHM6Ly93d3cuaXZvb3guY29tLzcyNTQzMjQx?sa=X&ved=0CAUQkfYCahcKEwjgrZme3uzxAhUAAAAAHQAAAAAQAQ&hl=es), [Apple Podcasts](https://podcasts.apple.com/us/podcast/ep40-la-magia-del-vocabulario-japon%C3%A9s/id1515175725?i=1000528236022)
+  - On 2020-06-03: [_&ldquo;Japón: ¿laboratorio de futuro?&rdquo;_](http://boladecristal.es/blog/2020/06/04/ep2-japon-laboratorio-de-futuro/)  
+  Audio: [MP3](https://www.ivoox.com/japon-laboratorio-futuro_mf_51716235_feed_1.mp3), [YouTube](https://www.youtube.com/watch?v=HcNzPH2BD4w), [Spotify](https://open.spotify.com/episode/5dTByjqbZANRhVB7Zoy3gU), [iVoox](https://www.ivoox.com/japon-laboratorio-futuro-audios-mp3_rf_51716235_1.html)
 * **Talk** at [Ignite Madrid](https://www.ignitemad.es/) #6 on 2018-02-16 in Madrid (Spain):  
   _&ldquo;Y ese maratón, ¿de cuántos kilómetros es?&rdquo;_  
   Video: [YouTube](https://www.youtube.com/watch?v=q1riVnzwDrA)

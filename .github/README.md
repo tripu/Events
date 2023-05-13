@@ -2,6 +2,8 @@
 
 Date | Location | Host / conference | Title / topic | Resources
 :----|:---------|:-----|:------|:---------
+2023-05-12 | Zaragoza <br /> (Spain) | [Congreso <br /> esLibre](https://eslib.re/2023/) <br /> [Etopia](https://etopia.es/) | *How to release <br /> an entire <br /> corporate design system* | Announcement: [#1](https://propuestas.eslib.re/2023/charlas/como-liberar-todo-sistema-diseno-corporativo), [#2](https://twitter.com/esLibre_/status/1651177942670532609) <br /> Presentation: [PDF](https://tripu.github.io/Events/doc/2023-05-12_Zaragoza-Spain_Etopia_esLibre_design-system/how-to-release-an-entire-corporate-design-system.pdf)
+2023-04-21 | Boadilla <br /> del Monte <br /> (Spain) | [Commit](https://2023.commit-conf.com/) <br /> [CEU](https://www.uspceu.com/) | *How to release <br /> an entire <br /> corporate design system* | Announcement: [#1](https://koliseo.com/events/commit-2023/agenda/0) <br /> Presentation: [PDF](https://tripu.github.io/Events/doc/2023-04-21_Boadilla-Spain_CEU_Commit_design-system/how-to-release-an-entire-corporate-design-system.pdf)
 2021-06-25 | _online_ | [Congreso <br /> esLibre](https://eslib.re/2021/) | *Abusando de ECMAScript <br /> en abierto* | Announcement: [#1](https://propuestas.eslib.re/2021/charlas/abusando-ecmascript-en-abierto) <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/doc/2021-06-25_esLibre_ECMAScript), [slideshow](https://tripu.github.io/Events/doc/2021-06-25_esLibre_ECMAScript/) <br /> Video: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:EsLibre_2021_P08_-_tripu_-_Abusando_de_ECMAScript_en_abierto.webm)
 2020-03-29 | _online_ | [Stay At Home <br /> Conf](https://stayathomeconf.com/) | *Abusing ECMAScript <br /> for fun and enlightenment* | Announcement: [#1](https://stayathomeconf.com/#g-341392231) <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/doc/2020-03-29_Stay-At-Home-Conf_ECMAScript), [slideshow](https://tripu.github.io/Events/doc/2020-03-29_Stay-At-Home-Conf_ECMAScript/) <br /> Video: [YouTube](https://www.youtube.com/watch?v=KNLlHYdht-4)
 2020-02-08 | Valladolid <br /> (Spain) | [WeCodeFest](https://wecodefest.com/), <br /> [EII](https://www.inf.uva.es/), <br /> [UVA](http://www.uva.es/) | *Tu navegador <br /> está roto: <br /> Criticism <br /> of the web* | Announcement: [#1](https://wecodefest.com/#timetable) <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/doc/2020-02-08_Valladolid-Spain_UVA_WeCode_browsers), [slideshow](https://tripu.github.io/Events/doc/2020-02-08_Valladolid-Spain_UVA_WeCode_browsers/)
@@ -36,8 +38,14 @@ Date | Location | Host / conference | Title / topic | Resources
 * **Interview** on [_La Región Internacional_](https://www.laregioninternacional.com/) on 2014-09-05:  
   [_&laquo;La adaptación en Japón es todo un reto&raquo;_](https://www.laregioninternacional.com/articulo/protagonistas/adaptacion-japon-todo-reto/20140905125013241624.html)
 
+### Appearances in video
+
+* **_Cameo_** on [Circular](https://circular.io/)'s promotional video featuring [Devo](https://www.devo.com/) on 2019-12-11:  
+  _&ldquo;Devo Success Story. Hire successfully with Circular.&rdquo;_  
+  Video: [YouTube](https://www.youtube.com/watch?v=uiCMy84s9II)
+
 ## Credits
 
-Copyright &copy; 2014&ndash;2021 tripu ([`t@tripu.info`](mailto:t@tripu.info), [`https://tripu.info`](https://tripu.info/)).
+Copyright &copy; 2014&ndash;2023 tripu ([`t@tripu.info`](mailto:t@tripu.info), [`https://tripu.info`](https://tripu.info/)).
 
 [All rights reserved](//github.com/tripu/Events/blob/master/LICENSE.md).

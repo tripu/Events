@@ -37,6 +37,8 @@ Date | Location | Host / conference | Title / topic | Resources
 
 * **Interview** on [_La Región Internacional_](https://www.laregioninternacional.com/) on 2014-09-05:  
   [_&laquo;La adaptación en Japón es todo un reto&raquo;_](https://www.laregioninternacional.com/articulo/protagonistas/adaptacion-japon-todo-reto/20140905125013241624.html)
+* **Mention** on [_elEconomista.es_](https://www.eleconomista.es/) on 2011-09-28:  
+  [_&laquo;Asalariados de día, emprendedores de noche&raquo;_](https://www.eleconomista.es/emprendedores/noticias/3410762/09/11/Asalariados-de-dia-emprendedores-de-noche.html)
 
 ### Appearances in video
 

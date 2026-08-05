@@ -17,19 +17,25 @@ Date | Location | Host / conference | Title / topic | Resources
 2014-11-28 | Granada <br /> (Spain) | [ETSIIT](http://etsiit.ugr.es/?lang=en), <br /> [UGR](https://www.ugr.es/en) | *Intro to the W3C, <br /> tools & resources; <br /> [TTWF](http://testthewebforward.org/) workshop* | Announcements: [#1](https://osl.ugr.es/2014/10/14/el-world-wide-web-consortium-en-granada-antonio-olmo-titos-nos-hablara-sobre-el/), [#2](https://osl.ugr.es/2014/11/11/hackaton-test-the-web-forward-con-antonio-olmos-del-consorcio-w3/) <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/doc/2014-11-28_Granada-Spain_UGR_W3C-TTWF), [W3C](https://tripu.github.io/remark/remarkise?url=https%3A%2F%2Ftripu.github.io%2FEvents%2Fdoc%2F2014-11-28_Granada-Spain_UGR_W3C-TTWF%2Fpresentation.md), [TTWF](https://tripu.github.io/remark/remarkise?url=https%3A%2F%2Ftripu.github.io%2FEvents%2Fdoc%2F2014-11-28_Granada-Spain_UGR_W3C-TTWF%2Fttwf.md) <br /> Docs: [minutes](http://www.w3.org/2014/11/28-w3cugr-minutes.html), [IRC log](http://www.w3.org/2014/11/28-w3cugr-irc) <br /> Tweets: [`#w3cugr`](https://twitter.com/search?f=realtime&q=w3cugr&src=typd), [`#httwf`](https://twitter.com/search?f=realtime&q=httwf&src=typd) <br /> Photos: [Flickr: `w3cugr`](https://secure.flickr.com/search/?q=w3cugr&m=tags&ct=6&mt=all&adv=1), [at `osl.ugr.es`](https://osl.ugr.es/galeria/Hackaton-W3C-Tripu) <br /> Chronicle: [at `osl.ugr.es`](http://osl.ugr.es/2014/12/01/6250/)
 2014-11-24 | Fuenlabrada <br /> (Spain) | [ETSIT](http://www.etsit.urjc.es), <br /> [URJC](https://urjc.es/version_ingles) | *Intro to the W3C, <br /> the Open Web Platform, <br /> specs, tools & resources* | Announcements: [#1](http://docencia.etsit.urjc.es/moodle/mod/forum/discuss.php?d=21202), [#2](http://docencia.etsit.urjc.es/moodle/mod/forum/discuss.php?d=21274) <br /> Presentation: [source](https://github.com/tripu/Events/tree/master/doc/2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools), [slideshow](https://tripu.github.io/remark/remarkise?url=https%3A%2F%2Ftripu.github.io%2FEvents%2Fdoc%2F2014-11-24_Fuenlabrada-Spain_URJC_W3C-tools%2Fpresentation.md) <br /> Tweets: [`#w3c-urjc`](https://twitter.com/search?f=realtime&q=w3c-urjc&src=typd) <br /> Photos: [`w3curjc`](https://secure.flickr.com/search/?q=w3curjc&m=tags&ct=6&mt=all&adv=1)
 
-## Non-tech-related (all in Spanish)
+## Non-tech-related
 
 ### Events
 
-* **Interviews** on [_Bola de Cristal_ podcast](https://www.boladecristal.es/):
+* **Interview** on
+  [Newsday](https://www.bbc.co.uk/programmes/p00w940j)
+  ([BBC News World Service](https://www.bbc.com/audio/schedules/bbc_world_service))
+  on 2026-07-28:  
+  [wildfires in the Madrid region of Spain](https://www.bbc.co.uk/programmes/w1730c1ggwrggwg)  
+  Audio: [YouTube](https://youtu.be/kRpSQAZFaNI)
+* **Interviews** (in Spanish) on [_Bola de Cristal_ podcast](https://www.boladecristal.es/):
   - On 2021-07-08: [_&ldquo;La magia del vocabulario japonés&rdquo;_](https://www.boladecristal.es/blog/2021/07/08/ep40-la-magia-del-vocabulario-japones/)  
   Audio: [MP3](https://podcastcdn-26.ivoox.com/audio/1/4/2/3/ep40lamagiadelvocabulariojaponesco-bolacristalpodcast-ivoox72543241.mp3?secure=PcIBOkWi9rl3hxXOK0hEPQ==,1626621100), [Spotify](https://open.spotify.com/episode/6TsOrvD32wu46qPcpgfQwB?go=1&utm_source=embed_v3&t=0&nd=1), [iVoox](https://www.ivoox.com/ep40-la-magia-del-vocabulario-japones-audios-mp3_rf_72543241_1.html), [Google Podcasts](https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuaXZvb3guY29tL3BvZGNhc3QtYm9sYS1jcmlzdGFsX2ZnX2YxOTE2NDEwX2ZpbHRyb18xLnhtbA/episode/aHR0cHM6Ly93d3cuaXZvb3guY29tLzcyNTQzMjQx?sa=X&ved=0CAUQkfYCahcKEwjgrZme3uzxAhUAAAAAHQAAAAAQAQ&hl=es), [Apple Podcasts](https://podcasts.apple.com/us/podcast/ep40-la-magia-del-vocabulario-japon%C3%A9s/id1515175725?i=1000528236022)
   - On 2020-06-03: [_&ldquo;Japón: ¿laboratorio de futuro?&rdquo;_](http://boladecristal.es/blog/2020/06/04/ep2-japon-laboratorio-de-futuro/)  
   Audio: [MP3](https://www.ivoox.com/japon-laboratorio-futuro_mf_51716235_feed_1.mp3), [YouTube](https://www.youtube.com/watch?v=HcNzPH2BD4w) ([summary](https://www.summarize.tech/www.youtube.com/watch?v=HcNzPH2BD4w)), [Spotify](https://open.spotify.com/episode/5dTByjqbZANRhVB7Zoy3gU), [iVoox](https://www.ivoox.com/japon-laboratorio-futuro-audios-mp3_rf_51716235_1.html)
-* **Talk** at [Ignite Madrid](https://www.ignitemad.es/) #6 on 2018-02-16 in Madrid (Spain):  
+* **Talk** (in Spanish) at [Ignite Madrid](https://www.ignitemad.es/) #6 on 2018-02-16 in Madrid (Spain):  
   _&ldquo;Y ese maratón, ¿de cuántos kilómetros es?&rdquo;_  
   Video: [YouTube](https://www.youtube.com/watch?v=q1riVnzwDrA), [summary](https://www.summarize.tech/www.youtube.com/watch?v=q1riVnzwDrA)
-* **Interview** on [_No es un día cualquiera_](https://www.rtve.es/radio/no-es-un-dia-cualquiera/) ([_Radio Nacional de España_](https://www.rtve.es/radio/)) on   2015-02-28:  
+* **Interview** (in Spanish) on [_No es un día cualquiera_](https://www.rtve.es/radio/no-es-un-dia-cualquiera/) ([_Radio Nacional de España_](https://www.rtve.es/radio/)) on   2015-02-28:  
   life in Tokyo  
   Audio: [SoundCloud](https://soundcloud.com/tripu-info/rne)
 
@@ -48,6 +54,6 @@ Date | Location | Host / conference | Title / topic | Resources
 
 ## Credits
 
-Copyright &copy; 2014&ndash;2023 tripu ([`t@tripu.info`](mailto:t@tripu.info), [`https://tripu.info`](https://tripu.info/)).
+Copyright &copy; 2014 tripu ([`t@tripu.info`](mailto:t@tripu.info), [`https://tripu.info`](https://tripu.info/)).
 
 [All rights reserved](//github.com/tripu/Events/blob/master/LICENSE.md).
